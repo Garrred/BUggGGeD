@@ -13,14 +13,14 @@ public class CameraFollow : MonoBehaviour
     public float minY;
     public Vector2 offset;
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         if (playerTransform != null)
         {
             float clampedX = Mathf.Clamp(playerTransform.position.x, minX, maxX);
             float clampedY = Mathf.Clamp(playerTransform.position.y, minY, maxY);
             Vector2 targetPosition = new Vector2(clampedX, clampedY) + offset;
-            Vector2 smoothedPosition = Vector2.Lerp(transform.position, targetPosition, followSpeed);
+            Vector2 smoothedPosition = Vector2.Lerp(transform.position, targetPosition, followSpeed * Time.fixedDeltaTime);
             transform.position = smoothedPosition;
         }
     }
