@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6536588719214882164}
   - component: {fileID: 7872836633794503801}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player_Core_Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4606444694933267348}
   - component: {fileID: 4507908572532255625}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2814579478290194625}
   - component: {fileID: 6132030100905308953}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8665850912567640223}
   - component: {fileID: 2499512679091054893}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player_Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3935512758001896464}
   - component: {fileID: 7441019361199678730}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1513902327226067920}
   - component: {fileID: 116369354505809790}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player_Core_Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 1085240385431318436}
   - component: {fileID: 3216400643999096667}
   - component: {fileID: 4861831110909219302}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,5 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a0d038c50a0cd04f88ae81b8e35ac93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  movementSpeed: 10
+  rotationSpeed: 1000
+  slowRatio: 0.4
   health: 10

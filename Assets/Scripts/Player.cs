@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public float movementSpeed;
     public float rotationSpeed;
+    public float slowRatio;
 
     public int health;
 
@@ -31,6 +32,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            movementInput *= slowRatio;
+        }
 
         //if (movementInput != Vector2.zero) animator.SetBool("isRunning", true);
         //else animator.SetBool("isRunning", false);
@@ -49,8 +54,6 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation,
                 Quaternion.LookRotation(Vector3.forward, movementInput), rotationSpeed * Time.fixedDeltaTime);
         }
-
-        //transform.rotation = new Quaternion()
     }
 
     //public void takeDamage(int damage)
