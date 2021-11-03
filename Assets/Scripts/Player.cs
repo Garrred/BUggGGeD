@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public float speed;
+    public float movementSpeed;
+    public float rotationSpeed;
+
     public int health;
 
     private Rigidbody2D rb;
     private Vector2 movementInput;
+    private Vector2 playerRotation;
     //private Animator animator;
 
     //public Image[] hearts;
@@ -28,6 +31,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
         //if (movementInput != Vector2.zero) animator.SetBool("isRunning", true);
         //else animator.SetBool("isRunning", false);
     }
@@ -36,9 +40,17 @@ public class Player : MonoBehaviour
     {
         if ((movementInput.x == 0 && movementInput.y != 0) ||
             (movementInput.x != 0 && movementInput.y == 0))
-            rb.MovePosition(rb.position + movementInput * speed * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + movementInput * movementSpeed * Time.fixedDeltaTime);
         else
-            rb.MovePosition(rb.position + movementInput * speed * Time.fixedDeltaTime / Mathf.Sqrt(2));
+            rb.MovePosition(rb.position + movementInput * movementSpeed * Time.fixedDeltaTime / Mathf.Sqrt(2));
+
+        if (movementInput != Vector2.zero)
+        {
+            transform.rotation = Quaternion.RotateTowards(transform.rotation,
+                Quaternion.LookRotation(Vector3.forward, movementInput), rotationSpeed * Time.fixedDeltaTime);
+        }
+
+        //transform.rotation = new Quaternion()
     }
 
     //public void takeDamage(int damage)
