@@ -242,6 +242,7 @@ MonoBehaviour:
   maxY: 10
   minY: -10
   offset: {x: 0, y: 0}
+  smoothedPosition: {x: 0, y: 0}
 --- !u!4 &663493829
 Transform:
   m_ObjectHideFlags: 0
@@ -477,6 +478,10 @@ PrefabInstance:
     - target: {fileID: 555371549, guid: 7e66965657e86434ebd815dd18815333, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861831110909219302, guid: 7e66965657e86434ebd815dd18815333, type: 3}
+      propertyPath: slowRatio
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5913972251681258631, guid: 7e66965657e86434ebd815dd18815333, type: 3}
       propertyPath: m_RootOrder

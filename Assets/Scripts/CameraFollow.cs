@@ -12,6 +12,7 @@ public class CameraFollow : MonoBehaviour
     public float maxY;
     public float minY;
     public Vector2 offset;
+    public Vector2 smoothedPosition;
 
     void FixedUpdate()
     {
@@ -20,8 +21,11 @@ public class CameraFollow : MonoBehaviour
             float clampedX = Mathf.Clamp(playerTransform.position.x, minX, maxX);
             float clampedY = Mathf.Clamp(playerTransform.position.y, minY, maxY);
             Vector2 targetPosition = new Vector2(clampedX, clampedY) + offset;
-            Vector2 smoothedPosition = Vector2.Lerp(transform.position, targetPosition, followSpeed * Time.fixedDeltaTime);
-            transform.position = smoothedPosition;
+            smoothedPosition = Vector2.Lerp(transform.position, targetPosition, followSpeed * Time.fixedDeltaTime);
         }
+    }
+    private void LateUpdate()
+    {
+        transform.position = smoothedPosition;
     }
 }
