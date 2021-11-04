@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movementInput;
     private Vector2 playerRotation;
+    private Weapon weapon;
+
     //private Animator animator;
 
     //public Image[] hearts;
@@ -24,6 +26,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        weapon = GetComponent<Weapon>();
         //animator = GetComponent<Animator>();
         //UpdateLife();
     }
@@ -43,13 +46,12 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if ((movementInput.x == 0 && movementInput.y != 0) ||
-            (movementInput.x != 0 && movementInput.y == 0))
+        if ((movementInput.x == 0 && movementInput.y != 0) || (movementInput.x != 0 && movementInput.y == 0))
             rb.MovePosition(rb.position + movementInput * movementSpeed * Time.fixedDeltaTime);
         else
             rb.MovePosition(rb.position + movementInput * movementSpeed * Time.fixedDeltaTime / Mathf.Sqrt(2));
 
-        if (movementInput != Vector2.zero)
+        if (weapon.isShooting == false && movementInput != Vector2.zero)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation,
                 Quaternion.LookRotation(Vector3.forward, movementInput), rotationSpeed * Time.fixedDeltaTime);
