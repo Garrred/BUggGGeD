@@ -9,7 +9,10 @@ public class Bullet : MonoBehaviour
 
     public GameObject spark;
     public float damage; 
-
+    // public Transform playerTransform;
+    public Player player;
+    public float recoilSpeed;
+    public float recoilTime;
 
     // Start is called before the first frame update
     //void Start()
@@ -17,6 +20,15 @@ public class Bullet : MonoBehaviour
     //    Invoke("destorySpark", bulletLifeTime);
     //}
 
+    // void Start()
+    // {
+    //     player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+    //     player.SetRecoilSpeed(recoilSpeed);
+    //     player.SetRecoilTime(recoilTime);
+    //     // player.Recoil(recoilTime, recoilSpeed);
+    //     // playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+    //     // playerTransform.position = new Vector2(playerTransform.position.x, playerTransform.position.y - recoil);
+    // }
     // Update is called once per frame
     void Update()
     {

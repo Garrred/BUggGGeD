@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     private Vector2 movementInput;
     private Vector2 playerRotation;
     private Weapon weapon;
+    // private float recoilTimeLeft;
+    // private float recoilSpeed;
 
     //private Animator animator;
 
@@ -56,15 +58,50 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation,
                 Quaternion.LookRotation(Vector3.forward, movementInput), rotationSpeed * Time.fixedDeltaTime);
         }
+
+        // if (recoilTimeLeft > 0)
+        // {
+        //     recoilTimeLeft -= Time.fixedDeltaTime;
+        //     Recoil();
+        // }
     }
 
-    //public void takeDamage(int damage)
-    //{
-    //    health -= damage;
-    //    if (health <= 0)
-    //        Destroy(gameObject);
+    // public void SetRecoilTime(float time)
+    // {
+    //     recoilTimeLeft = time;
+    // }
+    // public void SetRecoilSpeed(float speed)
+    // {
+    //     recoilSpeed = speed;
+    // }
+    // public void Recoil() 
+    // {
+    //     rb.MovePosition(rb.position + new Vector2(transform.position.x, -transform.position.y) * recoilSpeed * Time.fixedDeltaTime);
+    // }
+
+    // public IEnumerator StartRecoil(float recoilTime, float recoilSpeed)
+    // {
+    //     float timer = 0;
+    //     while (timer < recoilTime)
+    //     {
+    //         transform.position += transform.position * recoilSpeed * Time.fixedDeltaTime;
+    //         // rb.MovePosition(rb.position + new Vector2(1f,1f) * recoilSpeed * Time.deltaTime / Mathf.Sqrt(2));
+    //         timer += Time.fixedDeltaTime;
+    //         yield return null;
+    //     }
+    // }
+    // {
+    //     yield return new WaitForSeconds(0.1f);
+    //     rb.MovePosition(rb.position + movementInput * movementSpeed * Time.fixedDeltaTime / Mathf.Sqrt(2));
+    // }
+    
+    public void takeDamage(int damage)
+    {
+       health -= damage;
+       if (health <= 0)
+           Destroy(gameObject);
     //    UpdateLife();
-    //}
+    }
 
     //public void UpdateLife()
     //{
