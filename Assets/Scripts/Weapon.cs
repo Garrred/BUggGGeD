@@ -38,10 +38,6 @@ public class Weapon : MonoBehaviour
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                 rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
 
-                Debug.Log(rotation);
-                Debug.Log(transform.rotation);
-
-
                 if (transform.rotation != rotation)
                 {
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, 
