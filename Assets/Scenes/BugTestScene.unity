@@ -330,9 +330,9 @@ GameObject:
   - component: {fileID: 1447192855}
   - component: {fileID: 1447192854}
   - component: {fileID: 1447192853}
-  - component: {fileID: 1447192856}
   - component: {fileID: 1447192857}
   - component: {fileID: 1447192858}
+  - component: {fileID: 1447192856}
   m_Layer: 0
   m_Name: BugBullet
   m_TagString: Untagged
