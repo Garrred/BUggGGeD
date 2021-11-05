@@ -2,21 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BUG01 : MonoBehaviour
+namespace BUGS
 {
-    public Player player;
-    // Start is called before the first frame update
-    void Start()
+    public class BUG01 : MonoBehaviour
     {
-        player = GameObject.Find("Player").GetComponent<Player>();
-        player.GetComponent<Weapon>().bullet = Resources.Load<GameObject>("Prefabs/Player_Bullet");
-        GameObject.Find("Player_Body").SetActive(false);
-        GameObject.Find("ShootPos").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BasicBullet");
-    }
+        public Player player;
+        // Start is called before the first frame update
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.tag == "Player")
+            {
+                player = other.GetComponent<Player>();
+                player.GetComponent<Weapon>().bullet = Resources.Load<GameObject>("Prefabs/Player_Bullet");
+                player.transform.Find("Player_Body").gameObject.SetActive(false);
+                player.transform.Find("ShootPos").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BasicBullet");
+            }
+        }
     }
 }
