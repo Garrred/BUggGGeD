@@ -34,22 +34,24 @@ public class Weapon : MonoBehaviour
 
             if (isShooting)
             {
-                Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
-
-                if (transform.rotation != rotation)
+                Vector2 direction = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+ 
+                if (transform.rotation!= Quaternion.LookRotation(Vector3.forward, direction))
                 {
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, 
                     Quaternion.LookRotation(Vector3.forward, direction), rotationSpeed * Time.fixedDeltaTime);
                 }
+                else
+                {
+                    if (Time.time >= shotTime)
+                    {
+                        Instantiate(bullet, shotPos.position, transform.rotation);
+                        shotTime = Time.time + timeBetweenShots;
+                    }
+
+                }
             }
 
-            if (Time.time >= shotTime)
-            {
-                Instantiate(bullet, shotPos.position, transform.rotation);
-                shotTime = Time.time + timeBetweenShots;
-            }
         }
         if (Input.GetMouseButtonUp(0))
         {
