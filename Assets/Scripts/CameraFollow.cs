@@ -17,7 +17,7 @@ namespace Basics
 
         void Start()
         {
-            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+            ResetFollow();
         }
         void FixedUpdate()
         {
@@ -32,6 +32,11 @@ namespace Basics
         private void LateUpdate()
         {
             transform.position = smoothedPosition;
+        }
+
+        public void ResetFollow()
+        {
+                playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         }
     }
 }

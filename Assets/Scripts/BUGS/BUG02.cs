@@ -11,7 +11,6 @@ namespace BUGS
 
         void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("OnTriggerEnter");
             if (collision.tag == "Player")
             {
                 cameraFollow = GameObject.FindGameObjectWithTag("Camera").GetComponent<Basics.CameraFollow>();

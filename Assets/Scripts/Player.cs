@@ -51,23 +51,23 @@ public class Player : MonoBehaviour
         else
             rb.MovePosition(rb.position + movementInput * movementSpeed * Time.fixedDeltaTime / Mathf.Sqrt(2));
 
-        if (weapon.isShooting == false && movementInput != Vector2.zero)
+        if (weapon != null && weapon.isShooting == false && movementInput != Vector2.zero)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation,
                 Quaternion.LookRotation(Vector3.forward, movementInput), rotationSpeed * Time.fixedDeltaTime);
         }
     }
 
-    //public void takeDamage(int damage)
-    //{
-    //    health -= damage;
-    //    if (health <= 0)
-    //        Destroy(gameObject);
+    public void takeDamage(int damage)
+    {
+       health -= damage;
+       if (health <= 0)
+           Destroy(gameObject);
     //    UpdateLife();
-    //}
+    }
 
-    //public void UpdateLife()
-    //{
+    // public void UpdateLife()
+    // {
     //    for (int i = 0; i < hearts.Length; i++)
     //    {
     //        if (i < health)
@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
     //        else
     //            hearts[i].sprite = emptyHeart;
     //    }
-    //}
+    // }
 
     //public void Heal(int healAmount)
     //{

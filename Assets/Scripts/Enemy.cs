@@ -8,8 +8,8 @@ public class Enemy : MonoBehaviour
     public int attackPower;
     public float timeBetweenAttack;
     public float speed;
-    public int healthDropChance;
-    public GameObject healthDrop;
+    // public int healthDropChance;
+    // public GameObject healthDrop;
 
     [HideInInspector]
     public Transform player;
@@ -25,10 +25,10 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            if (Random.Range(0, 100) <= healthDropChance)
-            {
-                Instantiate(healthDrop, transform.position, transform.rotation);
-            }
+            // if (Random.Range(0, 100) <= healthDropChance)
+            // {
+            //     Instantiate(healthDrop, transform.position, transform.rotation);
+            // }
             Destroy(gameObject);
         }
     }
