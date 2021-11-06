@@ -14,6 +14,8 @@ public class Weapon : MonoBehaviour
     private Player player;
     private Quaternion rotation;
 
+    private Quaternion BuggedDirection;
+
     void Start()
     {
         shotTime = 0;
@@ -44,7 +46,7 @@ public class Weapon : MonoBehaviour
                 {
                     if (Time.time >= shotTime)
                     {
-                        Instantiate(bullet, shotPos.position, transform.rotation);
+                        Instantiate(bullet, shotPos.position, transform.rotation * BuggedDirection);
                         shotTime = Time.time + timeBetweenShots;
                     }
 
