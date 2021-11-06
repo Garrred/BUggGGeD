@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public float slowRatio;
 
     public int health;
-    private bool enableMovement;
+    private bool enableMovement = true;
 
     private Rigidbody2D rb;
     private Vector2 movementInput;
