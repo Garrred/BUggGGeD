@@ -18,6 +18,7 @@ public class Weapon : MonoBehaviour
 
     void Start()
     {
+        BuggedDirection = Quaternion.Euler(0, 0, 0);
         shotTime = 0;
         isShooting = false;
         player = GetComponentInParent<Player>();
@@ -58,5 +59,17 @@ public class Weapon : MonoBehaviour
         {
             isShooting = false;
         }
+    }
+    
+
+    public void BugShootingDirection(float time)
+    {
+        BuggedDirection = Quaternion.Euler(0, 0, (Random.Range(0, 2) * 2 - 1) * 90);
+        Invoke("ResetAngle", time);
+    }
+
+    void ResetAngle()
+    {
+        BuggedDirection = Quaternion.Euler(0, 0, 0);
     }
 }

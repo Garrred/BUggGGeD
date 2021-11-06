@@ -435,8 +435,9 @@ GameObject:
   - component: {fileID: 1107321475}
   - component: {fileID: 1107321474}
   - component: {fileID: 1107321478}
+  - component: {fileID: 1107321479}
   m_Layer: 0
-  m_Name: BugBullet_05
+  m_Name: BugBullet_05_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -558,6 +559,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityTime: 3
+--- !u!114 &1107321479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107321473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7855737127380954eaaec4eac80a8173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buggedAngleTime: 5
 --- !u!1 &1447192852
 GameObject:
   m_ObjectHideFlags: 0
