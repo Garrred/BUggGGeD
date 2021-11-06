@@ -28,6 +28,14 @@ namespace Basics
                 Vector2 targetPosition = new Vector2(clampedX, clampedY) + offset;
                 smoothedPosition = Vector2.Lerp(transform.position, targetPosition, followSpeed * Time.fixedDeltaTime);
             }
+            if (playerTransform == null)
+            {
+                try {
+                    playerTransform = GameObject.FindGameObjectWithTag("FakePlayer").transform;
+                } catch {
+                    playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+                }
+            }
         }
         private void LateUpdate()
         {

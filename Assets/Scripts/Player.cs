@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
         else
             rb.MovePosition(rb.position + movementInput * movementSpeed * Time.fixedDeltaTime / Mathf.Sqrt(2));
 
-        if (weapon.isShooting == false && movementInput != Vector2.zero)
+        if (weapon != null && weapon.isShooting == false && movementInput != Vector2.zero)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation,
                 Quaternion.LookRotation(Vector3.forward, movementInput), rotationSpeed * Time.fixedDeltaTime);

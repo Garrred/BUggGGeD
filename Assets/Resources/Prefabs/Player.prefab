@@ -5733,7 +5733,7 @@ GameObject:
   - component: {fileID: 1150876062}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Player
+  m_TagString: FakePlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5775,7 +5775,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &3216400643999096667
 CircleCollider2D:
   m_ObjectHideFlags: 0
