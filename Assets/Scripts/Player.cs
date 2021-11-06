@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public float slowRatio;
 
     public int health;
+    private bool enableMovement;
 
     private Rigidbody2D rb;
     private Vector2 movementInput;
@@ -46,16 +47,19 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if ((movementInput.x == 0 && movementInput.y != 0) || (movementInput.x != 0 && movementInput.y == 0))
-            rb.MovePosition(rb.position + movementInput * movementSpeed * Time.fixedDeltaTime);
-        else
-            rb.MovePosition(rb.position + movementInput * movementSpeed * Time.fixedDeltaTime / Mathf.Sqrt(2));
-
-        if (weapon != null && weapon.isShooting == false && movementInput != Vector2.zero)
+        if (enableMovement)
         {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation,
-                Quaternion.LookRotation(Vector3.forward, movementInput), rotationSpeed * Time.fixedDeltaTime);
+            if ((movementInput.x == 0 && movementInput.y != 0) || (movementInput.x != 0 && movementInput.y == 0))
+                rb.MovePosition(rb.position + movementInput * movementSpeed * Time.fixedDeltaTime);
+            else
+                rb.MovePosition(rb.position + movementInput * movementSpeed * Time.fixedDeltaTime / Mathf.Sqrt(2));
+            if (weapon != null && weapon.isShooting == false && movementInput != Vector2.zero)
+            {
+                transform.rotation = Quaternion.RotateTowards(transform.rotation,
+                    Quaternion.LookRotation(Vector3.forward, movementInput), rotationSpeed * Time.fixedDeltaTime);
+            }
         }
+
     }
 
     public void takeDamage(int damage)
@@ -85,4 +89,17 @@ public class Player : MonoBehaviour
     //        UpdateLife();
     //    }
     //}
+
+    public void Dizzy(float duration)
+    {
+        enableMovement = false;
+        weapon.enabled = false;
+        Invoke("EnableMovement", duration);
+    }
+
+    void EnableMovement()
+    {
+        enableMovement = true;
+        weapon.enabled = true;
+    }
 }

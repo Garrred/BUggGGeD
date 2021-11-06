@@ -35,7 +35,6 @@ public class Weapon : MonoBehaviour
             if (isShooting)
             {
                 Vector2 direction = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
- 
                 if (transform.rotation!= Quaternion.LookRotation(Vector3.forward, direction))
                 {
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, 
