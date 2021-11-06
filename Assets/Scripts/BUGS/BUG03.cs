@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class BUG03 : MonoBehaviour
 {
+    public ParticleSystem ps;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -15,16 +16,17 @@ public class BUG03 : MonoBehaviour
     {
         
     }
-
-    void OnCollisionEnter2D(Collision2D collision)
+    
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Enter");
-        if (collision.gameObject.tag == "FakePlayer")
+        if (other.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<Player>().enabled = true;
-            collision.gameObject.GetComponent<Weapon>().enabled = true;
-            collision.gameObject.tag = "Player";
-            Destroy(gameObject);
+            other.gameObject.tag = "FakePlayer";
+            other.gameObject.GetComponent<Player>().enabled = false;
+            other.gameObject.GetComponent<Weapon>().enabled = false;
+            Instantiate(ps, transform.position - new Vector3(-5f, -5f, 0f), Quaternion.identity);
+            GameObject.FindGameObjectWithTag("Camera").GetComponent<Basics.CameraFollow>().ResetFollow();
+            
         }
     }
 }

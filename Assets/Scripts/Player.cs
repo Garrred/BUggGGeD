@@ -58,16 +58,16 @@ public class Player : MonoBehaviour
         }
     }
 
-    //public void takeDamage(int damage)
-    //{
-    //    health -= damage;
-    //    if (health <= 0)
-    //        Destroy(gameObject);
+    public void takeDamage(int damage)
+    {
+       health -= damage;
+       if (health <= 0)
+           Destroy(gameObject);
     //    UpdateLife();
-    //}
+    }
 
-    //public void UpdateLife()
-    //{
+    // public void UpdateLife()
+    // {
     //    for (int i = 0; i < hearts.Length; i++)
     //    {
     //        if (i < health)
@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
     //        else
     //            hearts[i].sprite = emptyHeart;
     //    }
-    //}
+    // }
 
     //public void Heal(int healAmount)
     //{
