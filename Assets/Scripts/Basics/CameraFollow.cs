@@ -36,7 +36,7 @@ namespace Basics
 
         public void ResetFollow()
         {
-                playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         }
     }
 }

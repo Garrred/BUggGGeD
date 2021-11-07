@@ -2,20 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BUG07 : MonoBehaviour
+namespace BUGS
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void OnTriggerEnter2D(Collider2D other)
+    public class BUG07 : MonoBehaviour
     {
-        if (other.gameObject.tag == "Player")
+        // Start is called before the first frame update
+        void Start()
         {
-            other.GetComponent<Weapon>().BugNum = 7;
+
+        }
+
+        // Update is called once per frame
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                other.GetComponent<Attacks.Weapon>().BugNum = 7;
+            }
         }
     }
 }
