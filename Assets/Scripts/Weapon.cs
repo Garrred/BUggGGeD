@@ -8,6 +8,7 @@ public class Weapon : MonoBehaviour
     public Transform shotPos;
     public float timeBetweenShots;
     public float rotationSpeed;
+    public float BugNum;
 
     private float shotTime;
     public bool isShooting;
@@ -15,13 +16,13 @@ public class Weapon : MonoBehaviour
     private Quaternion rotation;
 
     private Quaternion BuggedDirection;
-
     void Start()
     {
         BuggedDirection = Quaternion.Euler(0, 0, 0);
         shotTime = 0;
         isShooting = false;
         player = GetComponentInParent<Player>();
+
     }
 
     // Update is called once per frame
@@ -47,8 +48,15 @@ public class Weapon : MonoBehaviour
                 {
                     if (Time.time >= shotTime)
                     {
-                        Instantiate(bullet, shotPos.position, transform.rotation * BuggedDirection);
-                        shotTime = Time.time + timeBetweenShots;
+                        if (BugNum == 7)
+                        {
+                            this.transform.Translate(Vector2.up * 10 * Time.deltaTime);
+                        }
+                        else
+                        {
+                            Instantiate(bullet, shotPos.position, transform.rotation * BuggedDirection);
+                            shotTime = Time.time + timeBetweenShots;
+                        }
                     }
 
                 }
