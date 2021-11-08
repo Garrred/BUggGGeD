@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class BUGFrame : MonoBehaviour
 {
+    [HideInInspector]
     public string BUGNumber;
     public float lastingTime = 5f;
     public float remainingTime = -10f;
 
+
+    [HideInInspector]
     public Collider2D collision;
 
     void OnTriggerEnter2D(Collider2D other)
@@ -17,9 +20,10 @@ public class BUGFrame : MonoBehaviour
             this.collision = other;
             remainingTime = lastingTime;
             BugStart();
-            Invoke("EndBug", remainingTime);
+            Invoke("BugEnd", remainingTime);
         }
     }
+
     public virtual void BugStart() 
     {
         Debug.Log("This bug is not implemented");

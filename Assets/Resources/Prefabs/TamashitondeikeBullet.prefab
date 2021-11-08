@@ -55,7 +55,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: TamashitondeikeBullet
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6262846562361371325, guid: b31651638e726ba4f84b8eefba832469, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b31651638e726ba4f84b8eefba832469, type: 3}
 --- !u!1 &692050837048482639 stripped
 GameObject:
@@ -74,4 +75,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe59af662dbe263419a38ece440e4e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BUGNumber: 
+  lastingTime: 5
+  remainingTime: -10
+  collision: {fileID: 0}
   ps: {fileID: 8830077744287951606, guid: fa9a0871af5c1d546adf9217df7901a9, type: 3}
+  cam: {fileID: 3527304499553222904, guid: 2ba8ceb7211821a43b8c532225010c61, type: 3}
+--- !u!114 &4521776433356868184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692050837048482639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34639bd0c237654409eb2a8e68bfd2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 10
+  bulletLifeTime: 5
+  spark: {fileID: 0}
+  damage: 1

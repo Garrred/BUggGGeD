@@ -4853,6 +4853,7 @@ MonoBehaviour:
   rotationSpeed: 1000
   slowRatio: 0.5
   health: 10
+  enableMovement: 1
 --- !u!50 &8830077744287951611
 Rigidbody2D:
   serializedVersion: 4

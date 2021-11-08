@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2170877412027227680}
   - component: {fileID: 2170877412027227710}
   - component: {fileID: 5938253805284043534}
-  - component: {fileID: -6262846562361371325}
   - component: {fileID: -1631320592600344624}
+  - component: {fileID: 5502475984648204107}
   m_Layer: 0
   m_Name: 04_Bullet
   m_TagString: Untagged
@@ -196,28 +196,12 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.0000001, y: 2}
   m_Direction: 0
---- !u!114 &-6262846562361371325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2170877412027227711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe22190f84371ea48a345550f1b47c74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpeed: 10
-  bulletLifeTime: 5
-  spark: {fileID: 0}
-  damage: 1
 --- !u!114 &-1631320592600344624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +214,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ac9f6a1c9d9448ab63783a4585aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BUGNumber: 
+  lastingTime: 3
+  remainingTime: -10
+  collision: {fileID: 0}
   rotationSpeed: 1000
-  rotationTime: 3
-  isRotating: 0
+  player: {fileID: 0}
+--- !u!114 &5502475984648204107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2170877412027227711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34639bd0c237654409eb2a8e68bfd2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 10
+  bulletLifeTime: 5
+  spark: {fileID: 0}
+  damage: 1
