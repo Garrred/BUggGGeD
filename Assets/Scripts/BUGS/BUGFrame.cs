@@ -8,7 +8,7 @@ public class BUGFrame : MonoBehaviour
     public float lastingTime;
     private float remainingTime = -10f;
 
-    public Collision2D collision;
+    public Collider2D collision;
 
     // Start is called before the first frame update
     void Start()
@@ -16,34 +16,21 @@ public class BUGFrame : MonoBehaviour
         remainingTime = lastingTime;
     }
 
-    // // Update is called once per frame
-    // void Update()
-    // {
-    //     if (remainingTime > 0)
-    //     {
-    //         remainingTime -= Time.deltaTime;
-    //     }
-    //     else if (remainingTime >= -1)
-    //     {
-    //         Destroy(gameObject);
-    //     }
-    // }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
+            this.collision = other;
             BugEffect();
             Invoke("EndBug", lastingTime);
         }
     }
-
-    void BugEffect() 
+    public virtual void BugEffect() 
     {
         Debug.Log("This bug is not implemented");
     }
-
-    void EndBug()
+    public virtual void EndBug()
     {
         Debug.Log("This bug is not implemented");
     }

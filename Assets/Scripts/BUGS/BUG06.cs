@@ -5,28 +5,17 @@ using UnityEngine;
 namespace BUGS
 {
 
-    public class BUG06 : MonoBehaviour
+    public class BUG06 : BUGFrame
     {
-        public float buggedAngleTime = 5f;
-        // Start is called before the first frame update
         void Start()
         {
-
+            BUGNumber = "06";
+            lastingTime = 5f;
         }
 
-        // Update is called once per frame
-        void Update()
+        public override void BugEffect()
         {
-
+            collision.GetComponent<Attacks.Weapon>().BugShootingDirection(lastingTime);
         }
-
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.gameObject.tag == "Player")
-            {
-                other.GetComponent<Attacks.Weapon>().BugShootingDirection(buggedAngleTime);
-            }
-        }
-
     }
 }
