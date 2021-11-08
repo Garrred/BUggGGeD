@@ -4,20 +4,29 @@ using UnityEngine;
 
 namespace BUGS
 {
-    public class BUG01 : MonoBehaviour
+    public class BUG01 : BUGFrame
     {
         public Basics.Player player;
-        // Start is called before the first frame update
+        public Sprite basicBullet;
+        public GameObject playerBullet;
+        public GameObject playerBody;
 
-        void OnTriggerEnter2D(Collider2D other)
+        private GameObject originalBullet;
+
+        public override void BugStart()
         {
-            if (other.tag == "Player")
-            {
-                player = other.GetComponent<Basics.Player>();
-                player.GetComponent<Attacks.Weapon>().bullet = Resources.Load<GameObject>("Prefabs/Player_Bullet");
-                player.transform.Find("Player_Body").gameObject.SetActive(false);
-                player.transform.Find("ShootPos").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BasicBullet");
-            }
+            player = collision.GetComponent<Basics.Player>();
+            originalBullet = player.GetComponent<Attacks.Weapon>().bullet;
+            player.GetComponent<Attacks.Weapon>().bullet = playerBullet;
+            playerBody.SetActive(false);
+            player.transform.Find("ShootPos").GetComponent<SpriteRenderer>().sprite = basicBullet;
+        }
+
+        public override void BugEnd()
+        {
+            player.GetComponent<Attacks.Weapon>().bullet = originalBullet;
+            playerBody.SetActive(true);
+            player.transform.Find("ShootPos").GetComponent<SpriteRenderer>().sprite = null;
         }
     }
 }

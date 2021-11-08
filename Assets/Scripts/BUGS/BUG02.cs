@@ -4,24 +4,19 @@ using UnityEngine;
 
 namespace BUGS
 {
-    public class BUG02 : MonoBehaviour
+    public class BUG02 : BUGFrame
     {
-        public Basics.CameraFollow cameraFollow;
-        public float sleepTime = 5f;
+        public GameObject cam;
+        private Basics.CameraFollow cameraFollow;
 
-        void OnTriggerEnter2D(Collider2D collision)
+        public override void BugStart()
         {
-            if (collision.tag == "Player")
-            {
-                cameraFollow = GameObject.FindGameObjectWithTag("Camera").GetComponent<Basics.CameraFollow>();
-                StartCoroutine(WaitForSleep(sleepTime));
-            }
+            cameraFollow = cam.GetComponent<Basics.CameraFollow>();
+            cameraFollow.isSleeping = true;
         }
 
-        IEnumerator WaitForSleep(float sleepTime)
+        public override void BugEnd()
         {
-            cameraFollow.isSleeping = true;
-            yield return new WaitForSeconds(sleepTime);
             cameraFollow.isSleeping = false;
         }
     }
