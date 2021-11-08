@@ -5,37 +5,27 @@ using UnityEngine;
 namespace BUGS
 {
 
-    public class BUG05 : MonoBehaviour
+    public class BUG05 : BUGFrame
     {
         private Rigidbody2D bulletRB;
         private Rigidbody2D playerRB;
-        public float gravityTime = 3f;
-        // Start is called before the first frame update
+
         void Start()
         {
-
+            BUGNumber = "05";
+            lastingTime = 5f;
         }
 
-        // Update is called once per frame
-        void Update()
+        public override void BugStart()
         {
-
+            playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
+            playerRB.gravityScale = 10f;
+            bulletRB = collision.gameObject.GetComponent<Attacks.Weapon>().bullet.GetComponent<Rigidbody2D>();
+            bulletRB.gravityScale = 1f;
         }
 
-        void OnTriggerEnter2D(Collider2D other)
+        public override void BugEnd()
         {
-            if (other.gameObject.tag == "Player")
-            {
-                playerRB = other.gameObject.GetComponent<Rigidbody2D>();
-                playerRB.gravityScale = 10f;
-                bulletRB = other.gameObject.GetComponent<Attacks.Weapon>().bullet.GetComponent<Rigidbody2D>();
-                bulletRB.gravityScale = 1f;
-                StartCoroutine(Wait(gravityTime));
-            }
-        }
-        IEnumerator Wait(float time)
-        {
-            yield return new WaitForSeconds(time);
             bulletRB.gravityScale = 0f;
             playerRB.gravityScale = 0f;
         }

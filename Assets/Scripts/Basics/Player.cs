@@ -12,7 +12,7 @@ namespace Basics
         public float slowRatio;
 
         public int health;
-        private bool enableMovement = true;
+        public bool enableMovement = true;
 
         private Rigidbody2D rb;
         private Vector2 movementInput;
@@ -91,18 +91,5 @@ namespace Basics
         //        UpdateLife();
         //    }
         //}
-
-        public void Dizzy(float duration)
-        {
-            enableMovement = false;
-            weapon.enabled = false;
-            Invoke("EnableMovement", duration);
-        }
-
-        void EnableMovement()
-        {
-            enableMovement = true;
-            weapon.enabled = true;
-        }
     }
 }

@@ -4,16 +4,11 @@ using UnityEngine;
 
 namespace BUGS
 {
-    public class BUG04 : MonoBehaviour
+    public class BUG04 : BUGFrame
     {
-        // Start is called before the first frame update
         public float rotationSpeed = 10f;
-        public float rotationTime = 3f;
-        public bool isRotating = false;
-        public Collision2D collision;
-
-        private float remainingTime;
-
+        public Basics.Player player;
+        private Attacks.Weapon weapon;
         void Update()
         {
             if (remainingTime > 0)
@@ -22,15 +17,21 @@ namespace BUGS
                 collision.transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime * remainingTime);
             }
         }
-        void OnCollisionEnter2D(Collision2D collision)
+
+        public override void BugStart()
         {
-            if (collision.gameObject.tag == "Player")
-            {
-                this.collision = collision;
-                remainingTime = rotationTime;
-                collision.gameObject.GetComponent<Basics.Player>().Dizzy(rotationTime);
-            }
+            player = collision.GetComponent<Basics.Player>();
+            weapon = player.GetComponent<Attacks.Weapon>();
+
+            player.enableMovement = false;
+            weapon.enabled = false;
+
         }
 
+        public override void BugEnd()
+        {
+            player.enableMovement = true;
+            weapon.enabled = true;
+        }
     }
 }

@@ -5,32 +5,26 @@ using UnityEngine;
 public class BUGFrame : MonoBehaviour
 {
     public string BUGNumber;
-    public float lastingTime;
-    private float remainingTime = -10f;
+    public float lastingTime = 5f;
+    public float remainingTime = -10f;
 
     public Collider2D collision;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        remainingTime = lastingTime;
-    }
-
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             this.collision = other;
-            BugEffect();
-            Invoke("EndBug", lastingTime);
+            remainingTime = lastingTime;
+            BugStart();
+            Invoke("EndBug", remainingTime);
         }
     }
-    public virtual void BugEffect() 
+    public virtual void BugStart() 
     {
         Debug.Log("This bug is not implemented");
     }
-    public virtual void EndBug()
+    public virtual void BugEnd()
     {
         Debug.Log("This bug is not implemented");
     }

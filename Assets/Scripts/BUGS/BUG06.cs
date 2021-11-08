@@ -13,9 +13,16 @@ namespace BUGS
             lastingTime = 5f;
         }
 
-        public override void BugEffect()
+        // TODO: Delete the method in Player's script
+        public override void BugStart()
         {
-            collision.GetComponent<Attacks.Weapon>().BugShootingDirection(lastingTime);
+            collision.GetComponent<Attacks.Weapon>().buggedDirection = 
+                Quaternion.Euler(0, 0, (Random.Range(0, 2) * 2 - 1) * 90);
+        }
+
+        public override void BugEnd()
+        {
+            collision.GetComponent<Attacks.Weapon>().buggedDirection = Quaternion.Euler(0, 0, 0);
         }
     }
 }

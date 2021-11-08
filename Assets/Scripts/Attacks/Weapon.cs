@@ -17,10 +17,9 @@ namespace Attacks
         private Basics.Player player;
         private Quaternion rotation;
 
-        private Quaternion BuggedDirection;
+        public Quaternion buggedDirection = Quaternion.Euler(0, 0, 0);
         void Start()
         {
-            BuggedDirection = Quaternion.Euler(0, 0, 0);
             shotTime = 0;
             isShooting = false;
             player = GetComponentInParent<Basics.Player>();
@@ -56,7 +55,7 @@ namespace Attacks
                             }
                             else
                             {
-                                Instantiate(bullet, shotPos.position, transform.rotation * BuggedDirection);
+                                Instantiate(bullet, shotPos.position, transform.rotation *buggedDirection);
                                 shotTime = Time.time + timeBetweenShots;
                             }
                         }
@@ -69,18 +68,6 @@ namespace Attacks
             {
                 isShooting = false;
             }
-        }
-
-
-        public void BugShootingDirection(float time)
-        {
-            BuggedDirection = Quaternion.Euler(0, 0, (Random.Range(0, 2) * 2 - 1) * 90);
-            Invoke("ResetAngle", time);
-        }
-
-        void ResetAngle()
-        {
-            BuggedDirection = Quaternion.Euler(0, 0, 0);
         }
     }
 }
