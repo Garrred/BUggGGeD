@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2170877412027227680}
   - component: {fileID: 2170877412027227710}
   - component: {fileID: 5938253805284043534}
-  - component: {fileID: -6262846562361371325}
+  - component: {fileID: -651430483046015327}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -201,7 +201,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.0000001, y: 2}
   m_Direction: 0
---- !u!114 &-6262846562361371325
+--- !u!114 &-651430483046015327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,10 +210,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2170877412027227711}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe22190f84371ea48a345550f1b47c74, type: 3}
+  m_Script: {fileID: 11500000, guid: 34639bd0c237654409eb2a8e68bfd2fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 5
+  bulletSpeed: 10
   bulletLifeTime: 5
   spark: {fileID: 0}
-  damage: 3
+  damage: 0

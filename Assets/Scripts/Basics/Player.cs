@@ -13,6 +13,7 @@ namespace Basics
 
         public int health;
         public bool enableMovement = true;
+        public bool isSticky = false;
 
         private Rigidbody2D rb;
         private Vector2 movementInput;
@@ -60,6 +61,22 @@ namespace Basics
                     transform.rotation = Quaternion.RotateTowards(transform.rotation,
                         Quaternion.LookRotation(Vector3.forward, movementInput), rotationSpeed * Time.fixedDeltaTime);
                 }
+            }
+        }
+
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (isSticky)
+            {
+                other.transform.SetParent(transform);
+            }
+            else
+            {
+                // if (other.gameObject.CompareTag("Enemy"))
+                // {
+                //     // takeDamage();
+                //     //UpdateLife();
+                // }
             }
 
         }
