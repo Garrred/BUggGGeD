@@ -49,15 +49,8 @@ namespace Attacks
                     {
                         if (Time.time >= shotTime)
                         {
-                            if (BugNum == 7)
-                            {
-                                this.transform.Translate(Vector2.up * 10 * Time.deltaTime);
-                            }
-                            else
-                            {
-                                Instantiate(bullet, shotPos.position, transform.rotation *buggedDirection);
-                                shotTime = Time.time + timeBetweenShots;
-                            }
+                            Instantiate(bullet, shotPos.position, transform.rotation *buggedDirection);
+                            shotTime = Time.time + timeBetweenShots;
                         }
 
                     }
