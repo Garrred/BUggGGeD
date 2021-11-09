@@ -16,6 +16,7 @@ namespace Attacks
         public bool isShooting;
         private Basics.Player player;
         private Quaternion rotation;
+        public bool rotationFreezed = false;
 
         public Quaternion buggedDirection = Quaternion.Euler(0, 0, 0);
         void Start()
@@ -40,7 +41,7 @@ namespace Attacks
                 if (isShooting)
                 {
                     Vector2 direction = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
-                    if (transform.rotation != Quaternion.LookRotation(Vector3.forward, direction))
+                    if (!rotationFreezed && transform.rotation != Quaternion.LookRotation(Vector3.forward, direction))
                     {
                         transform.rotation = Quaternion.RotateTowards(transform.rotation,
                         Quaternion.LookRotation(Vector3.forward, direction), rotationSpeed * Time.fixedDeltaTime);
