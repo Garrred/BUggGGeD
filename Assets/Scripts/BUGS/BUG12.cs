@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BUG12 : BUGFrame
+namespace BUGS
 {
-    public override void BugStart()
+    public class BUG12 : BUGFrame
     {
-        collision.GetComponent<Attacks.Weapon>().rotationFreezed = true;
-    }
+        public override void BugStart()
+        {
+            collision.GetComponent<Attacks.Weapon>().rotationFreezed = true;
+        }
 
-    public override void BugEnd()
-    {
-        collision.GetComponent<Attacks.Weapon>().rotationFreezed = false;
-    }
+        public override void BugEnd()
+        {
+            collision.GetComponent<Attacks.Weapon>().rotationFreezed = false;
+        }
 
+    }
 }

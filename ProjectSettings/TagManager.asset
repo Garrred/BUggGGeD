@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Camera
   - FakePlayer
+  - Sanzou
   layers:
   - Default
   - TransparentFX
