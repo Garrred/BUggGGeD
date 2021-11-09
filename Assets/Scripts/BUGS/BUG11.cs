@@ -2,15 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BUG11 : BUGFrame
+namespace BUGS
 {
-    public override void BugStart()
+    public class BUG11 : BUGFrame
     {
-        collision.transform.position += new Vector3(0f, 0f, 100f);
-    }
+        SpriteRenderer[] playerSprites;
+        public override void BugStart()
+        {
+            playerSprites = collision.gameObject.GetComponentsInChildren<SpriteRenderer>();
+            foreach (SpriteRenderer sprite in playerSprites)
+            {
+                sprite.enabled = false;
+            }
+        }
 
-    public override void BugEnd()
-    {
-        collision.transform.position += new Vector3(0f, 0f, -100f);
+        public override void BugEnd()
+        {
+            foreach (SpriteRenderer sprite in playerSprites)
+            {
+                sprite.enabled = true;
+            }
+        }
     }
 }
