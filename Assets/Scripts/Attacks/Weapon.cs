@@ -19,18 +19,19 @@ namespace Attacks
         public bool rotationFreezed = false;
 
         public Quaternion buggedDirection = Quaternion.Euler(0, 0, 0);
+        public Basics.GameControl gameManager;
         void Start()
         {
             shotTime = 0;
             isShooting = false;
             player = GetComponentInParent<Basics.Player>();
-
+            gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Basics.GameControl>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetMouseButton(0))
+            if (!gameManager.isPaused && Input.GetMouseButton(0))
             {
                 isShooting = true;
                 if (Input.GetMouseButtonUp(0))
