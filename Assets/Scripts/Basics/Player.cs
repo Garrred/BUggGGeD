@@ -16,7 +16,7 @@ namespace Basics
         public bool isSticky = false;
 
         private Rigidbody2D rb;
-        private Vector2 movementInput;
+        public Vector2 movementInput;
         private Vector2 playerRotation;
         private Attacks.Weapon weapon;
 

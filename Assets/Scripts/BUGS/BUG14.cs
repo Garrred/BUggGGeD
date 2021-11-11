@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace BUGS
 {
-    public class BUG16 : BUGFrame
+    public class BUG14 : BUGFrame
     {
-        private float freezeTime = 0f;
+        private float freezeTime = 1f;
         private Transform player;
         private Transform enemies;
         // Start is called before the first frame update
@@ -29,6 +29,7 @@ namespace BUGS
                     {
                         Freeze();
                         freezeTime = Random.Range(0.2f, 0.5f);
+                        StartCoroutine(Melt());
                     }
                 }
             }
@@ -36,18 +37,19 @@ namespace BUGS
 
         public override void BugStart()
         {
-            Time.timeScale = 0;
-            
         }
-
+        public override void BugEnd()
+        {
+        }
         public void Freeze()
         {
             Time.timeScale = 0f;
         }
-        public void Melt()
+        IEnumerator Melt()
         {
+            yield return new WaitForSecondsRealtime(freezeTime);
             Time.timeScale = 1f;
-            player.Translate(Vector3.forward * freezeTime);
+            player.Translate(player.GetComponent<Basics.Player>().movementInput * 2 * freezeTime);
         }
     }
 }

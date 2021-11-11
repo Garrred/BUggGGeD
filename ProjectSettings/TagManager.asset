@@ -9,6 +9,7 @@ TagManager:
   - Sanzou
   - GameManager
   - Enemy
+  - WaveSpawner
   layers:
   - Default
   - TransparentFX
