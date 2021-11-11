@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5913972251681258631}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!96 &31308632
 TrailRenderer:
@@ -159,7 +159,7 @@ Transform:
   m_LocalScale: {x: 0.23279, y: 0.23279, z: 0.23279}
   m_Children: []
   m_Father: {fileID: 5913972251681258631}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &563789051
 SpriteRenderer:
@@ -698,7 +698,7 @@ Transform:
   - {fileID: 1513902327226067920}
   - {fileID: 6536588719214882164}
   m_Father: {fileID: 5913972251681258631}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7441019361199678730
 SpriteRenderer:
@@ -5718,36 +5718,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &8158389738982008801
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7055773093092105364}
-  m_Layer: 6
-  m_Name: PlayerBullets
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7055773093092105364
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8158389738982008801}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5913972251681258631}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8242996626399774657
 GameObject:
   m_ObjectHideFlags: 0
@@ -5780,7 +5750,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7055773093092105364}
   - {fileID: 3935512758001896464}
   - {fileID: 555371549}
   - {fileID: 31308631}
@@ -5842,6 +5811,7 @@ MonoBehaviour:
   health: 10
   enableMovement: 1
   isSticky: 0
+  movementInput: {x: 0, y: 0}
 --- !u!114 &1150876062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5863,6 +5833,7 @@ MonoBehaviour:
   rotationFreezed: 0
   buggedDirection: {x: 0, y: 0, z: 0, w: 1}
   gameManager: {fileID: 0}
+  playerBullets: {fileID: 0}
 --- !u!61 &4428323410993987796
 BoxCollider2D:
   m_ObjectHideFlags: 0

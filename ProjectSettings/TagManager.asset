@@ -10,6 +10,8 @@ TagManager:
   - GameManager
   - Enemy
   - WaveSpawner
+  - PlayerBullet
+  - PlayerBullets
   layers:
   - Default
   - TransparentFX

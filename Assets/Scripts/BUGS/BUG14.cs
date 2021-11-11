@@ -8,12 +8,13 @@ namespace BUGS
     {
         private float freezeTime = 1f;
         private Transform player;
+        private Basics.Player playerScript;
         private Transform enemies;
+        private Transform playerBullets;
+        private Attacks.Weapon weaponScript;
         // Start is called before the first frame update
         void Start()
         {
-            player = GameObject.FindGameObjectWithTag("Player").transform;
-            enemies = GameObject.FindGameObjectWithTag("WaveSpawner").transform.GetChild(0);
         }
 
         // Update is called once per frame
@@ -37,19 +38,28 @@ namespace BUGS
 
         public override void BugStart()
         {
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+            playerScript = player.GetComponent<Basics.Player>();
+            enemies = GameObject.FindGameObjectWithTag("WaveSpawner").transform.GetChild(0);
+            playerBullets = GameObject.FindGameObjectWithTag("PlayerBullets").transform;
+            weaponScript = collision.GetComponent<Attacks.Weapon>();
         }
         public override void BugEnd()
         {
         }
         public void Freeze()
         {
+            weaponScript.rotationFreezed = true;
             Time.timeScale = 0f;
         }
         IEnumerator Melt()
         {
             yield return new WaitForSecondsRealtime(freezeTime);
+            weaponScript.rotationFreezed = false;
             Time.timeScale = 1f;
-            player.Translate(player.GetComponent<Basics.Player>().movementInput * 2 * freezeTime);
+            player.Translate(playerScript.movementInput * 2 * freezeTime);
+            playerBullets.Translate(Vector3.up * 2 * freezeTime);
+            enemies.Translate(Vector3.up * 2 * freezeTime);
         }
     }
 }

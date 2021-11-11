@@ -20,6 +20,7 @@ namespace Attacks
 
         public Quaternion buggedDirection = Quaternion.Euler(0, 0, 0);
         public Basics.GameControl gameManager;
+        public Transform playerBullets;
         void Start()
         {
             shotTime = 0;
@@ -52,7 +53,7 @@ namespace Attacks
                         if (Time.time >= shotTime)
                         {
                             GameObject currentBullet = Instantiate(bullet, shotPos.position, transform.rotation *buggedDirection);
-                            currentBullet.transform.SetParent(transform.GetChild(0));
+                            currentBullet.transform.SetParent(playerBullets);
                             shotTime = Time.time + timeBetweenShots;
                         }
 
