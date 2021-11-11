@@ -31,21 +31,21 @@ namespace Enemies
                 Attack();
             }
 
-            // if (player != null)
-            // {
-            //     if (Vector2.Distance(transform.position, player.position) > stopDistance)
-            //     {
-            //         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-            //     }
-            //     else
-            //     {
-            //         if (Time.time >= shootCooldown)
-            //         {
-            //             shootCooldown = Time.time + timeBetweenAttack;
-            //             // animator.SetBool("isAttacking", true);
-            //         }
-            //     }
-            // }
+            if (player != null)
+            {
+                if (Vector2.Distance(transform.position, player.position) > stopDistance)
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+                }
+                else
+                {
+                    if (Time.time >= shootCooldown)
+                    {
+                        shootCooldown = Time.time + timeBetweenAttack;
+                        // animator.SetBool("isAttacking", true);
+                    }
+                }
+            }
 
         }
 
