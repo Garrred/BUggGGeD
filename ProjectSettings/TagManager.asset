@@ -8,6 +8,7 @@ TagManager:
   - FakePlayer
   - Sanzou
   - GameManager
+  - Enemy
   layers:
   - Default
   - TransparentFX
