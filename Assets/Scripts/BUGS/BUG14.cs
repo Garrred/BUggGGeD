@@ -57,7 +57,7 @@ namespace BUGS
             yield return new WaitForSecondsRealtime(freezeTime);
             weaponScript.rotationFreezed = false;
             Time.timeScale = 1f;
-            player.Translate(playerScript.movementInput * 2 * freezeTime);
+            player.position += new Vector3(playerScript.movementInput.x, playerScript.movementInput.y, 0);
             playerBullets.Translate(Vector3.up * 2 * freezeTime);
             enemies.Translate(Vector3.up * 2 * freezeTime);
         }
