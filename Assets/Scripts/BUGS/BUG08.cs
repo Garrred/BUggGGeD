@@ -19,7 +19,8 @@ namespace BUGS
             BUGNumber = "08";
             lastingTime = 5f;
             rb = this.GetComponent<Rigidbody2D>();
-            
+            rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+
 
         }
 
