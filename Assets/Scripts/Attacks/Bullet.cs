@@ -42,6 +42,7 @@ namespace Attacks
             if (collision.tag == "Enemy")
             {
                 collision.GetComponent<Enemies.Enemy>().takeDamage(damage);
+                Destroy(gameObject);
                 //destorySpark();
             }
         }
