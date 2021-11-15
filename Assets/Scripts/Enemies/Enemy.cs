@@ -6,7 +6,9 @@ namespace Enemies
 {
     public class Enemy : MonoBehaviour
     {
+        [HideInInspector]
         public float health;
+        public float maxHealth;
         public int attackPower;
         public float timeBetweenAttack;
         public float speed;
@@ -19,6 +21,7 @@ namespace Enemies
         // Start is called before the first frame update
         public virtual void Start()
         {
+            health = maxHealth;
             player = GameObject.FindGameObjectWithTag("Player").transform;
         }
 
