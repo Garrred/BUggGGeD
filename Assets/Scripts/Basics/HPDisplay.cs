@@ -9,15 +9,42 @@ namespace Basics
     {
         public Image BossHPBar;
         public Enemies.Boss boss;
+        public CanvasGroup canvasGroup;
 
-        // Update is called once per frame
-        void Update()
+        void Start()
         {
-            BossHPBar.fillAmount = boss.health / boss.maxHealth;
+            canvasGroup = GetComponent<CanvasGroup>();
+            canvasGroup.alpha = 0;
+            BossHPBar.fillAmount = 0;
+            StartCoroutine(FillBar());
+        }
+        // Update is called once per frame
+        void FixedUpdate()
+        {
             if (boss.health <= 0)
             {
-                Destroy(gameObject);
+                if (canvasGroup.alpha > 0)
+                    canvasGroup.alpha -= Time.fixedDeltaTime;
             }
+            else 
+            {
+                if (canvasGroup.alpha < 1)
+                    canvasGroup.alpha += Time.fixedDeltaTime;
+            }
+        }
+
+        IEnumerator FillBar()
+        {
+            while (BossHPBar.fillAmount < 1)
+            {
+                BossHPBar.fillAmount += Time.deltaTime;
+                yield return null;
+            }
+        }
+
+        public void UpdateHPBar()
+        {
+            BossHPBar.fillAmount = boss.health / boss.maxHealth;
         }
     }
 }
