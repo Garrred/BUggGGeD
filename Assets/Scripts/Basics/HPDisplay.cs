@@ -26,18 +26,18 @@ namespace Basics
                 if (canvasGroup.alpha > 0)
                     canvasGroup.alpha -= Time.fixedDeltaTime;
             }
-            else 
-            {
-                if (canvasGroup.alpha < 1)
-                    canvasGroup.alpha += Time.fixedDeltaTime;
-            }
         }
 
         IEnumerator FillBar()
         {
+            while (canvasGroup.alpha < 1)
+            {
+                canvasGroup.alpha += Time.fixedDeltaTime;
+                yield return null;
+            }
             while (BossHPBar.fillAmount < 1)
             {
-                BossHPBar.fillAmount += Time.deltaTime;
+                BossHPBar.fillAmount += Time.fixedDeltaTime * 0.5f;
                 yield return null;
             }
         }

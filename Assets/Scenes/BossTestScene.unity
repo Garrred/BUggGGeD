@@ -463,7 +463,7 @@ MonoBehaviour:
   timeBetweenAttack: 0
   speed: 10
   player: {fileID: 0}
-  hpDisplay: {fileID: 0}
+  hpDisplay: {fileID: 1687060308}
 --- !u!60 &352573525
 PolygonCollider2D:
   m_ObjectHideFlags: 0

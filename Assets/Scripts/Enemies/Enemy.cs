@@ -39,10 +39,12 @@ namespace Enemies
             health -= damage;
             if (health <= 0)
             {
+                // StartCoroutine(hpDisplay.FadeOut());
                 // if (Random.Range(0, 100) <= healthDropChance)
                 // {
                 //     Instantiate(healthDrop, transform.position, transform.rotation);
                 // }
+                
                 Destroy(gameObject);
             }
         }
