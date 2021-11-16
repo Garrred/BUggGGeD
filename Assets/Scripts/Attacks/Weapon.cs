@@ -56,7 +56,6 @@ namespace Attacks
                             currentBullet.transform.SetParent(playerBullets);
                             shotTime = Time.time + timeBetweenShots;
                         }
-
                     }
                 }
 

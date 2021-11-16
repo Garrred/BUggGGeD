@@ -12,6 +12,23 @@ namespace Enemies
             health = maxHealth;
             player = GameObject.FindGameObjectWithTag("Player").transform;
             isInvincible = true;
+            StartBullet();
+        }
+
+        public void StartBullet()
+        {
+            if (stage == 0)
+            {
+                transform.Find("Stage1Bullet").gameObject.SetActive(true);
+            }
+            else if (stage == 1)
+            {
+                transform.Find("Stage2Bullet").gameObject.SetActive(true);
+            }
+            else 
+            {
+                transform.Find("Stage3Bullet").gameObject.SetActive(true);
+            }
         }
         public override void takeDamage(float damage)
         {
@@ -21,18 +38,34 @@ namespace Enemies
                 UpdateHP();
                 if (health <= 0)
                 {
+                    EndBullet();
                     if (stage == 2)
                     {
                         Destroy(gameObject);
                     }
                     else
                     {
-                        maxHealth = maxHealth * 1.25f;
-                        base.Start();
-                        hpDisplay.Start();
                         stage++;
+                        maxHealth = maxHealth * 1.25f;
+                        Start();
+                        hpDisplay.Start();
                     }
                 }
+            }
+        }
+        public void EndBullet()
+        {
+            if (stage == 0)
+            {
+                transform.Find("Stage1Bullet").gameObject.SetActive(false);
+            }
+            else if (stage == 1)
+            {
+                transform.Find("Stage2Bullet").gameObject.SetActive(false);
+            }
+            else
+            {
+                transform.Find("Stage3Bullet").gameObject.SetActive(false);
             }
         }
     }

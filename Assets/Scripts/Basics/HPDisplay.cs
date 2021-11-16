@@ -16,6 +16,7 @@ namespace Basics
             canvasGroup = GetComponent<CanvasGroup>();
             canvasGroup.alpha = 0;
             BossHPBar.fillAmount = 0;
+            boss.isInvincible = true;
             StartCoroutine(FillBar());
         }
         // Update is called once per frame
