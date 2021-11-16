@@ -11,7 +11,7 @@ namespace Basics
         public Enemies.Boss boss;
         public CanvasGroup canvasGroup;
 
-        void Start()
+        public void Start()
         {
             canvasGroup = GetComponent<CanvasGroup>();
             canvasGroup.alpha = 0;
@@ -37,9 +37,10 @@ namespace Basics
             }
             while (BossHPBar.fillAmount < 1)
             {
-                BossHPBar.fillAmount += Time.fixedDeltaTime * 0.5f;
+                BossHPBar.fillAmount += Time.fixedDeltaTime * 0.3f;
                 yield return null;
             }
+            boss.isInvincible = false;
         }
 
         public void UpdateHPBar()

@@ -14,6 +14,7 @@ namespace Enemies
         public float speed;
         // public int healthDropChance;
         // public GameObject healthDrop;
+        public bool isInvincible = false;
 
         [HideInInspector]
         public Transform player;
@@ -34,18 +35,21 @@ namespace Enemies
             player = GameObject.FindGameObjectWithTag("Player").transform;
         }
 
-        public void takeDamage(float damage)
+        public virtual void takeDamage(float damage)
         {
-            health -= damage;
-            if (health <= 0)
+            if (!isInvincible)
             {
-                // StartCoroutine(hpDisplay.FadeOut());
-                // if (Random.Range(0, 100) <= healthDropChance)
-                // {
-                //     Instantiate(healthDrop, transform.position, transform.rotation);
-                // }
-                
-                Destroy(gameObject);
+                health -= damage;
+                if (health <= 0)
+                {
+                    // StartCoroutine(hpDisplay.FadeOut());
+                    // if (Random.Range(0, 100) <= healthDropChance)
+                    // {
+                    //     Instantiate(healthDrop, transform.position, transform.rotation);
+                    // }
+
+                    Destroy(gameObject);
+                }
             }
         }
     }
