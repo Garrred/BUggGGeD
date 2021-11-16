@@ -458,10 +458,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  maxHealth: 100
+  maxHealth: 10
   attackPower: 0
   timeBetweenAttack: 0
   speed: 10
+  isInvincible: 0
   player: {fileID: 0}
   hpDisplay: {fileID: 1687060308}
 --- !u!60 &352573525

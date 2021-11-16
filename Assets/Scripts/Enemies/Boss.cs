@@ -9,14 +9,16 @@ namespace Enemies
         int stage = 0;
         public override void Start()
         {
+            health = maxHealth;
+            player = GameObject.FindGameObjectWithTag("Player").transform;
             isInvincible = true;
         }
         public override void takeDamage(float damage)
         {
             if (!isInvincible)
             {
-                Debug.Log("Boss taking damage");
                 health -= damage;
+                UpdateHP();
                 if (health <= 0)
                 {
                     if (stage == 2)
