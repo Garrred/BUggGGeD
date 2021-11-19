@@ -6,10 +6,20 @@ namespace Enemies
 {
     public class Boss : Enemy
     {
+        public Basics.HPDisplay hpDisplay;
+
         int stage = 0;
+        public void UpdateHP()
+        {
+            if (hpDisplay != null)
+            {
+                hpDisplay.UpdateHPBar();
+            }
+        }
         public override void Start()
         {
             health = maxHealth;
+            hpDisplay = GameObject.FindGameObjectWithTag("HPDisplay").GetComponent<Basics.HPDisplay>();
             player = GameObject.FindGameObjectWithTag("Player").transform;
             isInvincible = true;
             StartBullet();

@@ -19,15 +19,6 @@ namespace Enemies
         [HideInInspector]
         public Transform player;
 
-        public Basics.HPDisplay hpDisplay;
-
-        public void UpdateHP()
-        {
-            if (hpDisplay != null)
-            {
-                hpDisplay.UpdateHPBar();
-            }
-        }
         // Start is called before the first frame update
         public virtual void Start()
         {

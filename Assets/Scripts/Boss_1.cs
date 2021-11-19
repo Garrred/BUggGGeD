@@ -12,7 +12,6 @@ public class Boss_1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         innerShield = this.transform.GetChild(1);
         outerShield = this.transform.GetChild(2);
     }
@@ -31,7 +30,6 @@ public class Boss_1 : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("haha");
             other.gameObject.GetComponent<Basics.Player>().enableMovement = false;
             Vector2 difference = other.gameObject.transform.position - this.transform.position;
             other.gameObject.GetComponent<Rigidbody2D>().velocity = (difference * pushSpeed);

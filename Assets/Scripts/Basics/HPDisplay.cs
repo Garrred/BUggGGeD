@@ -13,6 +13,7 @@ namespace Basics
 
         public void Start()
         {
+            boss = GameObject.FindGameObjectWithTag("BossCore").GetComponent<Enemies.Boss>();
             canvasGroup = GetComponent<CanvasGroup>();
             canvasGroup.alpha = 0;
             BossHPBar.fillAmount = 0;

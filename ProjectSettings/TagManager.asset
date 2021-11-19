@@ -12,6 +12,8 @@ TagManager:
   - WaveSpawner
   - PlayerBullet
   - PlayerBullets
+  - Boss
+  - BossCore
   layers:
   - Default
   - TransparentFX
