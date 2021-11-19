@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pattern 0
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 3036981
+  uniqueIndex: 10219485
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -34276,7 +34276,7 @@ MonoBehaviour:
   m_Name: Shot 0
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 15826850
+  uniqueIndex: 15234798
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -36702,7 +36702,7 @@ MonoBehaviour:
   m_Name: Shot 2
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 11045770
+  uniqueIndex: 10472330
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -39166,7 +39166,7 @@ MonoBehaviour:
   m_Name: Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 12805276
+  uniqueIndex: 3172272
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -45832,7 +45832,7 @@ MonoBehaviour:
   m_Name: Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 2784150
+  uniqueIndex: 3508346
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -48258,7 +48258,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 13778558
+  uniqueIndex: 2409077
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -54536,7 +54536,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 14843211
+  uniqueIndex: 12464034
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -94903,7 +94903,7 @@ MonoBehaviour:
   m_Name: Bullet 2
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 852740
+  uniqueIndex: 13470623
   profile: {fileID: 11400000}
   parent: {fileID: -1216059860593732248}
   children: []
