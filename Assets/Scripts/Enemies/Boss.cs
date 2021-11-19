@@ -7,6 +7,7 @@ namespace Enemies
     public class Boss : Enemy
     {
         public Basics.HPDisplay hpDisplay;
+        private GameObject currentBullet;
 
         int stage = 0;
         public void UpdateHP()
@@ -25,20 +26,18 @@ namespace Enemies
             StartCoroutine(StartBulletEmission());
         }
 
+        public void UpdateShootingPos()
+        {
+            if (currentBullet != null)
+            {
+                currentBullet.transform.position = transform.position;
+            }
+        }
         public void StartBullet()
         {
-            if (stage == 0)
-            {
-                transform.Find("Stage1Bullet").gameObject.SetActive(true);
-            }
-            else if (stage == 1)
-            {
-                transform.Find("Stage2Bullet").gameObject.SetActive(true);
-            }
-            else 
-            {
-                transform.Find("Stage3Bullet").gameObject.SetActive(true);
-            }
+            currentBullet = transform.Find("Stage" + (stage + 1) + "Bullet").gameObject;
+            UpdateShootingPos();
+            currentBullet.SetActive(true);
         }
         public override void takeDamage(float damage)
         {
@@ -65,22 +64,11 @@ namespace Enemies
         }
         public void EndBullet()
         {
-            if (stage == 0)
-            {
-                transform.Find("Stage1Bullet").gameObject.SetActive(false);
-            }
-            else if (stage == 1)
-            {
-                transform.Find("Stage2Bullet").gameObject.SetActive(false);
-            }
-            else
-            {
-                transform.Find("Stage3Bullet").gameObject.SetActive(false);
-            }
+            currentBullet.SetActive(false);
         }
         public IEnumerator StartBulletEmission()
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
             StartBullet();
         }
     }
