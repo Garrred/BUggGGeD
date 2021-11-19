@@ -42,13 +42,14 @@ namespace Attacks
             if (collision.tag == "Enemy")
             {
                 collision.GetComponent<Enemies.Enemy>().takeDamage(damage);
+                Destroy(gameObject);
                 
             }
             if (collision.tag == "BossCore")
             {
                 collision.GetComponent<Enemies.Boss>().takeDamage(damage);
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
             //destorySpark();
         }
     }

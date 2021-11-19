@@ -22,7 +22,7 @@ namespace Enemies
             hpDisplay = GameObject.FindGameObjectWithTag("HPDisplay").GetComponent<Basics.HPDisplay>();
             player = GameObject.FindGameObjectWithTag("Player").transform;
             isInvincible = true;
-            StartBullet();
+            StartCoroutine(StartBulletEmission());
         }
 
         public void StartBullet()
@@ -77,6 +77,11 @@ namespace Enemies
             {
                 transform.Find("Stage3Bullet").gameObject.SetActive(false);
             }
+        }
+        public IEnumerator StartBulletEmission()
+        {
+            yield return new WaitForSeconds(1f);
+            StartBullet();
         }
     }
 }
