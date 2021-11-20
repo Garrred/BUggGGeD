@@ -21,16 +21,19 @@ namespace Basics
         }
         void FixedUpdate()
         {
-            if (playerTransform != null && !isSleeping)
+            if (playerTransform != null)
             {
-                float clampedX = Mathf.Clamp(playerTransform.position.x, min.x, max.x);
-                float clampedY = Mathf.Clamp(playerTransform.position.y, min.y, max.y);
-                Vector2 targetPosition = new Vector2(clampedX, clampedY) + offset;
-                smoothedPosition = Vector2.Lerp(transform.position, targetPosition, followSpeed * Time.fixedDeltaTime);
-            }
-            else
-            {
-                smoothedPosition = playerTransform.position;
+                if (!isSleeping)
+                {
+                    float clampedX = Mathf.Clamp(playerTransform.position.x, min.x, max.x);
+                    float clampedY = Mathf.Clamp(playerTransform.position.y, min.y, max.y);
+                    Vector2 targetPosition = new Vector2(clampedX, clampedY) + offset;
+                    smoothedPosition = Vector2.Lerp(transform.position, targetPosition, followSpeed * Time.fixedDeltaTime);
+                }
+                else
+                {
+                    smoothedPosition = playerTransform.position;
+                }
             }
         }
         private void LateUpdate()

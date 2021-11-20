@@ -22,7 +22,7 @@ namespace Basics
 
         //private Animator animator;
 
-        public GameObject[] hearts;
+        public GameObject hearts;
         // public Sprite fullHeart;
         //public Sprite emptyHeart;
 
@@ -83,7 +83,6 @@ namespace Basics
 
         public void takeDamage(int damage)
         {
-            Debug.Log("Player takes " + damage + " damage");
             health -= damage;
             if (health <= 0)
                 Destroy(gameObject);
@@ -92,17 +91,20 @@ namespace Basics
 
         public void UpdateLife()
         {
-           for (int i = 0; i < hearts.Length; i++)
-           {
-               if (i < health)
+            if (hearts != null)
+            {
+                for (int i = 0; i < hearts.transform.childCount; i++)
                 {
-                     hearts[i].SetActive(true);
+                    if (i < health)
+                    {
+                        hearts.transform.GetChild(i).gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        hearts.transform.GetChild(i).gameObject.SetActive(false);
+                    }
                 }
-                else
-                {
-                    hearts[i].SetActive(false);
-                }
-           }
+            }
         }
 
         //public void Heal(int healAmount)

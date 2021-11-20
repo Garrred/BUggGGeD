@@ -5808,11 +5808,11 @@ MonoBehaviour:
   movementSpeed: 5
   rotationSpeed: 1000
   slowRatio: 0.5
-  health: 1000
+  health: 3
   enableMovement: 1
   isSticky: 0
   movementInput: {x: 0, y: 0}
-  hearts: []
+  hearts: {fileID: 0}
 --- !u!114 &1150876062
 MonoBehaviour:
   m_ObjectHideFlags: 0
