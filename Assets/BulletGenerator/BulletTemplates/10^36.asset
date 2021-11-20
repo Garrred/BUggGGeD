@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bullet (From 10^36 1)
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 2354667
+  uniqueIndex: 591538
   profile: {fileID: 11400000}
   parent: {fileID: 910398894766766513}
   children: []
@@ -6570,7 +6570,7 @@ MonoBehaviour:
   foldoutExport: 0
   foldoutEmptyBin: 0
   foldoutCompactMode: 0
-  currentParamsSelected: {fileID: 114027673760526898}
+  currentParamsSelected: {fileID: 114201774248674550}
   numberOfSubAssets: 8
 --- !u!114 &114027673760526898
 MonoBehaviour:
@@ -6585,7 +6585,7 @@ MonoBehaviour:
   m_Name: Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 14754124
+  uniqueIndex: 12129776
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -6694,9 +6694,9 @@ MonoBehaviour:
         indexOfTo: 0
         indexOfBlendedChildren: 
         weight: 0
-        headerTitle: 
+        headerTitle: Sprite
         blendColor: {r: 0, g: 0, b: 0, a: 0}
-      defaultValue: {fileID: 21300000, guid: 06e5d8f7ba9c17144b1ace83b073da17, type: 3}
+      defaultValue: {fileID: 21300000, guid: 9a145cdf60bcab144acad788cab55617, type: 3}
     narrowType: 1
     requireComponent: 0
     typeName: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
@@ -7530,6 +7530,95 @@ MonoBehaviour:
     - settings:
         valueType: 0
         interpolationValue:
+          interpolationFactor: 1
+          repartitionCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: -0.021093495
+              value: -0.0004175231
+              inSlope: 0.24884589
+              outSlope: 0.24884589
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0.33333334
+              outWeight: 0.077843025
+            - serializedVersion: 3
+              time: 2.5054789
+              value: 0.34500986
+              inSlope: 0.0964318
+              outSlope: 0.0964318
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0.16660276
+              outWeight: 0.33333334
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          shareValueBetweenInstances: 0
+          rerollFrequency: 0
+          interpolationFactorFromShot: 0
+          interpolationFactorFromPattern: 0
+          interpolationFactorFromBullet: 3
+          relativeTo: 0
+          parameterName: 
+          loopDepth: 0
+          useComplexRerollSequence: 0
+          checkEveryNLoops: 0
+          loopSequence: 0
+          period: 10
+          wrapMode: 2
+          sortMode: 0
+          sortDirection: 0
+          repartitionTexture: {fileID: 0}
+          centerX: 0
+          centerY: 0
+          radius: 0
+          wrapPoint: -10
+          countClockwise: 0
+          differentValuesPerShot: 0
+        combinedInterpolationFactors: 0
+        index: 1
+        indexOfParent: 0
+        indexOfFrom: 2
+        indexOfTo: 3
+        indexOfBlendedChildren: 
+        weight: 0
+        headerTitle: Color
+        blendColor: {r: 0, g: 0, b: 0, a: 0}
+      defaultValue: {r: 0.98853076, g: 1, b: 0, a: 1}
+      gradientValue:
+        serializedVersion: 2
+        key0: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 1, g: 1, b: 1, a: 1}
+        key2: {r: 0, g: 0, b: 0, a: 0}
+        key3: {r: 0, g: 0, b: 0, a: 0}
+        key4: {r: 0, g: 0, b: 0, a: 0}
+        key5: {r: 0, g: 0, b: 0, a: 0}
+        key6: {r: 0, g: 0, b: 0, a: 0}
+        key7: {r: 0, g: 0, b: 0, a: 0}
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_Mode: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+    - settings:
+        valueType: 0
+        interpolationValue:
           interpolationFactor: 0
           repartitionCurve:
             serializedVersion: 2
@@ -7541,8 +7630,8 @@ MonoBehaviour:
               outSlope: 1
               tangentMode: 0
               weightedMode: 0
-              inWeight: 0.33333334
-              outWeight: 0.33333334
+              inWeight: 0
+              outWeight: 0
             - serializedVersion: 3
               time: 1
               value: 1
@@ -7550,8 +7639,8 @@ MonoBehaviour:
               outSlope: 0
               tangentMode: 0
               weightedMode: 0
-              inWeight: 0.33333334
-              outWeight: 0.33333334
+              inWeight: 0
+              outWeight: 0
             m_PreInfinity: 2
             m_PostInfinity: 2
             m_RotationOrder: 4
@@ -7578,15 +7667,104 @@ MonoBehaviour:
           countClockwise: 0
           differentValuesPerShot: 0
         combinedInterpolationFactors: 0
-        index: 1
-        indexOfParent: 0
+        index: 2
+        indexOfParent: 1
         indexOfFrom: 0
         indexOfTo: 0
         indexOfBlendedChildren: 
         weight: 0
-        headerTitle: 
+        headerTitle: 'Color : "From"'
         blendColor: {r: 0, g: 0, b: 0, a: 0}
-      defaultValue: {r: 0.33333337, g: 0.613417, b: 1, a: 1}
+      defaultValue: {r: 1, g: 1, b: 1, a: 1}
+      gradientValue:
+        serializedVersion: 2
+        key0: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 1, g: 1, b: 1, a: 1}
+        key2: {r: 0, g: 0, b: 0, a: 0}
+        key3: {r: 0, g: 0, b: 0, a: 0}
+        key4: {r: 0, g: 0, b: 0, a: 0}
+        key5: {r: 0, g: 0, b: 0, a: 0}
+        key6: {r: 0, g: 0, b: 0, a: 0}
+        key7: {r: 0, g: 0, b: 0, a: 0}
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_Mode: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+    - settings:
+        valueType: 0
+        interpolationValue:
+          interpolationFactor: 0
+          repartitionCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 1
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 1
+              inSlope: 1
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          shareValueBetweenInstances: 0
+          rerollFrequency: 0
+          interpolationFactorFromShot: 0
+          interpolationFactorFromPattern: 0
+          interpolationFactorFromBullet: 0
+          relativeTo: 0
+          parameterName: 
+          loopDepth: 0
+          useComplexRerollSequence: 0
+          checkEveryNLoops: 0
+          loopSequence: 0
+          period: 0
+          wrapMode: 0
+          sortMode: 0
+          sortDirection: 0
+          repartitionTexture: {fileID: 0}
+          centerX: 0
+          centerY: 0
+          radius: 0
+          wrapPoint: 0
+          countClockwise: 0
+          differentValuesPerShot: 0
+        combinedInterpolationFactors: 0
+        index: 3
+        indexOfParent: 1
+        indexOfFrom: 0
+        indexOfTo: 0
+        indexOfBlendedChildren: 
+        weight: 0
+        headerTitle: 'Color : "To"'
+        blendColor: {r: 0, g: 0, b: 0, a: 0}
+      defaultValue: {r: 0, g: 0, b: 0, a: 1}
       gradientValue:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -8425,7 +8603,7 @@ MonoBehaviour:
     requiredComponentName: 
   foldoutVFX: 1
   hideSpriteList: 0
-  currentlyDisplayedModule: 0
+  currentlyDisplayedModule: 6
   canMove: 1
   canCollide: 1
   isVisible: 1
@@ -8747,7 +8925,7 @@ MonoBehaviour:
         weight: 0
         headerTitle: 
         blendColor: {r: 0, g: 0, b: 0, a: 0}
-      defaultValue: 0.2
+      defaultValue: 1
     useSlider: 0
     sliderMin: 0
     sliderMax: 0
@@ -13122,7 +13300,7 @@ MonoBehaviour:
   m_Name: Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 9174284
+  uniqueIndex: 7443681
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -14736,7 +14914,7 @@ MonoBehaviour:
           weight: 0
           headerTitle: 
           blendColor: {r: 0, g: 0, b: 0, a: 0}
-        defaultValue: 10
+        defaultValue: 60
       useSlider: 0
       sliderMin: 0
       sliderMax: 0
@@ -15500,155 +15678,155 @@ MonoBehaviour:
     selectionRectsVisible: 0
     postEffectBulletSpawns:
     - index: 0
-      bulletOrigin: {x: 0, y: 0, z: 175}
+      bulletOrigin: {x: 0, y: 0, z: 1050}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 1
-      bulletOrigin: {x: 0, y: 0, z: 165}
+      bulletOrigin: {x: 0, y: 0, z: 990}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 2
-      bulletOrigin: {x: 0, y: 0, z: 155}
+      bulletOrigin: {x: 0, y: 0, z: 930}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 3
-      bulletOrigin: {x: 0, y: 0, z: 145}
+      bulletOrigin: {x: 0, y: 0, z: 870}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 4
-      bulletOrigin: {x: 0, y: 0, z: 135}
+      bulletOrigin: {x: 0, y: 0, z: 810}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 5
-      bulletOrigin: {x: 0, y: 0, z: 125}
+      bulletOrigin: {x: 0, y: 0, z: 750}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 6
-      bulletOrigin: {x: 0, y: 0, z: 115}
+      bulletOrigin: {x: 0, y: 0, z: 690}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 7
-      bulletOrigin: {x: 0, y: 0, z: 105}
+      bulletOrigin: {x: 0, y: 0, z: 630}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 8
-      bulletOrigin: {x: 0, y: 0, z: 95}
+      bulletOrigin: {x: 0, y: 0, z: 570}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 9
-      bulletOrigin: {x: 0, y: 0, z: 85}
+      bulletOrigin: {x: 0, y: 0, z: 510}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 10
-      bulletOrigin: {x: 0, y: 0, z: 75}
+      bulletOrigin: {x: 0, y: 0, z: 450}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 11
-      bulletOrigin: {x: 0, y: 0, z: 65}
+      bulletOrigin: {x: 0, y: 0, z: 390}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 12
-      bulletOrigin: {x: 0, y: 0, z: 55}
+      bulletOrigin: {x: 0, y: 0, z: 330}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 13
-      bulletOrigin: {x: 0, y: 0, z: 45}
+      bulletOrigin: {x: 0, y: 0, z: 270}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 14
-      bulletOrigin: {x: 0, y: 0, z: 35}
+      bulletOrigin: {x: 0, y: 0, z: 210}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 15
-      bulletOrigin: {x: 0, y: 0, z: 25}
+      bulletOrigin: {x: 0, y: 0, z: 150}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 16
-      bulletOrigin: {x: 0, y: 0, z: 15}
+      bulletOrigin: {x: 0, y: 0, z: 90}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 17
-      bulletOrigin: {x: 0, y: 0, z: 5}
+      bulletOrigin: {x: 0, y: 0, z: 30}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 18
-      bulletOrigin: {x: 0, y: 0, z: -5}
+      bulletOrigin: {x: 0, y: 0, z: -30}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 19
-      bulletOrigin: {x: 0, y: 0, z: -15}
+      bulletOrigin: {x: 0, y: 0, z: -90}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 20
-      bulletOrigin: {x: 0, y: 0, z: -25}
+      bulletOrigin: {x: 0, y: 0, z: -150}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 21
-      bulletOrigin: {x: 0, y: 0, z: -35}
+      bulletOrigin: {x: 0, y: 0, z: -210}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 22
-      bulletOrigin: {x: 0, y: 0, z: -45}
+      bulletOrigin: {x: 0, y: 0, z: -270}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 23
-      bulletOrigin: {x: 0, y: 0, z: -55}
+      bulletOrigin: {x: 0, y: 0, z: -330}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 24
-      bulletOrigin: {x: 0, y: 0, z: -65}
+      bulletOrigin: {x: 0, y: 0, z: -390}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 25
-      bulletOrigin: {x: 0, y: 0, z: -75}
+      bulletOrigin: {x: 0, y: 0, z: -450}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 26
-      bulletOrigin: {x: 0, y: 0, z: -85}
+      bulletOrigin: {x: 0, y: 0, z: -510}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 27
-      bulletOrigin: {x: 0, y: 0, z: -95}
+      bulletOrigin: {x: 0, y: 0, z: -570}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 28
-      bulletOrigin: {x: 0, y: 0, z: -105}
+      bulletOrigin: {x: 0, y: 0, z: -630}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 29
-      bulletOrigin: {x: 0, y: 0, z: -115}
+      bulletOrigin: {x: 0, y: 0, z: -690}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 30
-      bulletOrigin: {x: 0, y: 0, z: -125}
+      bulletOrigin: {x: 0, y: 0, z: -750}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 31
-      bulletOrigin: {x: 0, y: 0, z: -135}
+      bulletOrigin: {x: 0, y: 0, z: -810}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 32
-      bulletOrigin: {x: 0, y: 0, z: -145}
+      bulletOrigin: {x: 0, y: 0, z: -870}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 33
-      bulletOrigin: {x: 0, y: 0, z: -155}
+      bulletOrigin: {x: 0, y: 0, z: -930}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 34
-      bulletOrigin: {x: 0, y: 0, z: -165}
+      bulletOrigin: {x: 0, y: 0, z: -990}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     - index: 35
-      bulletOrigin: {x: 0, y: 0, z: -175}
+      bulletOrigin: {x: 0, y: 0, z: -1050}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     enabled: 1
   bulletParamsRandom: 0
   listOfPossibleBulletParams: []
   possibleBulletParams: 0
-  highestValues: {x: 0, y: 0, z: 175}
-  lowestValues: {x: 0, y: 0, z: -175}
+  highestValues: {x: 0, y: 0, z: 1050}
+  lowestValues: {x: 0, y: 0, z: -1050}
   hasBeenSerializedOnce: 1
   foldout0: 0
   foldout1: 0
@@ -15692,7 +15870,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 6685546
+  uniqueIndex: 9394115
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -21867,7 +22045,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 10086408
+  uniqueIndex: 10908304
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -38425,7 +38603,7 @@ MonoBehaviour:
   m_Name: Shot (From 10^36 1)
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 1700411
+  uniqueIndex: 7047356
   profile: {fileID: 11400000}
   parent: {fileID: 4466968260674903663}
   children:
@@ -40803,7 +40981,7 @@ MonoBehaviour:
   m_Name: Pattern (From 10^36 1)
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 5707168
+  uniqueIndex: 14309868
   profile: {fileID: 11400000}
   parent: {fileID: 8859494335890342850}
   children:
@@ -57361,7 +57539,7 @@ MonoBehaviour:
   m_Name: Root Emitter (From 10^36 1)
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 15340456
+  uniqueIndex: 12161977
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:

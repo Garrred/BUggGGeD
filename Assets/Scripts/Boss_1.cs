@@ -9,11 +9,18 @@ public class Boss_1 : MonoBehaviour
     public Transform outerShield;
     public float pushSpeed;
     public float knockedBackTime;
+    public GameObject movePoints;
+    public float speed;
+
+    private float step;
+    private Transform target;
     // Start is called before the first frame update
     void Start()
     {
         innerShield = this.transform.GetChild(1);
         outerShield = this.transform.GetChild(2);
+
+        target = movePoints.transform.GetChild(Random.Range(0, 4));
     }
 
     // Update is called once per frame
@@ -22,8 +29,23 @@ public class Boss_1 : MonoBehaviour
         innerShield.Rotate(0, 0, 50 * Time.deltaTime);
         outerShield.Rotate(0, 0, -50 * Time.deltaTime);
 
+        
 
+    }
 
+    private void FixedUpdate()
+    {
+        if ((transform.position - target.position).magnitude < 17)
+        {
+            //rendomly generate next target
+            target = movePoints.transform.GetChild(Random.Range(0, 3));
+        }
+        else
+        {
+            Debug.Log("not equal: " + (transform.position - target.position).magnitude) ;
+        }
+        step = speed * Time.deltaTime;
+        transform.position = Vector2.MoveTowards(transform.position, target.position, step);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
