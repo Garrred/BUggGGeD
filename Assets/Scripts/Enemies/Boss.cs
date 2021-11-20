@@ -8,8 +8,11 @@ namespace Enemies
     {
         public Basics.HPDisplay hpDisplay;
         private GameObject currentBullet;
+        private int currentBulletIndex;
+        private bool isAlive;
 
         int stage = 0;
+
         public void UpdateHP()
         {
             if (hpDisplay != null)
@@ -19,6 +22,7 @@ namespace Enemies
         }
         public override void Start()
         {
+            isAlive = true;
             health = maxHealth;
             hpDisplay = GameObject.FindGameObjectWithTag("HPDisplay").GetComponent<Basics.HPDisplay>();
             player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -30,14 +34,13 @@ namespace Enemies
         {
             if (currentBullet != null)
             {
-                currentBullet.transform.position = transform.position;
+                currentBullet.transform.GetChild(currentBulletIndex).position = transform.position;
             }
         }
         public void StartBullet()
         {
-            currentBullet = transform.Find("Stage" + (stage + 1) + "Bullet").gameObject;
-            UpdateShootingPos();
-            currentBullet.SetActive(true);
+            currentBullet = transform.GetChild(stage).gameObject;
+            StartCoroutine(ChangeBulletPattern());
         }
         public override void takeDamage(float damage)
         {
@@ -47,6 +50,7 @@ namespace Enemies
                 UpdateHP();
                 if (health <= 0)
                 {
+                    isAlive = false;
                     EndBullet();
                     if (stage == 2)
                     {
@@ -70,6 +74,19 @@ namespace Enemies
         {
             yield return new WaitForSeconds(2f);
             StartBullet();
+        }
+        
+        public IEnumerator ChangeBulletPattern()
+        {
+            while (isAlive)
+            {
+                UpdateShootingPos();
+                currentBullet.transform.GetChild(currentBulletIndex).gameObject.SetActive(true);
+                yield return new WaitForSeconds(20f);
+                currentBullet.transform.GetChild(currentBulletIndex).gameObject.SetActive(false);
+                currentBulletIndex = Mathf.Abs(currentBulletIndex - 1);
+                yield return new WaitForSeconds(2f);
+            }
         }
     }
 }
