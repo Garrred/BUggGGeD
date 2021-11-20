@@ -22,8 +22,8 @@ namespace Basics
 
         //private Animator animator;
 
-        //public Image[] hearts;
-        //public Sprite fullHeart;
+        public GameObject[] hearts;
+        // public Sprite fullHeart;
         //public Sprite emptyHeart;
 
         // Start is called before the first frame update
@@ -32,7 +32,7 @@ namespace Basics
             rb = GetComponent<Rigidbody2D>();
             weapon = GetComponent<Attacks.Weapon>();
             //animator = GetComponent<Animator>();
-            //UpdateLife();
+            UpdateLife();
         }
 
         // Update is called once per frame
@@ -83,22 +83,27 @@ namespace Basics
 
         public void takeDamage(int damage)
         {
+            Debug.Log("Player takes " + damage + " damage");
             health -= damage;
             if (health <= 0)
                 Destroy(gameObject);
-            //    UpdateLife();
+            UpdateLife();
         }
 
-        // public void UpdateLife()
-        // {
-        //    for (int i = 0; i < hearts.Length; i++)
-        //    {
-        //        if (i < health)
-        //            hearts[i].sprite = fullHeart;
-        //        else
-        //            hearts[i].sprite = emptyHeart;
-        //    }
-        // }
+        public void UpdateLife()
+        {
+           for (int i = 0; i < hearts.Length; i++)
+           {
+               if (i < health)
+                {
+                     hearts[i].SetActive(true);
+                }
+                else
+                {
+                    hearts[i].SetActive(false);
+                }
+           }
+        }
 
         //public void Heal(int healAmount)
         //{

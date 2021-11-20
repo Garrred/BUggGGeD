@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 4237855
+  uniqueIndex: 5269140
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -1884,7 +1884,7 @@ MonoBehaviour:
     requiredComponentName: 
   foldoutVFX: 1
   hideSpriteList: 0
-  currentlyDisplayedModule: 0
+  currentlyDisplayedModule: 2
   canMove: 1
   canCollide: 1
   isVisible: 1
@@ -2322,13 +2322,13 @@ MonoBehaviour:
     tagList: 1
   colliders:
   - colliderType: 0
-    size: 1.71
-    offset: {x: 0, y: 0, z: 0}
+    size: 0.83
+    offset: {x: 0, y: -0.32, z: 0}
     lineStart: {x: 0, y: 0}
     lineEnd: {x: 0, y: 0}
   dieOnCollision: 1
   shapeFoldout: 0
-  collisionTagsFoldout: 0
+  collisionTagsFoldout: 1
   homing: 0
   homingTags:
     tagList: 1
@@ -6566,7 +6566,7 @@ MonoBehaviour:
       requiredComponentName: 
   preview:
     collidersTex: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 06e5d8f7ba9c17144b1ace83b073da17, type: 3}
+    sprite: {fileID: -6320040682598633833, guid: 355f759eb37eacf43972db3048fcb4a6, type: 3}
     gizmoColor: {r: 0, g: 0, b: 0.5, a: 1}
 --- !u!114 &114201774248674550
 MonoBehaviour:
@@ -6581,7 +6581,7 @@ MonoBehaviour:
   m_Name: Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 358211
+  uniqueIndex: 9890023
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -8959,7 +8959,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 9309679
+  uniqueIndex: 4478576
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -15134,7 +15134,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 6326638
+  uniqueIndex: 12862657
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
