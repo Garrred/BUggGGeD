@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,8 @@ namespace Basics
         public Vector2 movementInput;
         private Vector2 playerRotation;
         private Attacks.Weapon weapon;
+
+        private bool isInvincible = false;
 
         //private Animator animator;
 
@@ -64,6 +67,23 @@ namespace Basics
             }
         }
 
+        // IEnumerator Blink()
+        // {
+        //     while (isInvincible)
+        //     {
+        //         foreach (Transform child in transform.GetChild(0))
+        //         {
+        //             child.GetComponent<SpriteRenderer>().color = Color.gray;
+        //         }
+        //         yield return new WaitForSeconds(0.5f);
+        //         foreach (Transform child in transform.GetChild(0))
+        //         {
+        //             Debug.Log("aaaa aaaa");
+        //             child.GetComponent<SpriteRenderer>().color = Color.white;
+        //         }
+        //     }
+        // }
+
         void OnTriggerEnter2D(Collider2D other)
         {
             if (isSticky)
@@ -72,20 +92,24 @@ namespace Basics
             }
             else
             {
-                // if (other.gameObject.CompareTag("Enemy"))
-                // {
-                //     // takeDamage();
-                //     //UpdateLife();
-                // }
+                if (other.gameObject.CompareTag("Enemy"))
+                {
+                    takeDamage(1);
+                    //UpdateLife();
+                }
             }
 
         }
 
         public void takeDamage(int damage)
         {
-            health -= damage;
+            if (!isInvincible)
+            {
+                health -= damage;
+            }
             if (health <= 0)
                 Destroy(gameObject);
+            StartCoroutine(StartInvincibility());
             UpdateLife();
         }
 
@@ -107,6 +131,21 @@ namespace Basics
             }
         }
 
+        IEnumerator StartInvincibility()
+        {
+            isInvincible = true;
+            // StartCoroutine(Blink());
+            foreach (Transform child in transform.GetChild(0))
+            {
+                child.GetComponent<SpriteRenderer>().color = Color.gray;
+            }
+            yield return new WaitForSeconds(3f);
+            foreach (Transform child in transform.GetChild(0))
+            {
+                child.GetComponent<SpriteRenderer>().color = Color.white;
+            }
+            isInvincible = false;
+        }
         //public void Heal(int healAmount)
         //{
         //    if (health + healAmount <= 5)

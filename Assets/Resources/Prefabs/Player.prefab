@@ -238,11 +238,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478538697584158235}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.139, z: 0}
+  m_LocalPosition: {x: 0, y: 0.003999993, z: 0}
   m_LocalScale: {x: 0.16606437, y: 0.16606435, z: 0.16606437}
   m_Children: []
-  m_Father: {fileID: 3935512758001896464}
-  m_RootOrder: 3
+  m_Father: {fileID: 7085756842457140646}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7872836633794503801
 SpriteRenderer:
@@ -322,11 +322,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156580770046606269}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.255, y: -0.371, z: 0}
+  m_LocalPosition: {x: 0.255, y: -0.506, z: 0}
   m_LocalScale: {x: 0.47362, y: 0.47362, z: 0.47362}
   m_Children: []
-  m_Father: {fileID: 3935512758001896464}
-  m_RootOrder: 1
+  m_Father: {fileID: 7085756842457140646}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4507908572532255625
 SpriteRenderer:
@@ -505,11 +505,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718458786563811278}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.25499988, y: -0.371, z: 0}
+  m_LocalPosition: {x: -0.25499988, y: -0.506, z: 0}
   m_LocalScale: {x: 0.47362, y: 0.47362, z: 0.47362}
   m_Children: []
-  m_Father: {fileID: 3935512758001896464}
-  m_RootOrder: 0
+  m_Father: {fileID: 7085756842457140646}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6132030100905308953
 SpriteRenderer:
@@ -692,12 +692,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.135, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2814579478290194625}
-  - {fileID: 4606444694933267348}
-  - {fileID: 1513902327226067920}
-  - {fileID: 6536588719214882164}
-  m_Father: {fileID: 5913972251681258631}
+  m_Children: []
+  m_Father: {fileID: 7085756842457140646}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7441019361199678730
@@ -5660,11 +5656,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4278312890149642165}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.139, z: 0}
+  m_LocalPosition: {x: 0, y: 0.003999993, z: 0}
   m_LocalScale: {x: 0.40561846, y: 0.21771689, z: 0.23859908}
   m_Children: []
-  m_Father: {fileID: 3935512758001896464}
-  m_RootOrder: 2
+  m_Father: {fileID: 7085756842457140646}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &116369354505809790
 SpriteRenderer:
@@ -5718,6 +5714,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &7087325622788242521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7085756842457140646}
+  m_Layer: 6
+  m_Name: PlayerBody
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7085756842457140646
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7087325622788242521}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3935512758001896464}
+  - {fileID: 2814579478290194625}
+  - {fileID: 4606444694933267348}
+  - {fileID: 1513902327226067920}
+  - {fileID: 6536588719214882164}
+  m_Father: {fileID: 5913972251681258631}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8242996626399774657
 GameObject:
   m_ObjectHideFlags: 0
@@ -5750,7 +5781,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3935512758001896464}
+  - {fileID: 7085756842457140646}
   - {fileID: 555371549}
   - {fileID: 31308631}
   m_Father: {fileID: 0}
