@@ -11,7 +11,7 @@ namespace Enemies
         private int currentBulletIndex;
         private bool isAlive;
 
-        int stage = 0;
+        public int stage = 0;
 
         public void UpdateHP()
         {
