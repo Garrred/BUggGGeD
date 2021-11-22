@@ -50,6 +50,7 @@ namespace Attacks
                     }
                     else
                     {
+
                         if (Time.time >= shotTime)
                         {
                             GameObject currentBullet = Instantiate(bullet, shotPos.position, transform.rotation *buggedDirection);
