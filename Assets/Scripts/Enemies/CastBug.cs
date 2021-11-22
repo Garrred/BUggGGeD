@@ -22,10 +22,8 @@ public class CastBug : MonoBehaviour
 
     IEnumerator SpawnBug()
     {
-        Debug.Log("Waiting");
         yield return new WaitForSeconds(timeBetweenBugs);
         bugs[transform.GetComponent<Enemies.Boss>().stage].OnTriggerEnter2D(player.GetComponent<Collider2D>());
-        Debug.Log("Spawning");
         StartCoroutine(SpawnBug());
     }
 }

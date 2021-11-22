@@ -6,7 +6,7 @@ namespace BUGS
 {
     public class BUG01 : BUGFrame
     {
-        public Basics.Player player;
+        private Basics.Player player;
         public Sprite changedPlayerPrefab;
         public GameObject playerPrefabBullet;
         public GameObject playerBody;
