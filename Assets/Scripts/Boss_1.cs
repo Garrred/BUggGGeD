@@ -29,9 +29,12 @@ public class Boss_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < innerShield.childCount; i++)
         {
             innerShield.GetChild(i).transform.Rotate(0, 0, 50 * Time.deltaTime);
+        }
+        for (int i = 0; i < outerShield.childCount; i++)
+        {
             outerShield.GetChild(i).transform.Rotate(0, 0, -50 * Time.deltaTime);
         }
     }
@@ -64,8 +67,6 @@ public class Boss_1 : MonoBehaviour
 
             StartCoroutine(Wait(other.gameObject, knockedBackTime));
         }
-
-
     }
     IEnumerator Wait(GameObject player, float seconds)
     {

@@ -39,18 +39,30 @@ namespace Attacks
 
         void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.tag == "Enemy")
-            {
-                collision.GetComponent<Enemies.Enemy>().takeDamage(damage);
-                Destroy(gameObject);
-                
-            }
-            if (collision.tag == "BossCore")
-            {
-                collision.GetComponent<Enemies.Boss>().takeDamage(damage);
-                Destroy(gameObject);
-            }
+            Debug.Log("Bullet hit " + collision.gameObject.name);
+            if (!(collision.gameObject.tag == "Boss" || collision.gameObject.tag == "Enemy" ||
+                collision.gameObject.tag == "BossCore"))
+                return;
+            collision.GetComponent<Enemies.Enemy>().takeDamage(damage);
+            Destroy(gameObject);
             //destorySpark();
+        }
+        IEnumerator Flicker(Collider2D collision)
+        {
+            SpriteRenderer sprite = collision.GetComponent<SpriteRenderer>();
+            if (sprite != null)
+            {
+                for (int i = 0; i < 20; i++)
+                {
+                    sprite.color += new Color(0.05f, 0.05f, 0.05f, 0);
+                    yield return new WaitForSeconds(0.01f);
+                }
+                for (int i = 0; i < 20; i++)
+                {
+                    sprite.color -= new Color(0.05f, 0.05f, 0.05f, 0);
+                    yield return new WaitForSeconds(0.01f);
+                }
+            }
         }
     }
 }
