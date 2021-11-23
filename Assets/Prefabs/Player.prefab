@@ -738,7 +738,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -8868272330977153355, guid: 90af53413e5a725439cd7d99406fb155, type: 3}
-  m_Color: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5839,7 +5839,7 @@ MonoBehaviour:
   movementSpeed: 5
   rotationSpeed: 1000
   slowRatio: 0.5
-  health: 3
+  health: 1000
   enableMovement: 1
   isSticky: 0
   movementInput: {x: 0, y: 0}

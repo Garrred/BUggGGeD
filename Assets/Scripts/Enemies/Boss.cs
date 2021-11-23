@@ -68,6 +68,7 @@ namespace Enemies
                         Start();
                         hpDisplay.Start();
                     }
+                    transform.parent.GetComponent<BossBehaviors>().StageChangeModification();
                 }
             }
         }

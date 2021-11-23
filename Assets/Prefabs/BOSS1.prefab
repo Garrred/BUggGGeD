@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 292203967}
   - component: {fileID: 292203969}
   - component: {fileID: 292203968}
+  - component: {fileID: 2091828545}
   m_Layer: 0
   m_Name: Part2
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,6 +120,25 @@ PolygonCollider2D:
     - - {x: -0.78999996, y: -1.9699999}
       - {x: -0.78, y: -1.9499999}
       - {x: -0.78, y: -1.91}
+--- !u!114 &2091828545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292203966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850d8f1d7ae28d949bcffc505d7831b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 20
+  attackPower: 0
+  timeBetweenAttack: 0
+  speed: 0
+  isInvincible: 0
+  player: {fileID: 0}
 --- !u!1 &655914960
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,9 +150,10 @@ GameObject:
   - component: {fileID: 655914961}
   - component: {fileID: 655914963}
   - component: {fileID: 655914962}
+  - component: {fileID: 655625247}
   m_Layer: 0
   m_Name: Part4
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,6 +259,25 @@ PolygonCollider2D:
     - - {x: -0.78999996, y: -1.9699999}
       - {x: -0.78, y: -1.9499999}
       - {x: -0.78, y: -1.91}
+--- !u!114 &655625247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655914960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850d8f1d7ae28d949bcffc505d7831b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 20
+  attackPower: 0
+  timeBetweenAttack: 0
+  speed: 0
+  isInvincible: 0
+  player: {fileID: 0}
 --- !u!1 &850135861
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +289,7 @@ GameObject:
   - component: {fileID: 850135862}
   m_Layer: 0
   m_Name: outerShield
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,7 +310,7 @@ Transform:
   - {fileID: 975619660}
   - {fileID: 655914961}
   m_Father: {fileID: 7784216933953424809}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &975619659
 GameObject:
@@ -283,9 +323,10 @@ GameObject:
   - component: {fileID: 975619660}
   - component: {fileID: 975619662}
   - component: {fileID: 975619661}
+  - component: {fileID: 475396288}
   m_Layer: 0
   m_Name: Part3
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -391,6 +432,25 @@ PolygonCollider2D:
     - - {x: -0.78999996, y: -1.9699999}
       - {x: -0.78, y: -1.9499999}
       - {x: -0.78, y: -1.91}
+--- !u!114 &475396288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975619659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850d8f1d7ae28d949bcffc505d7831b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 20
+  attackPower: 0
+  timeBetweenAttack: 0
+  speed: 0
+  isInvincible: 0
+  player: {fileID: 0}
 --- !u!1 &1147436089
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,9 +462,10 @@ GameObject:
   - component: {fileID: 1147436090}
   - component: {fileID: 1147436092}
   - component: {fileID: 1147436091}
+  - component: {fileID: 1778970699}
   m_Layer: 0
   m_Name: Part1
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -510,6 +571,25 @@ PolygonCollider2D:
     - - {x: -0.78999996, y: -1.9699999}
       - {x: -0.78, y: -1.9499999}
       - {x: -0.78, y: -1.91}
+--- !u!114 &1778970699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147436089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850d8f1d7ae28d949bcffc505d7831b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 20
+  attackPower: 0
+  timeBetweenAttack: 0
+  speed: 0
+  isInvincible: 0
+  player: {fileID: 0}
 --- !u!1 &1626610902
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +601,7 @@ GameObject:
   - component: {fileID: 1626610903}
   m_Layer: 0
   m_Name: InnerShield
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -542,7 +622,7 @@ Transform:
   - {fileID: 5582319724433581535}
   - {fileID: 7862015843567589955}
   m_Father: {fileID: 7784216933953424809}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &801346442176011645
 GameObject:
@@ -633,9 +713,10 @@ GameObject:
   - component: {fileID: 6343472775259617287}
   - component: {fileID: 8428194664123922577}
   - component: {fileID: 6931367945057108909}
+  - component: {fileID: 1345935106}
   m_Layer: 0
   m_Name: Part2
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -716,7 +797,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -749,6 +830,25 @@ PolygonCollider2D:
       - {x: -0.41, y: -1.28}
       - {x: -0.42999998, y: -1.24}
       - {x: -0.68, y: -1.11}
+--- !u!114 &1345935106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000464873762792695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850d8f1d7ae28d949bcffc505d7831b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 20
+  attackPower: 0
+  timeBetweenAttack: 0
+  speed: 0
+  isInvincible: 0
+  player: {fileID: 0}
 --- !u!1 &3229154396276176443
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,9 +986,10 @@ GameObject:
   - component: {fileID: 5582319724433581535}
   - component: {fileID: 4222219915251247303}
   - component: {fileID: 740494311417816301}
+  - component: {fileID: 564048453}
   m_Layer: 0
   m_Name: Part3
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -969,7 +1070,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1002,6 +1103,25 @@ PolygonCollider2D:
       - {x: -0.41, y: -1.28}
       - {x: -0.42999998, y: -1.24}
       - {x: -0.68, y: -1.11}
+--- !u!114 &564048453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5741545862106144414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850d8f1d7ae28d949bcffc505d7831b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 20
+  attackPower: 0
+  timeBetweenAttack: 0
+  speed: 0
+  isInvincible: 0
+  player: {fileID: 0}
 --- !u!1 &5815088608245337093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,9 +1225,10 @@ GameObject:
   - component: {fileID: 8031545823590757984}
   - component: {fileID: 156790337047491503}
   - component: {fileID: 6204823654616469416}
+  - component: {fileID: 1149889004}
   m_Layer: 0
   m_Name: Part1
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1188,7 +1309,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1221,6 +1342,25 @@ PolygonCollider2D:
       - {x: -0.41, y: -1.28}
       - {x: -0.42999998, y: -1.24}
       - {x: -0.68, y: -1.11}
+--- !u!114 &1149889004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6624707500310049184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850d8f1d7ae28d949bcffc505d7831b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 20
+  attackPower: 0
+  timeBetweenAttack: 0
+  speed: 0
+  isInvincible: 0
+  player: {fileID: 0}
 --- !u!1 &6779320380897937314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,9 +1372,10 @@ GameObject:
   - component: {fileID: 7862015843567589955}
   - component: {fileID: 4567875142391323556}
   - component: {fileID: 4526621213889760089}
+  - component: {fileID: 1582226856}
   m_Layer: 0
   m_Name: Part4
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1315,7 +1456,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1348,6 +1489,25 @@ PolygonCollider2D:
       - {x: -0.41, y: -1.28}
       - {x: -0.42999998, y: -1.24}
       - {x: -0.68, y: -1.11}
+--- !u!114 &1582226856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6779320380897937314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850d8f1d7ae28d949bcffc505d7831b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 20
+  attackPower: 0
+  timeBetweenAttack: 0
+  speed: 0
+  isInvincible: 0
+  player: {fileID: 0}
 --- !u!1 &7784216933953424814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,7 +1525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7784216933953424809
 Transform:
   m_ObjectHideFlags: 0
@@ -1378,8 +1538,8 @@ Transform:
   m_LocalScale: {x: 1.7324, y: 1.7324, z: 1.7324}
   m_Children:
   - {fileID: 7784216934432258293}
-  - {fileID: 850135862}
   - {fileID: 1626610903}
+  - {fileID: 850135862}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1418,6 +1578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   innerShield: {fileID: 0}
   outerShield: {fileID: 0}
+  boss: {fileID: 0}
   pushSpeed: 2
   knockedBackTime: 0.5
   movePoints: {fileID: 0}

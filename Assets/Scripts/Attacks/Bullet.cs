@@ -39,7 +39,6 @@ namespace Attacks
 
         void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("Bullet hit " + collision.gameObject.name);
             if (!(collision.gameObject.tag == "Boss" || collision.gameObject.tag == "Enemy" ||
                 collision.gameObject.tag == "BossCore"))
                 return;

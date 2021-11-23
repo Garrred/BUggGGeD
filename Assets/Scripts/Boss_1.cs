@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss_1 : MonoBehaviour
+public class Boss_1 : BossBehaviors
 {
 
     public Transform innerShield;
     public Transform outerShield;
+    public Enemies.Boss boss;
     public float pushSpeed;
     public float knockedBackTime;
     public GameObject movePoints;
@@ -19,10 +20,28 @@ public class Boss_1 : MonoBehaviour
     {
         innerShield = this.transform.GetChild(1);
         outerShield = this.transform.GetChild(2);
+        boss = transform.GetChild(0).GetComponent<Enemies.Boss>();
+
+        for (int i = 0; i < innerShield.childCount; i++)
+        {
+            innerShield.GetChild(i).gameObject.GetComponent<Enemies.Enemy>().isInvincible = true;
+        }
 
         if (movePoints != null)
         {
             target = movePoints.transform.GetChild(Random.Range(0, 4));
+        }
+    }
+
+    public override void StageChangeModification()
+    {
+        // disable the inner shield invincibility
+        if (boss.stage == 1)
+        {
+            for (int i = 0; i < innerShield.childCount; i++)
+            {
+                innerShield.GetChild(i).gameObject.GetComponent<Enemies.Enemy>().isInvincible = false;
+            }
         }
     }
 
