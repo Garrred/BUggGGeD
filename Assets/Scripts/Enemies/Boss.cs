@@ -6,13 +6,18 @@ namespace Enemies
 {
     public class Boss : Enemy
     {
-        public Basics.HPDisplay hpDisplay;
+        public GameObject hpBarUI;
+        private Basics.HPDisplay hpDisplay;
         private GameObject currentBullet;
         private int currentBulletIndex;
         private bool isAlive;
 
         public int stage = 0;
 
+        public void Awake()
+        {
+            hpBarUI.SetActive(true);
+        }
         public void UpdateHP()
         {
             if (hpDisplay != null)
@@ -24,7 +29,7 @@ namespace Enemies
         {
             isAlive = true;
             health = maxHealth;
-            hpDisplay = GameObject.FindGameObjectWithTag("HPDisplay").GetComponent<Basics.HPDisplay>();
+            hpDisplay = hpBarUI.GetComponent<Basics.HPDisplay>();
             player = GameObject.FindGameObjectWithTag("Player").transform;
             isInvincible = true;
             StartCoroutine(StartBulletEmission());
