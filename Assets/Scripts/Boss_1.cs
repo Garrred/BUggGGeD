@@ -29,11 +29,11 @@ public class Boss_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        innerShield.Rotate(0, 0, 50 * Time.deltaTime);
-        outerShield.Rotate(0, 0, -50 * Time.deltaTime);
-
-        
-
+        for (int i = 0; i < 4; i++)
+        {
+            innerShield.GetChild(i).transform.Rotate(0, 0, 50 * Time.deltaTime);
+            outerShield.GetChild(i).transform.Rotate(0, 0, -50 * Time.deltaTime);
+        }
     }
 
     private void FixedUpdate()
