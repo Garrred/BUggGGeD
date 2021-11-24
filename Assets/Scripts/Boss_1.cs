@@ -67,10 +67,6 @@ public class Boss_1 : BossBehaviors
                 //rendomly generate next target
                 target = movePoints.transform.GetChild(Random.Range(0, 3));
             }
-            else
-            {
-                Debug.Log("not equal: " + (transform.position - target.position).magnitude);
-            }
             step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, target.position, step);
         }
