@@ -31,11 +31,11 @@ namespace Attacks
             }
         }
 
-        //protected void destorySpark()
-        //{
-        //    Instantiate(spark, transform.position, Quaternion.identity);
-        //    Destroy(gameObject);
-        //}
+        protected void destorySpark()
+        {
+            Instantiate(spark, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
 
         void OnTriggerEnter2D(Collider2D collision)
         {
@@ -44,7 +44,7 @@ namespace Attacks
                 return;
             collision.GetComponent<Enemies.Enemy>().takeDamage(damage);
             Destroy(gameObject);
-            //destorySpark();
+            destorySpark();
         }
         IEnumerator Flicker(Collider2D collision)
         {
