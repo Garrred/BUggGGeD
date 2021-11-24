@@ -61,6 +61,7 @@ namespace Enemies
                 if (health <= 0)
                 {
                     isAlive = false;
+                    Flash(transform.parent);
                     EndBullet();
                     if (stage == 2)
                     {

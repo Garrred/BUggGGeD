@@ -31,6 +31,7 @@ namespace Enemies
             if (!isInvincible)
             {
                 health -= damage;
+                Flash(transform.parent.parent);
                 if (health <= 0)
                 {
                     // StartCoroutine(hpDisplay.FadeOut());
@@ -42,6 +43,17 @@ namespace Enemies
                     Destroy(gameObject);
                 }
             }
+        }
+
+        public void Flash(Transform ob)
+        {
+            GetComponent<SpriteRenderer>().material.shader = ob.GetComponent<FlashOnHit>().flashShader;
+            StartCoroutine(ResetMaterial(ob));
+        }
+        public IEnumerator ResetMaterial(Transform ob)
+        {
+            yield return new WaitForSeconds(0.1f);
+            GetComponent<SpriteRenderer>().material.shader = ob.GetComponent<FlashOnHit>().defaultShader;
         }
     }
 }
