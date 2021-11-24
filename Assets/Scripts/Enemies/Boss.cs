@@ -16,6 +16,11 @@ namespace Enemies
 
         public void Awake()
         {
+            SpriteRenderer[] spriteRenderer = transform.parent.GetComponentsInChildren<SpriteRenderer>();
+            foreach (SpriteRenderer sr in spriteRenderer)
+            {
+                sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0);
+            }
             hpBarUI.SetActive(true);
         }
         public void UpdateHP()
