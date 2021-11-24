@@ -57,11 +57,12 @@ namespace Enemies
             if (!isInvincible)
             {
                 health -= damage;
+                Flash(transform.parent);
                 UpdateHP();
                 if (health <= 0)
                 {
+                    transform.GetComponent<CastBug>().StopSpawningBug();
                     isAlive = false;
-                    Flash(transform.parent);
                     EndBullet();
                     if (stage == 2)
                     {

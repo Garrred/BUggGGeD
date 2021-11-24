@@ -15,7 +15,7 @@ namespace Basics
         public int health;
         public bool enableMovement = true;
         public bool isSticky = false;
-
+        public bool hasBugNow = false;
         private Rigidbody2D rb;
         public Vector2 movementInput;
         private Vector2 playerRotation;

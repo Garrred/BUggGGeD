@@ -5842,6 +5842,7 @@ MonoBehaviour:
   health: 1000
   enableMovement: 1
   isSticky: 0
+  hasBugNow: 0
   movementInput: {x: 0, y: 0}
   hearts: {fileID: 0}
 --- !u!114 &1150876062

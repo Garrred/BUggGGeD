@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dec75a7dc5d3bf4cab7f4e357227833, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 20
+  maxHealth: 1
   attackPower: 0
   timeBetweenAttack: 0
   speed: 0
@@ -192,7 +192,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dec75a7dc5d3bf4cab7f4e357227833, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 20
+  maxHealth: 1
   attackPower: 0
   timeBetweenAttack: 0
   speed: 0
@@ -365,7 +365,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dec75a7dc5d3bf4cab7f4e357227833, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 20
+  maxHealth: 1
   attackPower: 0
   timeBetweenAttack: 0
   speed: 0
@@ -504,7 +504,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dec75a7dc5d3bf4cab7f4e357227833, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 20
+  maxHealth: 1
   attackPower: 0
   timeBetweenAttack: 0
   speed: 0
@@ -755,7 +755,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dec75a7dc5d3bf4cab7f4e357227833, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -843,7 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 20
+  maxHealth: 1
   attackPower: 0
   timeBetweenAttack: 0
   speed: 0
@@ -1028,7 +1028,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dec75a7dc5d3bf4cab7f4e357227833, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 20
+  maxHealth: 1
   attackPower: 0
   timeBetweenAttack: 0
   speed: 0
@@ -1267,7 +1267,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dec75a7dc5d3bf4cab7f4e357227833, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1355,7 +1355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 20
+  maxHealth: 1
   attackPower: 0
   timeBetweenAttack: 0
   speed: 0
@@ -1414,7 +1414,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dec75a7dc5d3bf4cab7f4e357227833, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1502,7 +1502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 20
+  maxHealth: 1
   attackPower: 0
   timeBetweenAttack: 0
   speed: 0
@@ -1519,6 +1519,7 @@ GameObject:
   - component: {fileID: 7784216933953424809}
   - component: {fileID: 7784216933953424808}
   - component: {fileID: 7784216933953424811}
+  - component: {fileID: 2133715408}
   m_Layer: 0
   m_Name: BOSS1
   m_TagString: Boss
@@ -1583,6 +1584,20 @@ MonoBehaviour:
   knockedBackTime: 0.5
   movePoints: {fileID: 0}
   speed: 0
+--- !u!114 &2133715408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784216933953424814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f5ba18a67ab884d92c793acdf8427b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashShader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
+  defaultShader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &7784216934432258314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,11 +1740,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  timeBetweenBugs: 6
+  timeBetweenBugs: 10
   bugs:
   - {fileID: 2696121247047994663}
   - {fileID: 2147421203}
   - {fileID: 2147421202}
+  currentBug: {fileID: 0}
 --- !u!114 &2696121247047994663
 MonoBehaviour:
   m_ObjectHideFlags: 0
