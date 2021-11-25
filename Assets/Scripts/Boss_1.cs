@@ -55,7 +55,7 @@ public class Boss_1 : BossBehaviors
     IEnumerator FadeOffShield(GameObject currentShield)
     {
         float alpha = 1f;
-        while (alpha > 0)
+        while (alpha > 0.01f)
         {
             alpha *= 0.9f;
             foreach (Transform child in currentShield.transform)
