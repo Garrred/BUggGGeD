@@ -133,7 +133,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7940012973013768922, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
   m_PrefabInstance: {fileID: 7940012973203037925}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 780792517}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd749e5d995b90042a3c4917d9ed272f, type: 3}
@@ -162,10 +162,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3527304498638251076, guid: 2ba8ceb7211821a43b8c532225010c61, type: 3}
-      propertyPath: orthographic size
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 3527304499553222904, guid: 2ba8ceb7211821a43b8c532225010c61, type: 3}
       propertyPath: m_Name
       value: CameraFollow
@@ -288,12 +284,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: BOSS1
       objectReference: {fileID: 0}
+    - target: {fileID: 7784216933953424814, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7824490205041500636, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 454889621}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
+--- !u!1 &780792517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7940012973013768920, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+  m_PrefabInstance: {fileID: 7940012973203037925}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &780792519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780792517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68d70253d6d67d488342e8674064f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossPrefab: {fileID: 2133715407}
+  timeBeforeSpawn: 3
 --- !u!4 &840876521 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 840876521, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
@@ -517,6 +536,10 @@ PrefabInstance:
       propertyPath: bossPrefab
       value: 
       objectReference: {fileID: 2133715407}
+    - target: {fileID: 5610277951150830369, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+      propertyPath: timeBeforeSpawn
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6468113285164219290, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -575,6 +598,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7940012973013768923, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940012974588700280, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
