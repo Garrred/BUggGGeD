@@ -11,6 +11,7 @@ namespace BUGS
 
         public override void BugStart()
         {
+            remainingTime = lastingTime;
             cameraFollow = cam.GetComponent<Basics.CameraFollow>();
             cameraFollow.isSleeping = true;
         }

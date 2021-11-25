@@ -61,7 +61,6 @@ namespace Enemies
                 UpdateHP();
                 if (health <= 0)
                 {
-                    transform.GetComponent<CastBug>().StopSpawningBug();
                     isAlive = false;
                     EndBullet();
                     if (stage == 2)

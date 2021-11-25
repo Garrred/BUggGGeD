@@ -23,7 +23,8 @@ public class CastBug : MonoBehaviour
         remainingTime -= Time.deltaTime;
         if (remainingTime <= 0 && !player.GetComponent<Basics.Player>().hasBugNow)
         {
-            SpawnBug();
+            currentBug = bugs[transform.GetComponent<Enemies.Boss>().stage];
+            currentBug.OnTriggerEnter2D(player.gameObject.GetComponent<Collider2D>());
             remainingTime = timeBetweenBugs;
         }
     }
@@ -31,16 +32,5 @@ public class CastBug : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         player = transform.GetComponent<Enemies.Boss>().player.gameObject;
-    }
-
-    void SpawnBug()
-    {
-        currentBug = bugs[transform.GetComponent<Enemies.Boss>().stage];
-        currentBug.OnTriggerEnter2D(player.gameObject.GetComponent<Collider2D>());
-    }
-
-    public void StopSpawningBug()
-    {
-        // currentBug.BugEnd();
     }
 }
