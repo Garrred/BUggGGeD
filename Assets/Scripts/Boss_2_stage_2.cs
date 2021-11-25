@@ -21,7 +21,6 @@ public class Boss_2_stage_2 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("not working");
         if (other.gameObject.tag == "Player")
         {
             other.gameObject.GetComponent<Basics.Player>().enableMovement = false;

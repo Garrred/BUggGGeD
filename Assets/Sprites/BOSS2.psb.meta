@@ -44,6 +44,21 @@ ScriptedImporter:
   - first:
       213: -4791153143496805831
     second: BOSS2_4
+  - first:
+      213: -1450144285634042865
+    second: BOSS2_0
+  - first:
+      213: 1351683593732744401
+    second: BOSS2_1
+  - first:
+      213: 3605500679130102176
+    second: BOSS2_2
+  - first:
+      213: 5955516776297104261
+    second: BOSS2_3
+  - first:
+      213: -4791153143496805831
+    second: BOSS2_4
   externalObjects: {}
   serializedVersion: 2
   userData: 
@@ -135,8 +150,8 @@ ScriptedImporter:
   rigSpriteImportData:
   - name: BOSS2_0
     originalName: 
-    pivot: {x: 0, y: 0}
-    alignment: 0
+    pivot: {x: 0.99999994, y: 0.29190752}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -685,12 +700,12 @@ ScriptedImporter:
     uvTransform: {x: 266, y: 518}
   - name: BOSS2_1
     originalName: 
-    pivot: {x: 0, y: 0}
-    alignment: 0
+    pivot: {x: 0.6925287, y: 1}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 267
+      x: 268
       y: 262
       width: 348
       height: 248
@@ -1274,11 +1289,11 @@ ScriptedImporter:
     - {x: 36, y: 19}
     tessellationDetail: 1
     parentGroupIndex: -1
-    uvTransform: {x: 267, y: 262}
+    uvTransform: {x: 268, y: 262}
   - name: BOSS2_3
     originalName: 
-    pivot: {x: 0, y: 0}
-    alignment: 0
+    pivot: {x: 0, y: 0.69688386}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1969,8 +1984,8 @@ ScriptedImporter:
     uvTransform: {x: 5, y: 4}
   - name: BOSS2_4
     originalName: 
-    pivot: {x: 0, y: 0}
-    alignment: 0
+    pivot: {x: 0.2881356, y: 0}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
