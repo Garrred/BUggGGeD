@@ -67,6 +67,11 @@ namespace Basics
             }
         }
 
+        public void Heal(int amount)
+        {
+            health += amount;
+            UpdateLife();
+        }
         // IEnumerator Blink()
         // {
         //     while (isInvincible)
@@ -106,10 +111,10 @@ namespace Basics
             if (!isInvincible)
             {
                 health -= damage;
+                StartCoroutine(StartInvincibility());
             }
             if (health <= 0)
                 Destroy(gameObject);
-            StartCoroutine(StartInvincibility());
             UpdateLife();
         }
 

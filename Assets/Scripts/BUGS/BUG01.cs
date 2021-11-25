@@ -24,9 +24,12 @@ namespace BUGS
 
         public override void BugEnd()
         {
-            player.GetComponent<Attacks.Weapon>().bullet = originalBullet;
-            playerBody.SetActive(true);
-            player.transform.Find("ShootPos").GetComponent<SpriteRenderer>().sprite = null;
+            if (player != null)
+            {
+                player.GetComponent<Attacks.Weapon>().bullet = originalBullet;
+                playerBody.SetActive(true);
+                player.transform.Find("ShootPos").GetComponent<SpriteRenderer>().sprite = null;
+            }
         }
     }
 }
