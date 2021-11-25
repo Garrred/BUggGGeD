@@ -74,8 +74,8 @@ namespace Enemies
                         maxHealth = maxHealth * 1.25f;
                         Start();
                         hpDisplay.Start();
+                        transform.parent.GetComponent<BossBehaviors>().StageChangeModification();
                     }
-                    transform.parent.GetComponent<BossBehaviors>().StageChangeModification();
                 }
             }
         }

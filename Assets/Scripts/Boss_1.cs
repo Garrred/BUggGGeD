@@ -43,8 +43,31 @@ public class Boss_1 : BossBehaviors
                 innerShield.GetChild(i).gameObject.GetComponent<Enemies.Enemy>().isInvincible = false;
             }
         }
+        TakeOffShield(boss.stage);
     }
 
+    void TakeOffShield(int stage)
+    {
+        GameObject currentShield = transform.GetChild(3 - stage).gameObject;
+        StartCoroutine(FadeOffShield(currentShield));
+    }
+
+    IEnumerator FadeOffShield(GameObject currentShield)
+    {
+        float alpha = 1f;
+        while (alpha > 0)
+        {
+            alpha *= 0.9f;
+            foreach (Transform child in currentShield.transform)
+            {
+                int direction = Random.Range(0, 2) * 2 - 1;
+                child.Translate(new Vector3(direction, direction, 0) * 10f * Time.deltaTime);
+                child.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, alpha);
+                yield return null;
+            }
+        }
+        currentShield.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {

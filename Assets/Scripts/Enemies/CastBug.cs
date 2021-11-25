@@ -41,6 +41,6 @@ public class CastBug : MonoBehaviour
 
     public void StopSpawningBug()
     {
-        currentBug.BugEnd();
+        // currentBug.BugEnd();
     }
 }
