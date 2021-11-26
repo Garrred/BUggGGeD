@@ -28,8 +28,8 @@ namespace BUGS
             Destroy(gameObject);
         }
 
-        public override void BugEnd() 
-        { 
+        public override void BugEnd()
+        {
             // behavior is done in the particle system
         }
     }

@@ -53,7 +53,7 @@ namespace Attacks
 
                         if (Time.time >= shotTime)
                         {
-                            GameObject currentBullet = Instantiate(bullet, shotPos.position, transform.rotation *buggedDirection);
+                            GameObject currentBullet = Instantiate(bullet, shotPos.position, transform.rotation * buggedDirection);
                             currentBullet.transform.SetParent(playerBullets);
                             shotTime = Time.time + timeBetweenShots;
                         }

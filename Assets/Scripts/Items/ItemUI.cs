@@ -25,7 +25,6 @@ public class ItemUI : MonoBehaviour
         {
             if (hasItem1)
             {
-                currentItem1.SetActive(true);
                 currentItem1.GetComponent<Item>().UseItem();
                 item1.SetActive(false);
                 hasItem1 = false;
@@ -35,7 +34,6 @@ public class ItemUI : MonoBehaviour
         {
             if (hasItem2)
             {
-                currentItem2.SetActive(true);
                 currentItem2.GetComponent<Item>().UseItem();
                 item2.SetActive(false);
                 hasItem2 = false;
