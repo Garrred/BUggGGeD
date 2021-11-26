@@ -112,7 +112,7 @@ namespace Basics
 
         public void takeDamage(int damage)
         {
-            if (!isInvincible)
+            if (damage > 0 && !isInvincible)
             {
                 health -= damage;
                 StartCoroutine(StartInvincibility());

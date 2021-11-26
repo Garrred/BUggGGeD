@@ -19,6 +19,7 @@ public class BossSpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(timeBeforeSpawn);
             gameObject.GetComponent<AudioSource>().Play();
+
             SpriteRenderer[] spriteRenderer = bossPrefab.GetComponentsInChildren<SpriteRenderer>();
             // foreach (SpriteRenderer sr in spriteRenderer)
             // {

@@ -25,7 +25,6 @@ namespace BUGS
         {
             yield return new WaitForSeconds(0.5f);
             cam.ResetFollow();
-            Destroy(gameObject);
         }
 
         public override void BugEnd()
