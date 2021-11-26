@@ -69,8 +69,11 @@ namespace Basics
 
         public void Heal(int amount)
         {
-            health += amount;
-            UpdateLife();
+            if (health < 7)
+            {
+                health += amount;
+                UpdateLife();
+            }
         }
         // IEnumerator Blink()
         // {

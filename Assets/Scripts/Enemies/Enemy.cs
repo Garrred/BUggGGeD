@@ -19,6 +19,26 @@ namespace Enemies
         [HideInInspector]
         public Transform player;
 
+        [System.Serializable]
+        public class Item
+        {
+            public GameObject item;
+            public int chance;
+        }
+
+        public Item[] possibleDrops;
+
+        void OnDestroy()
+        {
+            if (possibleDrops.Length > 0)
+            {
+                if (Random.Range(0, 100) < possibleDrops[0].chance)
+                {
+                    Instantiate(possibleDrops[0].item, transform.position, Quaternion.identity);
+                }
+            }
+        }
+
         // Start is called before the first frame update
         public virtual void Start()
         {
