@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 3846901458662402903}
   - component: {fileID: 5219544640343206799}
   - component: {fileID: 1346731247427376765}
-  - component: {fileID: 2191494938987687512}
   - component: {fileID: 1543811023810877521}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: BugBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,22 +101,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.5600002
---- !u!114 &2191494938987687512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6657655551737317930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7432adc8f6586514cadcb1d05d9d7488, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BUGNumber: 
-  lastingTime: 5
-  remainingTime: -10
-  collision: {fileID: 0}
 --- !u!114 &1543811023810877521
 MonoBehaviour:
   m_ObjectHideFlags: 0

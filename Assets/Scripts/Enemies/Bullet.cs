@@ -19,6 +19,7 @@ namespace Enemies
                     collision.GetComponent<Basics.Player>().takeDamage((int)damage);
                     // destorySpark();
                 }
+                Destroy(gameObject);
             }
             if (collision.transform.parent != null && collision.transform.parent.tag == "Player")
             {

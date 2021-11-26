@@ -14,8 +14,11 @@ namespace Enemies
 
         public int stage = 0;
 
+        private BugBulletEmitter bugBulletEmitter;
+
         public void Awake()
         {
+            bugBulletEmitter = transform.parent.GetChild(4).GetComponent<BugBulletEmitter>();
             SpriteRenderer[] spriteRenderer = transform.parent.GetComponentsInChildren<SpriteRenderer>();
             foreach (SpriteRenderer sr in spriteRenderer)
             {
@@ -69,6 +72,7 @@ namespace Enemies
                     }
                     else
                     {
+                        bugBulletEmitter.UpdateBug(stage + 1);
                         stage++;
                         maxHealth = maxHealth * 1.25f;
                         Start();
