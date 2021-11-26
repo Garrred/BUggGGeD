@@ -15,14 +15,17 @@ public class BossSpawner : MonoBehaviour
 
     IEnumerator SpawnBoss()
     {
-        yield return new WaitForSeconds(timeBeforeSpawn);
-        SpriteRenderer[] spriteRenderer = bossPrefab.GetComponentsInChildren<SpriteRenderer>();
-        // foreach (SpriteRenderer sr in spriteRenderer)
-        // {
-        //     sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0);
-        // }
-        bossPrefab.SetActive(true);
-        StartCoroutine(FadeIn(spriteRenderer));
+        if (currentBoss != null)
+        {
+            yield return new WaitForSeconds(timeBeforeSpawn);
+            SpriteRenderer[] spriteRenderer = bossPrefab.GetComponentsInChildren<SpriteRenderer>();
+            // foreach (SpriteRenderer sr in spriteRenderer)
+            // {
+            //     sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0);
+            // }
+            bossPrefab.SetActive(true);
+            StartCoroutine(FadeIn(spriteRenderer));
+        }
     }
 
     IEnumerator FadeIn(SpriteRenderer[] spriteRenderer)

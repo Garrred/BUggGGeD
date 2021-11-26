@@ -35,7 +35,6 @@ public class Item : MonoBehaviour
         if (other.tag == "Player")
         {
             PickupItem();
-            Destroy(gameObject);
         }
     }
 
