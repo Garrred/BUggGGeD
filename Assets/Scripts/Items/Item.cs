@@ -10,6 +10,7 @@ public class Item : MonoBehaviour
     private Vector3 flyAwayDirection = Vector3.up;
     public GameObject itemUI;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,14 +18,14 @@ public class Item : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (lifeTime > 0)
         {
-            lifeTime -= Time.deltaTime;
+            lifeTime -= Time.fixedDeltaTime;
             transform.Translate(flyAwayDirection * flyAwaySpeed * Time.deltaTime);
         }
-        else
+        else if (lifeTime > -5f)
         {
             Destroy(gameObject);
         }
@@ -41,6 +42,8 @@ public class Item : MonoBehaviour
     public virtual void PickupItem()
     {
         itemUI.GetComponent<ItemUI>().PickupItem(this);
+        lifeTime = -10f;
+        gameObject.SetActive(false);
     }
 
     public void UseItem()
