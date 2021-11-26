@@ -21,7 +21,7 @@ public class CastBug : MonoBehaviour
     void Update()
     {
         remainingTime -= Time.deltaTime;
-        if (remainingTime <= 0 && !player.GetComponent<Basics.Player>().hasBugNow)
+        if (player != null && remainingTime <= 0 && !player.GetComponent<Basics.Player>().hasBugNow)
         {
             currentBug = bugs[transform.GetComponent<Enemies.Boss>().stage];
             currentBug.OnTriggerEnter2D(player.gameObject.GetComponent<Collider2D>());

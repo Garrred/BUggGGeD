@@ -21,6 +21,7 @@ namespace Basics
         private Vector2 playerRotation;
         private Attacks.Weapon weapon;
 
+        public float invincibleTime = 2f;
         private bool isInvincible = false;
 
         //private Animator animator;
@@ -143,14 +144,22 @@ namespace Basics
         {
             isInvincible = true;
             // StartCoroutine(Blink());
-            foreach (Transform child in transform.GetChild(0))
+            float remainingTime = invincibleTime;
+
+            while (remainingTime > 0)
             {
-                child.GetComponent<SpriteRenderer>().color = Color.gray;
-            }
-            yield return new WaitForSeconds(3f);
-            foreach (Transform child in transform.GetChild(0))
-            {
-                child.GetComponent<SpriteRenderer>().color = Color.white;
+                remainingTime -= 0.4f;
+                foreach (Transform child in transform.GetChild(0))
+                {
+                    child.GetComponent<SpriteRenderer>().color = Color.gray;
+                }
+                yield return new WaitForSeconds(0.2f);
+                foreach (Transform child in transform.GetChild(0))
+                {
+                    child.GetComponent<SpriteRenderer>().color = Color.white;
+                }
+                yield return new WaitForSeconds(0.2f);
+                yield return null;
             }
             isInvincible = false;
         }

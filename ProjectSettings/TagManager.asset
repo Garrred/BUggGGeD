@@ -15,6 +15,7 @@ TagManager:
   - Boss
   - BossCore
   - HPDisplay
+  - ItemUI
   layers:
   - Default
   - TransparentFX

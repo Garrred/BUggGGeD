@@ -15,7 +15,7 @@ public class BossSpawner : MonoBehaviour
 
     IEnumerator SpawnBoss()
     {
-        if (currentBoss != null)
+        if (bossPrefab != null)
         {
             yield return new WaitForSeconds(timeBeforeSpawn);
             SpriteRenderer[] spriteRenderer = bossPrefab.GetComponentsInChildren<SpriteRenderer>();

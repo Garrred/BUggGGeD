@@ -21,14 +21,6 @@ namespace Enemies
 
         public GameObject[] possibleDrops;
 
-        void OnDestroy()
-        {
-            if (possibleDrops.Length > 0)
-            {
-                Instantiate(possibleDrops[Random.Range(0, possibleDrops.Length + 1)], transform.position, Quaternion.identity);
-            }
-        }
-
         // Start is called before the first frame update
         public virtual void Start()
         {
@@ -44,6 +36,10 @@ namespace Enemies
                 Flash(transform.parent.parent);
                 if (health <= 0)
                 {
+                    if (possibleDrops != null)
+                    {
+                        Instantiate(possibleDrops[Random.Range(0, possibleDrops.Length)], transform.position, Quaternion.identity);
+                    }
                     // StartCoroutine(hpDisplay.FadeOut());
                     // if (Random.Range(0, 100) <= healthDropChance)
                     // {

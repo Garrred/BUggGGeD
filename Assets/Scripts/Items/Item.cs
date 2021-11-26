@@ -14,6 +14,7 @@ public class Item : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        itemUI = GameObject.FindGameObjectWithTag("ItemUI");
         flyAwayDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
     }
 
