@@ -43,7 +43,7 @@ public class ItemUI : MonoBehaviour
         }
     }
 
-    public void PickupItem(Item item)
+    public bool PickupItem(Item item)
     {
         if (!hasItem1)
         {
@@ -51,6 +51,7 @@ public class ItemUI : MonoBehaviour
             item1.SetActive(true);
             currentItem1 = item.gameObject;
             hasItem1 = true;
+            return true;
         }
         else if (!hasItem2)
         {
@@ -58,10 +59,8 @@ public class ItemUI : MonoBehaviour
             item2.SetActive(true);
             currentItem2 = item.gameObject;
             hasItem2 = true;
+            return true;
         }
-        else
-        {
-            Debug.Log("No more room for items");
-        }
+        return false;
     }
 }

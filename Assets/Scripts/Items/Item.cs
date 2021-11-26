@@ -5,17 +5,18 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public float lastingTime = 10f;
-    public float flyAwaySpeed = 1f;
+    public float flyAwaySpeed = 2.5f;
     public float lifeTime = 10f;
     private Vector3 flyAwayDirection = Vector3.up;
     public GameObject itemUI;
+    protected GameObject player;
 
 
     // Start is called before the first frame update
     void Start()
     {
         itemUI = GameObject.FindGameObjectWithTag("ItemUI");
-        flyAwayDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+        flyAwayDirection = new Vector3(0, -1, 0);
     }
 
     // Update is called once per frame
@@ -36,15 +37,18 @@ public class Item : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            player = other.gameObject;
             PickupItem();
         }
     }
 
     public virtual void PickupItem()
     {
-        itemUI.GetComponent<ItemUI>().PickupItem(this);
-        lifeTime = -10f;
-        gameObject.SetActive(false);
+        if (itemUI.GetComponent<ItemUI>().PickupItem(this))
+        {
+            lifeTime = -10f;
+            gameObject.SetActive(false);
+        }
     }
 
     public void UseItem()

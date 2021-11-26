@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3629523356527745321}
   - component: {fileID: 3629523356527745320}
   - component: {fileID: 3629523356527745323}
-  - component: {fileID: 3629523356527745322}
+  - component: {fileID: -3998731567158788775}
   m_Layer: 0
   m_Name: HealthUP
   m_TagString: Untagged
@@ -101,7 +101,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
---- !u!114 &3629523356527745322
+--- !u!114 &-3998731567158788775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,10 +110,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3629523356527745325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e71c2ac202ca52449e33eb694280711, type: 3}
+  m_Script: {fileID: 11500000, guid: f4fe1bc3a82b82d4d8d53fa25606a594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lastingTime: 10
-  flyAwaySpeed: 1
+  flyAwaySpeed: 2.5
   lifeTime: 10
   itemUI: {fileID: 0}
+  healAmount: 1

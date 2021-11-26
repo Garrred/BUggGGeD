@@ -2,24 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthUp : MonoBehaviour
+public class HealthUp : Item
 {
     public int healAmount = 1;
 
-    private Basics.Player playerScript;
-
-    // Start is called before the first frame update
-    void Start()
+    public override void TriggerEffect()
     {
-        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Basics.Player>();
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            playerScript.Heal(healAmount);
-            Destroy(gameObject);
-        }
+        player.GetComponent<Basics.Player>().Heal(healAmount);
     }
 }
