@@ -19,23 +19,13 @@ namespace Enemies
         [HideInInspector]
         public Transform player;
 
-        [System.Serializable]
-        public class Item
-        {
-            public GameObject item;
-            public int chance;
-        }
-
-        public Item[] possibleDrops;
+        public GameObject[] possibleDrops;
 
         void OnDestroy()
         {
             if (possibleDrops.Length > 0)
             {
-                if (Random.Range(0, 100) < possibleDrops[0].chance)
-                {
-                    Instantiate(possibleDrops[0].item, transform.position, Quaternion.identity);
-                }
+                Instantiate(possibleDrops[Random.Range(0, possibleDrops.Length + 1)], transform.position, Quaternion.identity);
             }
         }
 
