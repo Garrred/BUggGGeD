@@ -60,7 +60,8 @@ namespace Enemies
             if (!isInvincible)
             {
                 health -= damage;
-                Flash(transform.parent);
+                if (transform.GetComponent<SpriteRenderer>() != null)
+                    Flash(transform.parent);
                 UpdateHP();
                 if (health <= 0)
                 {

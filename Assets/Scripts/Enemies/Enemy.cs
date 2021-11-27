@@ -51,10 +51,10 @@ namespace Enemies
             }
         }
 
-        public void Flash(Transform ob)
+        public void Flash(Transform materialLocation)
         {
-            GetComponent<SpriteRenderer>().material.shader = ob.GetComponent<FlashOnHit>().flashShader;
-            StartCoroutine(ResetMaterial(ob));
+            transform.GetComponent<SpriteRenderer>().material.shader = materialLocation.GetComponent<FlashOnHit>().flashShader;
+            StartCoroutine(ResetMaterial(materialLocation));
         }
         public IEnumerator ResetMaterial(Transform ob)
         {

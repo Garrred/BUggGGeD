@@ -12,7 +12,6 @@ namespace BUGS
 
         void Start()
         {
-            BUGNumber = "05";
             lastingTime = 5f;
         }
 
