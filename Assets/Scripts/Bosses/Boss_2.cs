@@ -15,6 +15,16 @@ public class Boss_2 : BossBehaviors
     //     this.transform.GetChild(0).parent = null;
     // }
 
+
+    public Enemies.Boss boss;
+    private GameObject Shuriken1;
+    private GameObject Shuriken2;
+
+    void Start()
+    {
+        boss = transform.GetChild(0).GetComponent<Enemies.Boss>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -23,6 +33,18 @@ public class Boss_2 : BossBehaviors
 
     public override void StageChangeModification()
     {
-        base.StageChangeModification();
+        if (boss.stage == 1)
+        {
+            StartCoroutine(StartSplitingIntoTwo());
+        }
+    }
+
+    IEnumerator StartSplitingIntoTwo()
+    {
+        yield return new WaitForSeconds(1);
+        Shuriken1 = transform.GetChild(1).gameObject;
+        Shuriken2 = transform.GetChild(2).gameObject;
+        Shuriken1.GetComponent<Boss2Stage2>().enabled = true;
+        Shuriken2.GetComponent<Boss2Stage2>().enabled = true;
     }
 }

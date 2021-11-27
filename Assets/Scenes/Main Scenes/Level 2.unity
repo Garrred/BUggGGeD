@@ -766,6 +766,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &929688394 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9158487323918262834, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
+  m_PrefabInstance: {fileID: 2081228630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &929688396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929688394}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d7ebe0ea588db46beb24102d11043f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushSpeed: 0
+  knockedBackTime: 0
+  timeBetweenAttacks: 5
 --- !u!1 &1194241403
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,6 +961,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6895383968276185509, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
   m_PrefabInstance: {fileID: 6895383969962458871}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1715729869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9158487324566856414, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
+  m_PrefabInstance: {fileID: 2081228630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1715729871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715729869}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d7ebe0ea588db46beb24102d11043f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushSpeed: 0
+  knockedBackTime: 0
+  timeBetweenAttacks: 5
 --- !u!1 &1854921464 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1854921464, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
@@ -1031,11 +1071,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: BOSS2_TEMP
       objectReference: {fileID: 0}
+    - target: {fileID: 7245926410621555303, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8213808096036485249, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: hpBarUI
       value: 
       objectReference: {fileID: 1687060306}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1135875158, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
+    - {fileID: 493712, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
 --- !u!1001 &6533110417469856898
 PrefabInstance:

@@ -35,7 +35,7 @@ public class Boss_1 : BossBehaviors
 
     public override void StageChangeModification()
     {
-        // disable the inner shield invincibility
+        // disable the inner shield's invincibility
         if (boss.stage == 1)
         {
             for (int i = 0; i < innerShield.childCount; i++)

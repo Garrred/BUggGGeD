@@ -69,6 +69,7 @@ namespace Enemies
                     EndBullet();
                     if (stage == 2)
                     {
+                        isAlive = false;
                         Destroy(gameObject.transform.parent.gameObject);
                     }
                     else
@@ -102,7 +103,6 @@ namespace Enemies
                 transform.parent.GetChild(4).GetComponent<BugBulletEmitter>().enabled = true;
                 currentBullet.transform.GetChild(currentBulletIndex).gameObject.SetActive(true);
                 yield return new WaitForSeconds(20f);
-                transform.parent.GetChild(4).GetComponent<BugBulletEmitter>().enabled = false;
                 currentBullet.transform.GetChild(currentBulletIndex).gameObject.SetActive(false);
                 currentBulletIndex = Mathf.Abs(currentBulletIndex - 1);
                 yield return new WaitForSeconds(2f);
