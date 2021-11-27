@@ -44,6 +44,7 @@ public class Boss2Stage2 : MonoBehaviour
         Vector3 target = player.transform.position;
         Vector3 direction = (target - this.transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        // Quaternion targetRotation = transform.rotation;
         // Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
         // this.transform.position = Vector3.MoveTowards(this.transform.position, target, 3f);
         while (dashedTime < dashAttackDuration)
@@ -56,6 +57,9 @@ public class Boss2Stage2 : MonoBehaviour
                 // }
                 transform.position = Vector2.MoveTowards(transform.position, direction * 100, dashSpeed * Time.deltaTime);
             }
+            // targetRotation *= Quaternion.AngleAxis(10, Vector3.forward);
+            // transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 10 * Time.deltaTime);
+            // transform.Rotate(0, 0, 100 * Time.deltaTime + 4000 * Time.deltaTime * Mathf.Pow((dashAttackDuration * 0.5f - Mathf.Abs(0.5f * dashAttackDuration - dashedTime)), 2) / dashAttackDuration);
             transform.Rotate(0, 0, 1000 * Time.deltaTime);
             dashedTime += Time.fixedDeltaTime;
             yield return null;
