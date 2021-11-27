@@ -139,43 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd749e5d995b90042a3c4917d9ed272f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &221404538 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 221404538, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
-  m_PrefabInstance: {fileID: 742239557}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &221404542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221404538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f162f408c743c342ab599cd76aa1e49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BUGNumber: 
-  lastingTime: 5
-  remainingTime: -10
-  collision: {fileID: 0}
---- !u!114 &221404543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221404538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eedf562931a11146820db07e8d1b2ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BUGNumber: 
-  lastingTime: 5
-  remainingTime: -10
-  collision: {fileID: 0}
 --- !u!1 &454889621 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3527304499553222904, guid: 2ba8ceb7211821a43b8c532225010c61, type: 3}
@@ -261,14 +224,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 221404540, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
-      propertyPath: bugs.Array.data[1]
-      value: 
-      objectReference: {fileID: 221404543}
-    - target: {fileID: 221404540, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
-      propertyPath: bugs.Array.data[2]
-      value: 
-      objectReference: {fileID: 221404542}
     - target: {fileID: 869185456, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
       propertyPath: hpBarUI
       value: 
@@ -277,10 +232,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 454889622}
-    - target: {fileID: 4014909406514690452, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6147097672454118350, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
       propertyPath: playerBody
       value: 

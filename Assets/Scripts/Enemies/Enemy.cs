@@ -36,7 +36,7 @@ namespace Enemies
                 Flash(transform.parent.parent);
                 if (health <= 0)
                 {
-                    if (possibleDrops != null)
+                    if (possibleDrops.Length > 0)
                     {
                         Instantiate(possibleDrops[Random.Range(0, possibleDrops.Length)], transform.position, Quaternion.identity);
                     }
