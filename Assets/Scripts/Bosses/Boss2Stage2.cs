@@ -33,7 +33,7 @@ public class Boss2Stage2 : MonoBehaviour
         }
         else
         {
-            attackCooldown = timeBetweenAttacks;
+            attackCooldown = UnityEngine.Random.Range(timeBetweenAttacks - 0.5f, timeBetweenAttacks + 0.5f);
             StartCoroutine(RotationAttack());
         }
     }
@@ -54,8 +54,9 @@ public class Boss2Stage2 : MonoBehaviour
                 // {
                 // transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
                 // }
-                transform.position = Vector2.MoveTowards(transform.position, target, dashSpeed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, direction * 100, dashSpeed * Time.deltaTime);
             }
+            transform.Rotate(0, 0, 1000 * Time.deltaTime);
             dashedTime += Time.fixedDeltaTime;
             yield return null;
         }

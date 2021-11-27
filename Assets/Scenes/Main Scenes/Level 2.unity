@@ -804,11 +804,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushSpeed: 0
   knockedBackTime: 0
-  timeBetweenAttacks: 5
+  timeBetweenAttacks: 3
   dashAttackDuration: 2
   dashedTime: 0
   dashSpeed: 15
   stopDistance: 5
+--- !u!95 &929688397
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929688394}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ed2157ab445eb1c45aa503c5c2eff269, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1194241403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,11 +1022,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushSpeed: 0
   knockedBackTime: 0
-  timeBetweenAttacks: 5
+  timeBetweenAttacks: 3
   dashAttackDuration: 2
   dashedTime: 0
   dashSpeed: 15
   stopDistance: 5
+--- !u!95 &1715729872
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715729869}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e0ba07b0ea01c1438d6638b4366a4bf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1854921464 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1854921464, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
@@ -1136,7 +1174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9158487324566856401, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.000000749014
       objectReference: {fileID: 0}
     - target: {fileID: 9158487324566856401, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1144,11 +1182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9158487324566856401, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9158487324566856401, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 900
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1135875158, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
