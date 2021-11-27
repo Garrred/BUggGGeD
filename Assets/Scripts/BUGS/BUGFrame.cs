@@ -17,8 +17,8 @@ public class BUGFrame : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            this.collision = other;
             remainingTime = lastingTime;
+            this.collision = other;
             BugStart();
             Invoke("BugEnd", remainingTime);
         }
