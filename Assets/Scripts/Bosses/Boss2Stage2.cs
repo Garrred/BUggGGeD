@@ -15,7 +15,10 @@ public class Boss2Stage2 : MonoBehaviour
     public float dashedTime = 0f;
     public float dashSpeed = 15f;
     public float stopDistance = 5f;
+    private bool isDashing = false;
+    public int count = 0;
 
+    public bool splitedIntoFour = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,22 +29,29 @@ public class Boss2Stage2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.Rotate(0, 0, 100 * Time.deltaTime);
-        if (attackCooldown > 0)
+        if (!splitedIntoFour)
         {
-            attackCooldown -= Time.deltaTime;
-        }
-        else
-        {
-            attackCooldown = UnityEngine.Random.Range(timeBetweenAttacks - 0.5f, timeBetweenAttacks + 0.5f);
-            StartCoroutine(RotationAttack());
+            this.transform.Rotate(0, 0, 100 * Time.deltaTime);
+            if (attackCooldown > 0)
+            {
+                attackCooldown -= Time.deltaTime;
+            }
+            else
+            {
+                attackCooldown = UnityEngine.Random.Range(timeBetweenAttacks - 0.5f, timeBetweenAttacks + 0.5f);
+                StartCoroutine(RotationAttack());
+            }
         }
     }
 
     IEnumerator RotationAttack()
     {
+        gameObject.GetComponent<BulletPro.BulletEmitter>().enabled = false;
+        transform.GetChild(2).gameObject.SetActive(false);
+        isDashing = true;
         // rotate to player
         Vector3 target = player.transform.position;
+        yield return new WaitForSeconds(0.5f);
         Vector3 direction = (target - this.transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         // Quaternion targetRotation = transform.rotation;
@@ -65,6 +75,17 @@ public class Boss2Stage2 : MonoBehaviour
             yield return null;
         }
         dashedTime = 0f;
+        isDashing = false;
+        if (count == 0)
+        {
+            gameObject.GetComponent<BulletPro.BulletEmitter>().enabled = true;
+            count++;
+        }
+        else
+        {
+            transform.GetChild(2).gameObject.SetActive(true);
+            count--;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)

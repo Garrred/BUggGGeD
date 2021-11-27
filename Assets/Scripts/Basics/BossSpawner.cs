@@ -7,6 +7,7 @@ public class BossSpawner : MonoBehaviour
     public GameObject bossPrefab;
     public float timeBeforeSpawn = 5f;
     private GameObject currentBoss;
+    private SpriteRenderer[] spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,17 +21,17 @@ public class BossSpawner : MonoBehaviour
             yield return new WaitForSeconds(timeBeforeSpawn);
             gameObject.GetComponent<AudioSource>().Play();
 
-            SpriteRenderer[] spriteRenderer = bossPrefab.GetComponentsInChildren<SpriteRenderer>();
+            spriteRenderer = bossPrefab.GetComponentsInChildren<SpriteRenderer>();
             // foreach (SpriteRenderer sr in spriteRenderer)
             // {
             //     sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0);
             // }
             bossPrefab.SetActive(true);
-            StartCoroutine(FadeIn(spriteRenderer));
+            StartCoroutine(FadeIn());
         }
     }
 
-    IEnumerator FadeIn(SpriteRenderer[] spriteRenderer)
+    public IEnumerator FadeIn()
     {
         for (int i = 0; i < 20; i++)
         {
@@ -38,6 +39,19 @@ public class BossSpawner : MonoBehaviour
             foreach (SpriteRenderer sr in spriteRenderer)
             {
                 sr.color += new Color(0, 0, 0, 0.05f);
+            }
+        }
+    }
+
+    public IEnumerator FadeOut()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            yield return new WaitForSeconds(0.05f);
+            foreach (SpriteRenderer sr in spriteRenderer)
+            {
+                Debug.Log(sr.color);
+                sr.color -= new Color(0, 0, 0, 0.05f);
             }
         }
     }

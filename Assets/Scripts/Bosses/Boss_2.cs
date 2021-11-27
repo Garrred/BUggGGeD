@@ -21,9 +21,15 @@ public class Boss_2 : BossBehaviors
     private GameObject Shuriken2;
     private bool splited = false;
 
+    private BossSpawner bossSpawner;
+
+    private GameObject player;
+
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         boss = transform.GetChild(0).GetComponent<Enemies.Boss>();
+        bossSpawner = GameObject.FindGameObjectWithTag("GameManager").GetComponent<BossSpawner>();
     }
 
     // Update is called once per frame
@@ -40,6 +46,42 @@ public class Boss_2 : BossBehaviors
             splited = true;
             StartCoroutine(StartSplitingIntoTwo());
         }
+        if (boss.stage == 2)
+        {
+            StartCoroutine(StartSplitingIntoFour());
+            // transform.GetChild(4).GetComponent<BugBulletEmitter>().enabled = true;
+        }
+    }
+
+    IEnumerator StartSplitingIntoFour()
+    {
+        Shuriken1.GetComponent<Boss2Stage2>().enabled = false;
+        Shuriken2.GetComponent<Boss2Stage2>().enabled = false;
+        transform.GetChild(4).GetComponent<BugBulletEmitter>().enabled = false;
+        StartCoroutine(bossSpawner.FadeOut());
+        yield return new WaitForSeconds(3);
+        // gameObject.GetComponent<Animator>().SetTrigger("Stage2Start");
+        Shuriken1.GetComponent<Boss2Stage2>().splitedIntoFour = true;
+        Shuriken2.GetComponent<Boss2Stage2>().splitedIntoFour = true;
+
+        for (int i = 0; i < 2; i++)
+        {
+            Shuriken1.transform.GetChild(i).GetComponent<Collider2D>().enabled = false;
+            Shuriken2.transform.GetChild(i).GetComponent<Collider2D>().enabled = false;
+        }
+        Shuriken1.transform.GetChild(0).position = player.transform.position + new Vector3(0, 5, 0);
+        Shuriken1.transform.GetChild(1).position = player.transform.position + new Vector3(0, -5, 0);
+        Shuriken2.transform.GetChild(0).position = player.transform.position + new Vector3(-5, 0, 0);
+        Shuriken2.transform.GetChild(1).position = player.transform.position + new Vector3(5, 0, 0);
+
+        StartCoroutine(bossSpawner.FadeIn());
+        for (int i = 0; i < 2; i++)
+        {
+            Shuriken1.transform.GetChild(i).GetComponent<Collider2D>().enabled = true;
+            Shuriken2.transform.GetChild(i).GetComponent<Collider2D>().enabled = true;
+        }
+        yield return new WaitForSeconds(2f);
+
     }
 
     IEnumerator StartSplitingIntoTwo()
@@ -53,5 +95,6 @@ public class Boss_2 : BossBehaviors
         gameObject.GetComponent<Animator>().enabled = false;
         Shuriken1.GetComponent<Boss2Stage2>().enabled = true;
         Shuriken2.GetComponent<Boss2Stage2>().enabled = true;
+        transform.GetChild(4).GetComponent<BugBulletEmitter>().enabled = false;
     }
 }
