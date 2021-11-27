@@ -47,8 +47,10 @@ public class Boss_2 : BossBehaviors
         yield return new WaitForSeconds(1);
         Shuriken1 = transform.GetChild(1).gameObject;
         Shuriken2 = transform.GetChild(2).gameObject;
-        Shuriken1.transform.position = Vector3.MoveTowards(transform.position, new Vector3(-5, 0, 0), 5);
-        Shuriken2.transform.position = Vector3.MoveTowards(transform.position, new Vector3(5, 0, 0), 5);
+        // gameObject.transform.GetChild(5).GetComponent<Animator>().SetTrigger("Stage2Start");
+        gameObject.GetComponent<Animator>().SetTrigger("Stage2Start");
+        yield return new WaitForSeconds(2f);
+        gameObject.GetComponent<Animator>().enabled = false;
         Shuriken1.GetComponent<Boss2Stage2>().enabled = true;
         Shuriken2.GetComponent<Boss2Stage2>().enabled = true;
     }

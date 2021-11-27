@@ -19,6 +19,7 @@ public class Boss2Stage2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        attackCooldown = timeBetweenAttacks;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -44,7 +45,7 @@ public class Boss2Stage2 : MonoBehaviour
         Vector3 direction = (target - this.transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         // Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
-        this.transform.position = Vector3.MoveTowards(this.transform.position, target, 3f);
+        // this.transform.position = Vector3.MoveTowards(this.transform.position, target, 3f);
         while (dashedTime < dashAttackDuration)
         {
             if (player != null)
