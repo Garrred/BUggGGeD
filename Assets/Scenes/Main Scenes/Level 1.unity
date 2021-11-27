@@ -224,6 +224,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 221404540, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 869185456, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
       propertyPath: hpBarUI
       value: 

@@ -25,6 +25,8 @@ namespace Enemies
                 sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0);
             }
             hpBarUI.SetActive(true);
+            hpDisplay = hpBarUI.GetComponent<Basics.HPDisplay>();
+            player = GameObject.FindGameObjectWithTag("Player").transform;
         }
         public void UpdateHP()
         {
@@ -37,8 +39,6 @@ namespace Enemies
         {
             isAlive = true;
             health = maxHealth;
-            hpDisplay = hpBarUI.GetComponent<Basics.HPDisplay>();
-            player = GameObject.FindGameObjectWithTag("Player").transform;
             isInvincible = true;
             StartCoroutine(StartBulletEmission());
         }
@@ -69,7 +69,7 @@ namespace Enemies
                     EndBullet();
                     if (stage == 2)
                     {
-                        Destroy(gameObject);
+                        Destroy(gameObject.transform.parent.gameObject);
                     }
                     else
                     {
@@ -85,6 +85,7 @@ namespace Enemies
         }
         public void EndBullet()
         {
+            transform.parent.GetChild(4).GetComponent<BugBulletEmitter>().enabled = false;
             currentBullet.SetActive(false);
         }
         public IEnumerator StartBulletEmission()
@@ -98,8 +99,10 @@ namespace Enemies
             while (isAlive)
             {
                 UpdateShootingPos();
+                transform.parent.GetChild(4).GetComponent<BugBulletEmitter>().enabled = true;
                 currentBullet.transform.GetChild(currentBulletIndex).gameObject.SetActive(true);
                 yield return new WaitForSeconds(20f);
+                transform.parent.GetChild(4).GetComponent<BugBulletEmitter>().enabled = false;
                 currentBullet.transform.GetChild(currentBulletIndex).gameObject.SetActive(false);
                 currentBulletIndex = Mathf.Abs(currentBulletIndex - 1);
                 yield return new WaitForSeconds(2f);
