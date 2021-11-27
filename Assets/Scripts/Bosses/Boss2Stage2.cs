@@ -11,6 +11,10 @@ public class Boss2Stage2 : MonoBehaviour
     private GameObject player;
     public float timeBetweenAttacks;
     private float attackCooldown;
+    public float dashAttackDuration = 2f;
+    public float dashedTime = 0f;
+    public float dashSpeed = 15f;
+    public float stopDistance = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -37,12 +41,24 @@ public class Boss2Stage2 : MonoBehaviour
     {
         // rotate to player
         Vector3 target = player.transform.position;
-        target.y = this.transform.position.y;
         Vector3 direction = (target - this.transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
-        this.transform.rotation = Quaternion.Slerp(this.transform.rotation, q, Time.deltaTime * 10);
-        yield return null;
+        // Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+        this.transform.position = Vector3.MoveTowards(this.transform.position, target, 3f);
+        while (dashedTime < dashAttackDuration)
+        {
+            if (player != null)
+            {
+                // if (Vector2.Distance(transform.position, player.position) > stopDistance)
+                // {
+                // transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+                // }
+                transform.position = Vector2.MoveTowards(transform.position, target, dashSpeed * Time.deltaTime);
+            }
+            dashedTime += Time.fixedDeltaTime;
+            yield return null;
+        }
+        dashedTime = 0f;
     }
 
     private void OnCollisionEnter2D(Collision2D other)

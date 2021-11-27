@@ -106,6 +106,7 @@ namespace Enemies
                 currentBullet.transform.GetChild(currentBulletIndex).gameObject.SetActive(false);
                 currentBulletIndex = Mathf.Abs(currentBulletIndex - 1);
                 yield return new WaitForSeconds(2f);
+
             }
         }
     }

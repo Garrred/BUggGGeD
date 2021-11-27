@@ -786,6 +786,10 @@ MonoBehaviour:
   pushSpeed: 0
   knockedBackTime: 0
   timeBetweenAttacks: 5
+  dashAttackDuration: 2
+  dashedTime: 0
+  dashSpeed: 15
+  stopDistance: 5
 --- !u!1 &1194241403
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,6 +985,10 @@ MonoBehaviour:
   pushSpeed: 0
   knockedBackTime: 0
   timeBetweenAttacks: 5
+  dashAttackDuration: 2
+  dashedTime: 0
+  dashSpeed: 15
+  stopDistance: 5
 --- !u!1 &1854921464 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1854921464, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
@@ -1073,7 +1081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7245926410621555303, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8213808096036485249, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: hpBarUI
