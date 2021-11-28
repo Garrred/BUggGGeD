@@ -43,7 +43,7 @@ namespace Attacks
                 if (isShooting)
                 {
                     Vector2 direction = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
-                    if (!rotationFreezed && transform.rotation != Quaternion.LookRotation(Vector3.forward, direction))
+                    if (!rotationFreezed && Quaternion.Angle(transform.rotation,Quaternion.LookRotation(Vector3.forward, direction))>1)
                     {
                         transform.rotation = Quaternion.RotateTowards(transform.rotation,
                         Quaternion.LookRotation(Vector3.forward, direction), rotationSpeed * Time.fixedDeltaTime);
