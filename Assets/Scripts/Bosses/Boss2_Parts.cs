@@ -32,7 +32,7 @@ public class Boss2_Parts : Enemies.Enemy
     {
         if (transform.parent.GetComponent<Boss2Stage2>().splitedIntoFour)
         {
-            // transform.RotateAround(transform.parent.parent.position, player.transform.forward, Time.deltaTime * 100);
+            transform.RotateAround(transform.parent.parent.position, transform.forward, Time.deltaTime * 100);
         }
 
     }

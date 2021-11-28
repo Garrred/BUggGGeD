@@ -85,6 +85,11 @@ public class Boss_2 : BossBehaviors
         // }
 
 
+        Shuriken1.transform.GetChild(0).Translate(new Vector3(8f, 8f, 0));
+        Shuriken1.transform.GetChild(1).Translate(new Vector3(8f, 8f, 0));
+        Shuriken2.transform.GetChild(0).Translate(new Vector3(8f, 8f, 0));
+        Shuriken2.transform.GetChild(1).Translate(new Vector3(8f, 8f, 0));
+
         // Shuriken1.transform.GetChild(0).position = player.transform.position + new Vector3(0, 5, 0);
         // Shuriken1.transform.GetChild(1).position = player.transform.position + new Vector3(0, -5, 0);
         // Shuriken2.transform.GetChild(0).position = player.transform.position + new Vector3(-5, 0, 0);
