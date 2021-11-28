@@ -34,7 +34,6 @@ public class Boss2_Parts : Enemies.Enemy
         {
             transform.RotateAround(transform.parent.parent.position, transform.forward, Time.deltaTime * 100);
         }
-
     }
     // Update is called once per frame
     // void Update()

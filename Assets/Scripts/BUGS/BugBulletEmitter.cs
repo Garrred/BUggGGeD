@@ -9,9 +9,12 @@ public class BugBulletEmitter : MonoBehaviour
     public BUGFrame[] bugs;
     public GameObject bugBulletPrefab;
     private BUGFrame currentBug;
+    public bool isHoming = false;
+    private Transform player;
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         currentBug = bugs[0];
     }
     // Update is called once per frame
@@ -35,7 +38,19 @@ public class BugBulletEmitter : MonoBehaviour
         // shoot bullet in four directions
         for (int i = 0; i < 4; i++)
         {
-            GameObject bullet = Instantiate(bugBulletPrefab, transform.position, Quaternion.identity);
+            GameObject bullet;
+            if (isHoming)
+            {
+                Vector2 direction = player.position - transform.position;
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                Quaternion rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+
+                bullet = Instantiate(bugBulletPrefab, transform.position, rotation);
+            }
+            else
+            {
+                bullet = Instantiate(bugBulletPrefab, transform.position, Quaternion.identity);
+            }
             bullet.AddComponent(currentBug.GetType());
             bullet.GetComponent<Enemies.Bullet>().transform.rotation = Quaternion.Euler(0, 0, (i * 90) + transform.rotation.eulerAngles.z);
         }

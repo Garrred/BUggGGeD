@@ -76,6 +76,8 @@ public class Boss_2 : BossBehaviors
         {
             Shuriken1.transform.GetChild(i).GetComponent<Collider2D>().enabled = false;
             Shuriken2.transform.GetChild(i).GetComponent<Collider2D>().enabled = false;
+            Shuriken1.transform.GetChild(i).GetChild(0).gameObject.SetActive(true);
+            Shuriken2.transform.GetChild(i).GetChild(0).gameObject.SetActive(true);
             Shuriken1.transform.GetChild(i).transform.position = transform.position;
             Shuriken2.transform.GetChild(i).transform.position = transform.position;
         }
