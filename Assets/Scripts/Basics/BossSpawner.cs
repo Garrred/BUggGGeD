@@ -50,7 +50,6 @@ public class BossSpawner : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
             foreach (SpriteRenderer sr in spriteRenderer)
             {
-                Debug.Log(sr.color);
                 sr.color -= new Color(0, 0, 0, 0.05f);
             }
         }

@@ -28,6 +28,14 @@ public class Boss2_Parts : Enemies.Enemy
         attackCooldown = timeBetweenAttacks;
     }
 
+    void FixedUpdate()
+    {
+        if (transform.parent.GetComponent<Boss2Stage2>().splitedIntoFour)
+        {
+            // transform.RotateAround(transform.parent.parent.position, player.transform.forward, Time.deltaTime * 100);
+        }
+
+    }
     // Update is called once per frame
     // void Update()
     // {

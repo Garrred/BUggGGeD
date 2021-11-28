@@ -24,6 +24,7 @@ public class Boss_2 : BossBehaviors
     private BossSpawner bossSpawner;
 
     private GameObject player;
+    private bool followingPlayer = false;
 
     void Start()
     {
@@ -35,6 +36,10 @@ public class Boss_2 : BossBehaviors
     // Update is called once per frame
     void Update()
     {
+        if (followingPlayer)
+        {
+            transform.position = Vector2.Lerp(transform.position, player.transform.position, 10f * Time.fixedDeltaTime);
+        }
         if (!splited)
             this.transform.Rotate(0, 0, 100 * Time.deltaTime);
     }
@@ -64,16 +69,26 @@ public class Boss_2 : BossBehaviors
         Shuriken1.GetComponent<Boss2Stage2>().splitedIntoFour = true;
         Shuriken2.GetComponent<Boss2Stage2>().splitedIntoFour = true;
 
+        followingPlayer = true;
+        Shuriken1.transform.position = transform.position;
+        Shuriken2.transform.position = transform.position;
         for (int i = 0; i < 2; i++)
         {
             Shuriken1.transform.GetChild(i).GetComponent<Collider2D>().enabled = false;
             Shuriken2.transform.GetChild(i).GetComponent<Collider2D>().enabled = false;
+            Shuriken1.transform.GetChild(i).transform.position = transform.position;
+            Shuriken2.transform.GetChild(i).transform.position = transform.position;
         }
-        Shuriken1.transform.GetChild(0).position = player.transform.position + new Vector3(0, 5, 0);
-        Shuriken1.transform.GetChild(1).position = player.transform.position + new Vector3(0, -5, 0);
-        Shuriken2.transform.GetChild(0).position = player.transform.position + new Vector3(-5, 0, 0);
-        Shuriken2.transform.GetChild(1).position = player.transform.position + new Vector3(5, 0, 0);
+        // foreach (Transform child in transform)
+        // {
+        //     child.transform.position = player.transform.position;
+        // }
 
+
+        // Shuriken1.transform.GetChild(0).position = player.transform.position + new Vector3(0, 5, 0);
+        // Shuriken1.transform.GetChild(1).position = player.transform.position + new Vector3(0, -5, 0);
+        // Shuriken2.transform.GetChild(0).position = player.transform.position + new Vector3(-5, 0, 0);
+        // Shuriken2.transform.GetChild(1).position = player.transform.position + new Vector3(5, 0, 0);
         StartCoroutine(bossSpawner.FadeIn());
         for (int i = 0; i < 2; i++)
         {
@@ -81,7 +96,6 @@ public class Boss_2 : BossBehaviors
             Shuriken2.transform.GetChild(i).GetComponent<Collider2D>().enabled = true;
         }
         yield return new WaitForSeconds(2f);
-
     }
 
     IEnumerator StartSplitingIntoTwo()
@@ -95,6 +109,6 @@ public class Boss_2 : BossBehaviors
         gameObject.GetComponent<Animator>().enabled = false;
         Shuriken1.GetComponent<Boss2Stage2>().enabled = true;
         Shuriken2.GetComponent<Boss2Stage2>().enabled = true;
-        transform.GetChild(4).GetComponent<BugBulletEmitter>().enabled = false;
+        transform.GetChild(4).gameObject.SetActive(false);
     }
 }
