@@ -52,7 +52,7 @@ MonoBehaviour:
   - {fileID: 221404543}
   - {fileID: 221404542}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
-  isHoming: 0
+  isHoming: 1
 --- !u!114 &221404541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2265,13 +2265,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7784216934432258314}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 545b1faf2f9632248bf42d8928b3dbab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  timeBetweenBugs: 15
+  timeBetweenBugs: 22.5
   bugs:
   - {fileID: 6147097672454118350}
   - {fileID: 7824490205041500636}
