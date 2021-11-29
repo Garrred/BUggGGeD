@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
   followSpeed: 10
-  max: {x: 10, y: 10}
+  max: {x: 11.2, y: 6}
   min: {x: -10, y: -10}
   offset: {x: 0, y: 0}
   isSleeping: 0
