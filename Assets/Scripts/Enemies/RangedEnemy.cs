@@ -73,11 +73,14 @@ namespace Enemies
 
         public IEnumerator BugAttack(Quaternion rotation)
         {
+            isCastingBug = true;
             attackCount = 0;
             yield return new WaitForSeconds(1f);
             Instantiate(bugBullet, transform.position, rotation);
-            Instantiate(bugBulletSpark, transform.position, rotation);
-            yield return new WaitForSeconds(1f);
+            GameObject spark = Instantiate(bugBulletSpark, transform.position, rotation);
+            yield return new WaitForSeconds(2f);
+            Destroy(spark);
+            isCastingBug = false;
         }
 
         // IEnumerator attacking()

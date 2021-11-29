@@ -7,7 +7,9 @@ public class Summon : Enemies.Enemy
     public float escapeDistance;
 
     private float summonCooldown;
-
+    public GameObject bugSummonSpark;
+    public GameObject bugMinion;
+    private bool isCastingBug = false;
     public GameObject minion;
     private Animator animator;
 
@@ -21,7 +23,7 @@ public class Summon : Enemies.Enemy
     // Update is called once per frame
     void Update()
     {
-        if (player != null)
+        if (player != null && !isCastingBug)
         {
             if (Vector2.Distance(transform.position, player.position) < escapeDistance)
             {
@@ -42,11 +44,29 @@ public class Summon : Enemies.Enemy
 
     public void summon()
     {
-        attackCount++;
         if (player != null)
         {
-            GameObject newMinion = Instantiate(minion, transform.position, transform.rotation);
-            newMinion.transform.SetParent(transform);
+            if (attackCount >= attacksBeforeBug)
+            {
+                GameObject newMinion = Instantiate(minion, transform.position, transform.rotation);
+                newMinion.transform.SetParent(transform);
+                attackCount++;
+            }
+            else
+            {
+                StartCoroutine(BugAttack(transform.rotation));
+            }
         }
+    }
+
+    public IEnumerator BugAttack(Quaternion rotation)
+    {
+        isCastingBug = true;
+        attackCount = 0;
+        yield return new WaitForSeconds(1f);
+        Instantiate(bugMinion, transform.position, rotation);
+        GameObject spark = Instantiate(bugSummonSpark, transform.position, rotation);
+        Destroy(spark);
+        isCastingBug = false;
     }
 }
