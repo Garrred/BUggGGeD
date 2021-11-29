@@ -20,9 +20,9 @@ public class DashingEnemy : Enemies.Enemy
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        this.transform.Rotate(0, 0, 300 * Time.deltaTime);
+        this.transform.Rotate(0, 0, 300 * Time.fixedDeltaTime);
         if (player != null && !isDashing && !spawningBug)
         {
             if (Vector2.Distance(transform.position, player.position) > stopDistance)
@@ -40,7 +40,7 @@ public class DashingEnemy : Enemies.Enemy
                     StartCoroutine(DashAttack());
                 }
             }
-            attackCoolDown -= Time.deltaTime;
+            attackCoolDown -= Time.fixedDeltaTime;
 
         }
 

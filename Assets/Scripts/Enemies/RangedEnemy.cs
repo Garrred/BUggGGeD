@@ -19,14 +19,14 @@ namespace Enemies
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
             if (!isCastingBug)
             {
 
                 if (attackCoolDown > 0)
                 {
-                    attackCoolDown -= Time.deltaTime;
+                    attackCoolDown -= Time.fixedDeltaTime;
                 }
                 else
                 {
