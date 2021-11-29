@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BUGFrame : MonoBehaviour
 {
@@ -19,12 +20,19 @@ public class BUGFrame : MonoBehaviour
         {
             remainingTime = lastingTime;
             this.collision = other;
+            StartCoroutine(DisplayWarning());
             BugStart();
             // GameObject.FindGameObjectWithTag("Player").transform.GetChild(4).text = bugText;
             Invoke("BugEnd", remainingTime);
         }
     }
-
+    IEnumerator DisplayWarning()
+    {
+        collision.transform.parent.GetChild(1).gameObject.GetComponent<TMPro.TextMeshPro>().text = bugText;
+        collision.transform.parent.GetChild(1).gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        collision.transform.parent.GetChild(1).gameObject.SetActive(false);
+    }
     public virtual void BugStart() 
     {
         Debug.Log("This bug is not implemented");

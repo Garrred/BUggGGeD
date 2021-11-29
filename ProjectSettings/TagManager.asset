@@ -16,6 +16,7 @@ TagManager:
   - BossCore
   - HPDisplay
   - ItemUI
+  - BugText
   layers:
   - Default
   - TransparentFX
