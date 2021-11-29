@@ -48,13 +48,13 @@ public class Summon : Enemies.Enemy
         {
             if (attackCount >= attacksBeforeBug)
             {
-                GameObject newMinion = Instantiate(minion, transform.position, transform.rotation);
-                newMinion.transform.SetParent(transform);
-                attackCount++;
+                StartCoroutine(BugAttack(transform.rotation));
             }
             else
             {
-                StartCoroutine(BugAttack(transform.rotation));
+                GameObject newMinion = Instantiate(minion, transform.position, transform.rotation);
+                newMinion.transform.SetParent(transform);
+                attackCount++;
             }
         }
     }
