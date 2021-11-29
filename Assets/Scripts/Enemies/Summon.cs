@@ -34,7 +34,6 @@ public class Summon : Enemies.Enemy
             }
             else if (attackCoolDown <= 0)
             {
-                Debug.Log("Attacking");
                 summon();
                 attackCoolDown = timeBetweenAttacks;
             }

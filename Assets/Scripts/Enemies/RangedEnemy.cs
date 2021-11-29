@@ -8,26 +8,24 @@ namespace Enemies
     {
         public float stopDistance;
         // private Animator animator;
-        private float shootCooldown;
         public GameObject bullet;
 
         public override void Start()
         {
             base.Start();
-            shootCooldown = 1f;
             // animator = GetComponent<Animator>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (shootCooldown > 0)
+            if (attackCoolDown > 0)
             {
-                shootCooldown -= Time.deltaTime;
+                attackCoolDown -= Time.deltaTime;
             }
             else
             {
-                shootCooldown = timeBetweenAttacks;
+                attackCoolDown = timeBetweenAttacks;
                 Attack();
             }
 
@@ -37,14 +35,12 @@ namespace Enemies
                 {
                     transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
                 }
-                else
+                else if (attackCoolDown <= 0)
                 {
-                    if (Time.time >= shootCooldown)
-                    {
-                        shootCooldown = Time.time + timeBetweenAttacks;
-                        // animator.SetBool("isAttacking", true);
-                    }
+                    Attack();
+                    attackCoolDown = timeBetweenAttacks;
                 }
+                attackCoolDown -= Time.deltaTime;
             }
 
         }
