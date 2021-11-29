@@ -15,7 +15,6 @@ public class Boss2_Parts : Enemies.Enemy
     public float dashAttackDuration = 2f;
     public float dashedTime = 0f;
     public float dashSpeed = 5f;
-    public float stopDistance = 5f;
     private bool isDashing = false;
     public int count = 0;
 

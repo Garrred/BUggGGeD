@@ -6,7 +6,6 @@ namespace Enemies
 {
     public class RangedEnemy : Enemy
     {
-        public float stopDistance;
         // private Animator animator;
         public GameObject bullet;
 

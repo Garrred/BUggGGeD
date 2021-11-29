@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Summon : Enemies.Enemy
 {
-    public float stopDistance;
     public float escapeDistance;
 
     private float summonCooldown;

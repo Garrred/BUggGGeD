@@ -10,6 +10,7 @@ namespace Enemies
         public float health;
         public float maxHealth;
         public int attackPower;
+        public float stopDistance;
         public float timeBetweenAttacks;
         [HideInInspector]
         public float attackCoolDown = 0f;

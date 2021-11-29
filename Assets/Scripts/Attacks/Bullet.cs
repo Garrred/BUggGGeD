@@ -42,7 +42,10 @@ namespace Attacks
             if (!(collision.gameObject.tag == "Boss" || collision.gameObject.tag == "Enemy" ||
                 collision.gameObject.tag == "BossCore"))
                 return;
-            collision.GetComponent<Enemies.Enemy>().takeDamage(damage);
+            if (collision.GetComponent<Enemies.Enemy>() != null)
+                collision.GetComponent<Enemies.Enemy>().takeDamage(damage);
+            else
+                collision.transform.parent.GetComponent<Enemies.Enemy>().takeDamage(damage);
             Destroy(gameObject);
             destorySpark();
         }
