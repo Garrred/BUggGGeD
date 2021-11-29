@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class BUGFrame : MonoBehaviour
 {
-    [HideInInspector]
-    public string BUGNumber;
+    public string bugText;
     public float lastingTime = 5f;
     public float remainingTime = -10f;
     public bool bugEnabled = true;
@@ -21,6 +20,7 @@ public class BUGFrame : MonoBehaviour
             remainingTime = lastingTime;
             this.collision = other;
             BugStart();
+            // GameObject.FindGameObjectWithTag("Player").transform.GetChild(4).text = bugText;
             Invoke("BugEnd", remainingTime);
         }
     }
