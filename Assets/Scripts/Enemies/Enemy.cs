@@ -11,6 +11,8 @@ namespace Enemies
         public float maxHealth;
         public int attackPower;
         public float timeBetweenAttacks;
+        [HideInInspector]
+        public float attackCoolDown = 0f;
         public float speed;
         // public int healthDropChance;
         // public GameObject healthDrop;
@@ -33,7 +35,8 @@ namespace Enemies
             if (!isInvincible)
             {
                 health -= damage;
-                Flash(transform.parent.parent);
+                if (transform.parent.parent != null)
+                    Flash(transform.parent.parent);
                 if (health <= 0)
                 {
                     if (possibleDrops.Length > 0)
@@ -53,12 +56,11 @@ namespace Enemies
 
         public void Flash(Transform materialLocation)
         {
-            try
+            if (materialLocation.GetComponent<FlashOnHit>() != null)
             {
                 transform.GetComponent<SpriteRenderer>().material.shader = materialLocation.GetComponent<FlashOnHit>().flashShader;
                 StartCoroutine(ResetMaterial(materialLocation));
             }
-            catch { }
         }
         public IEnumerator ResetMaterial(Transform ob)
         {

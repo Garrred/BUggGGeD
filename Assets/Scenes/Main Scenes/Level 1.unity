@@ -373,7 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemies:
-    - {fileID: 5507399272857002407, guid: 216cbd091b885204eac54dc3f34195ca, type: 3}
+    - {fileID: 3851400743318969207, guid: e927209c778ed324c909c779eaffb41e, type: 3}
     enemyNum: 1
     timeBetweenSpawns: 0
   spawnPoints:

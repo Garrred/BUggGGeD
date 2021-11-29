@@ -12,7 +12,6 @@ public class Boss2_Parts : Enemies.Enemy
             Flash(transform.parent.parent);
         }
     }
-    private float attackCooldown;
     public float dashAttackDuration = 2f;
     public float dashedTime = 0f;
     public float dashSpeed = 5f;
@@ -24,7 +23,7 @@ public class Boss2_Parts : Enemies.Enemy
     public override void Start()
     {
         base.Start();
-        attackCooldown = timeBetweenAttacks;
+        attackCoolDown = timeBetweenAttacks;
     }
 
     void FixedUpdate()

@@ -32,13 +32,13 @@ public class Summon : Enemies.Enemy
             {
                 transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
             }
-            else
+            else if (attackCoolDown <= 0)
             {
-                if (Time.time >= summonCooldown)
-                {
-                    summonCooldown = Time.time + timeBetweenAttacks;
-                }
+                Debug.Log("Attacking");
+                summon();
+                attackCoolDown = timeBetweenAttacks;
             }
+            attackCoolDown -= Time.deltaTime;
         }
     }
 
@@ -46,7 +46,8 @@ public class Summon : Enemies.Enemy
     {
         if (player != null)
         {
-            Instantiate(minion, transform.position, transform.rotation);
+            GameObject newMinion = Instantiate(minion, transform.position, transform.rotation);
+            newMinion.transform.SetParent(transform);
         }
     }
 }
