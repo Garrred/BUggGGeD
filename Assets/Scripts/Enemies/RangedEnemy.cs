@@ -8,6 +8,9 @@ namespace Enemies
     {
         // private Animator animator;
         public GameObject bullet;
+        public GameObject bugBullet;
+        public GameObject bugBulletSpark;
+        public bool isCastingBug = false;
 
         public override void Start()
         {
@@ -18,45 +21,63 @@ namespace Enemies
         // Update is called once per frame
         void Update()
         {
-            if (attackCoolDown > 0)
+            if (!isCastingBug)
             {
-                attackCoolDown -= Time.deltaTime;
-            }
-            else
-            {
-                attackCoolDown = timeBetweenAttacks;
-                Attack();
-            }
 
-            if (player != null)
-            {
-                if (Vector2.Distance(transform.position, player.position) > stopDistance)
+                if (attackCoolDown > 0)
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+                    attackCoolDown -= Time.deltaTime;
                 }
-                else if (attackCoolDown <= 0)
+                else
                 {
-                    Attack();
                     attackCoolDown = timeBetweenAttacks;
+                    Attack();
                 }
-                attackCoolDown -= Time.deltaTime;
+
+                if (player != null)
+                {
+                    if (Vector2.Distance(transform.position, player.position) > stopDistance)
+                    {
+                        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+                    }
+                    else if (attackCoolDown <= 0)
+                    {
+                        Attack();
+                        attackCoolDown = timeBetweenAttacks;
+                    }
+                    attackCoolDown -= Time.deltaTime;
+                }
             }
 
         }
 
         public void Attack()
         {
-            attackCount++;
             if (player != null)
             {
                 Vector2 direction = player.position - transform.position;
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                 Quaternion rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
 
-                Instantiate(bullet, transform.position, rotation);
+                if (attackCount >= attacksBeforeBug)
+                {
+                    Instantiate(bullet, transform.position, rotation);
+                    attackCount++;
+                }
+                else
+                    StartCoroutine(BugAttack(rotation));
                 // StartCoroutine(attacking());
                 // animator.SetBool("isAttacking", false);
             }
+        }
+
+        public IEnumerator BugAttack(Quaternion rotation)
+        {
+            attackCount = 0;
+            yield return new WaitForSeconds(1f);
+            Instantiate(bugBullet, transform.position, rotation);
+            Instantiate(bugBulletSpark, transform.position, rotation);
+            yield return new WaitForSeconds(1f);
         }
 
         // IEnumerator attacking()
