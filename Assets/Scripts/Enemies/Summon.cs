@@ -36,7 +36,7 @@ public class Summon : Enemies.Enemy
             {
                 if (Time.time >= summonCooldown)
                 {
-                    summonCooldown = Time.time + timeBetweenAttack;
+                    summonCooldown = Time.time + timeBetweenAttacks;
                 }
             }
         }

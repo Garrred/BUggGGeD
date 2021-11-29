@@ -27,7 +27,7 @@ namespace Enemies
             }
             else
             {
-                shootCooldown = timeBetweenAttack;
+                shootCooldown = timeBetweenAttacks;
                 Attack();
             }
 
@@ -41,7 +41,7 @@ namespace Enemies
                 {
                     if (Time.time >= shootCooldown)
                     {
-                        shootCooldown = Time.time + timeBetweenAttack;
+                        shootCooldown = Time.time + timeBetweenAttacks;
                         // animator.SetBool("isAttacking", true);
                     }
                 }

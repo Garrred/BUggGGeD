@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5507399272857002401}
   - component: {fileID: 5507399272857002400}
   - component: {fileID: 5507399272857002407}
+  - component: {fileID: 6254476178418301704}
   m_Layer: 0
   m_Name: MeleeEnemy
   m_TagString: Enemy
@@ -99,10 +100,37 @@ MonoBehaviour:
   health: 0
   maxHealth: 10
   attackPower: 1
-  timeBetweenAttack: 1
+  timeBetweenAttacks: 1
   speed: 5
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops: []
-  stopDistance: 0
-  attackSpeed: 0
+  stopDistance: 1
+  attackSpeed: 1
+  attackCoolDown: 0
+--- !u!61 &6254476178418301704
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507399272857002406}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

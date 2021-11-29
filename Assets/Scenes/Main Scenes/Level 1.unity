@@ -373,9 +373,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemies:
-    - {fileID: 0}
-    enemyNum: 10
-    timeBetweenSpawns: 2
+    - {fileID: 5507399272857002407, guid: 216cbd091b885204eac54dc3f34195ca, type: 3}
+    enemyNum: 1
+    timeBetweenSpawns: 0
   spawnPoints:
   - {fileID: 1639680943}
   - {fileID: 1503106319}
@@ -389,7 +389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266682531}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.143568, y: 0.34198165, z: -151.70918}
+  m_LocalPosition: {x: -12.4, y: 0.34198165, z: -151.70918}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1639680943}

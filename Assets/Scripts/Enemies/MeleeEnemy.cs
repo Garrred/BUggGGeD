@@ -6,8 +6,7 @@ public class MeleeEnemy : Enemies.Enemy
 {
     public float stopDistance;
     public float attackSpeed;
-
-    private float attackCoolDown;
+    private float attackCoolDown = 0;
 
 
     // Update is called once per frame
@@ -19,14 +18,14 @@ public class MeleeEnemy : Enemies.Enemy
             {
                 transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
             }
-            else
+            else if (attackCoolDown <= 0)
             {
-                if (Time.time >= attackCoolDown)
-                {
-                    StartCoroutine(Attack());
-                    attackCoolDown = Time.time + timeBetweenAttack;
-                }
+                Debug.Log("Attacking");
+                StartCoroutine(Attack());
+                attackCoolDown = timeBetweenAttacks;
             }
+            attackCoolDown -= Time.deltaTime;
+
         }
     }
 

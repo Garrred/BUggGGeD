@@ -12,7 +12,6 @@ public class Boss2_Parts : Enemies.Enemy
             Flash(transform.parent.parent);
         }
     }
-    public float timeBetweenAttacks = 2f;
     private float attackCooldown;
     public float dashAttackDuration = 2f;
     public float dashedTime = 0f;

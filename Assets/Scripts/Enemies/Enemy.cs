@@ -10,7 +10,7 @@ namespace Enemies
         public float health;
         public float maxHealth;
         public int attackPower;
-        public float timeBetweenAttack;
+        public float timeBetweenAttacks;
         public float speed;
         // public int healthDropChance;
         // public GameObject healthDrop;
@@ -53,8 +53,12 @@ namespace Enemies
 
         public void Flash(Transform materialLocation)
         {
-            transform.GetComponent<SpriteRenderer>().material.shader = materialLocation.GetComponent<FlashOnHit>().flashShader;
-            StartCoroutine(ResetMaterial(materialLocation));
+            try
+            {
+                transform.GetComponent<SpriteRenderer>().material.shader = materialLocation.GetComponent<FlashOnHit>().flashShader;
+                StartCoroutine(ResetMaterial(materialLocation));
+            }
+            catch { }
         }
         public IEnumerator ResetMaterial(Transform ob)
         {
