@@ -8,6 +8,7 @@ public class BUGFrame : MonoBehaviour
     public string BUGNumber;
     public float lastingTime = 5f;
     public float remainingTime = -10f;
+    public bool bugEnabled = true;
 
 
     [HideInInspector]
@@ -15,7 +16,7 @@ public class BUGFrame : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (bugEnabled && other.gameObject.tag == "Player")
         {
             remainingTime = lastingTime;
             this.collision = other;

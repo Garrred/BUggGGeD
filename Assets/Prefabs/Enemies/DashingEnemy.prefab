@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 831992537809649359}
   - component: {fileID: 831992537809649357}
   - component: {fileID: 831992537809649356}
+  - component: {fileID: 358334963}
   m_Layer: 7
   m_Name: L
   m_TagString: Enemy
@@ -113,6 +114,23 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &358334963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831992537809649358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eedf562931a11146820db07e8d1b2ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BUGNumber: 
+  lastingTime: 5
+  remainingTime: -10
+  bugEnabled: 1
+  collision: {fileID: 0}
 --- !u!1 &831992538900189770
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +142,7 @@ GameObject:
   - component: {fileID: 831992538900189771}
   - component: {fileID: 831992538900189769}
   - component: {fileID: 831992538900189768}
+  - component: {fileID: 1455439562}
   m_Layer: 7
   m_Name: R
   m_TagString: Enemy
@@ -226,6 +245,23 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1455439562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831992538900189770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eedf562931a11146820db07e8d1b2ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BUGNumber: 
+  lastingTime: 5
+  remainingTime: -10
+  bugEnabled: 1
+  collision: {fileID: 0}
 --- !u!1 &5180796243297607643
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bug: {fileID: 0}
-  attacksBeforeBug: 0
+  attacksBeforeBug: 2
   attackCount: 0
   stopTimeBeforeCasting: 2
   health: 0

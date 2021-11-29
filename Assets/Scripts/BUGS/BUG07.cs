@@ -9,7 +9,7 @@ namespace BUGS
     {
         public float movementSpeed;
 
-        private bool bugEnabled;
+        private bool bugActive;
         private Basics.Player player;
         private Attacks.Weapon weapon;
         private Rigidbody2D rb;
