@@ -61,11 +61,13 @@ namespace Enemies
 
                 if (attackCount >= attacksBeforeBug)
                 {
+                    StartCoroutine(BugAttack(rotation));
+                }
+                else
+                {
                     Instantiate(bullet, transform.position, rotation);
                     attackCount++;
                 }
-                else
-                    StartCoroutine(BugAttack(rotation));
                 // StartCoroutine(attacking());
                 // animator.SetBool("isAttacking", false);
             }
@@ -79,7 +81,6 @@ namespace Enemies
             Instantiate(bugBullet, transform.position, rotation);
             GameObject spark = Instantiate(bugBulletSpark, transform.position, rotation);
             yield return new WaitForSeconds(2f);
-            Destroy(spark);
             isCastingBug = false;
         }
 
