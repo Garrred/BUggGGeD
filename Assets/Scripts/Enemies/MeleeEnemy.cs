@@ -40,6 +40,11 @@ public class MeleeEnemy : Enemies.Enemy
             transform.position = Vector2.Lerp(currentPos, targetPos, inter);
             yield return null;
         }
+        if (attackCount++ >= attacksBeforeBug)
+        {
+            attackCount = 0;
+            StartCoroutine(CastBug(player.gameObject));
+        }
     }
 
 }

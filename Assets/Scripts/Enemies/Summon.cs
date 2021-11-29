@@ -43,6 +43,7 @@ public class Summon : Enemies.Enemy
 
     public void summon()
     {
+        attackCount++;
         if (player != null)
         {
             GameObject newMinion = Instantiate(minion, transform.position, transform.rotation);

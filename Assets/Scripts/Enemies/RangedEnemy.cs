@@ -47,6 +47,7 @@ namespace Enemies
 
         public void Attack()
         {
+            attackCount++;
             if (player != null)
             {
                 Vector2 direction = player.position - transform.position;

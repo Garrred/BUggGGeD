@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &30142777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 30142779}
+  - component: {fileID: 30142778}
+  m_Layer: 0
+  m_Name: Bug
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &30142779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30142777}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5507399272857002401}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &30142778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30142777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b0d8fc81e8b030429bfabff785153e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BUGNumber: 
+  lastingTime: 5
+  remainingTime: -10
+  collision: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!1 &5507399272857002406
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,6 +60,7 @@ GameObject:
   - component: {fileID: 5507399272857002400}
   - component: {fileID: 5507399272857002407}
   - component: {fileID: 6254476178418301704}
+  - component: {fileID: 2028416610}
   m_Layer: 0
   m_Name: MeleeEnemy
   m_TagString: Enemy
@@ -29,7 +78,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.103755, y: -1.8148857, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 30142779}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -97,17 +147,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e261556f8c4c80e45b950d22ed62a378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bug: {fileID: 0}
+  attacksBeforeBug: 0
+  attackCount: 0
+  stopTimeBeforeCasting: 2
   health: 0
   maxHealth: 10
   attackPower: 1
   timeBetweenAttacks: 1
+  attackCoolDown: 0
   speed: 5
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops: []
   stopDistance: 1
   attackSpeed: 1
-  attackCoolDown: 0
 --- !u!61 &6254476178418301704
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -134,3 +188,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2028416610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507399272857002406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dce9b34e36e664abc3d45efeef0e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bug: {fileID: 30142778}
+  attacksBeforeBug: 3
+  attackCount: 0
+  stopTimeBeforeCasting: 2

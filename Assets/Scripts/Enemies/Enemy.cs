@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Enemies
 {
-    public class Enemy : MonoBehaviour
+    public class Enemy : EnemyBugs
     {
         [HideInInspector]
         public float health;
@@ -35,7 +35,7 @@ namespace Enemies
             if (!isInvincible)
             {
                 health -= damage;
-                if (transform.parent.parent != null)
+                if (transform.parent != null && transform.parent.parent != null)
                     Flash(transform.parent.parent);
                 if (health <= 0)
                 {
