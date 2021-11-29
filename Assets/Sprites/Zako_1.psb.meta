@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: 3c5f81052c5a737468b894f74aaa0ab5
+guid: ca35899b845161e49a162c70d682f259
 ScriptedImporter:
-  internalIDToNameTable:
-  - first:
-      213: 1527460159850314722
-    second: Zako1_0
-  - first:
-      213: 1527460159850314722
-    second: Zako1_0
-  - first:
-      213: 1527460159850314722
-    second: Zako1_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 2
   userData: 
@@ -100,18 +91,18 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Zako1_0
+  - name: "\u30EC\u30A4\u30E4\u30FC 1"
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
-      width: 404
-      height: 404
-    spriteID: 2eb707c2ce0a23510800000000000000
+      x: 326
+      y: 380
+      width: 165
+      height: 165
+    spriteID: 5222072139d0ce24897a701b41ce399a
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -121,7 +112,73 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: -73, y: -82}
+  - name: "\u30EC\u30A4\u30E4\u30FC 2"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 702
+      width: 290
+      height: 289
+    spriteID: 94021c3285f981c43afc183ac25caa83
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -331, y: 303}
+  - name: "\u30EC\u30A4\u30E4\u30FC 5"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 380
+      width: 404
+      height: 404
+    spriteID: 821d407958d6f904eb0ff9b5c9df78b8
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -319, y: -7}
+  - name: "\u30EC\u30A4\u30E4\u30FC 6"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 368
+      height: 368
+    spriteID: 79c45b10cf47ce841ab366c93c6520f0
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -293, y: -355}
   characterData:
     bones: []
     parts: []
@@ -142,7 +199,7 @@ ScriptedImporter:
   documentAlignment: 7
   importHiddenLayers: 0
   importedTextureWidth: 512
-  importedTextureHeight: 512
+  importedTextureHeight: 1024
   documentSize: {x: 1000, y: 1000}
   paperDollMode: 0
   keepDupilcateSpriteName: 1
@@ -150,22 +207,43 @@ ScriptedImporter:
   spriteCategoryList:
     categories: []
   textureActualWidth: 512
-  textureActualHeight: 512
+  textureActualHeight: 1024
   spritePackingTag: 
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Zako1
-    spriteName: Zako1
+  - name: "\u30EC\u30A4\u30E4\u30FC 1"
+    spriteName: "\u30EC\u30A4\u30E4\u30FC 1"
     isGroup: 0
     parentIndex: -1
-    spriteID: 14d2aac6ceb284d4ea7d3544a93e5998
+    spriteID: 5222072139d0ce24897a701b41ce399a
     layerID: 0
+    mosaicPosition: {x: 326, y: 380}
+  - name: "\u30EC\u30A4\u30E4\u30FC 6"
+    spriteName: "\u30EC\u30A4\u30E4\u30FC 6"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 79c45b10cf47ce841ab366c93c6520f0
+    layerID: 769538980
     mosaicPosition: {x: 4, y: 4}
+  - name: "\u30EC\u30A4\u30E4\u30FC 2"
+    spriteName: "\u30EC\u30A4\u30E4\u30FC 2"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 94021c3285f981c43afc183ac25caa83
+    layerID: -1556059848
+    mosaicPosition: {x: 4, y: 702}
+  - name: "\u30EC\u30A4\u30E4\u30FC 5"
+    spriteName: "\u30EC\u30A4\u30E4\u30FC 5"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 821d407958d6f904eb0ff9b5c9df78b8
+    layerID: 366254453
+    mosaicPosition: {x: 4, y: 380}
   sharedRigPSDLayers: []
   generateGOHierarchy: 0
-  textureAssetName: Zako1 Texture
-  prefabAssetName: Zako1 Prefab
-  spriteLibAssetName: Zako1 Sprite Lib
-  skeletonAssetName: Zako1 Skeleton
+  textureAssetName: Zako_1 Texture
+  prefabAssetName: Zako_1 Prefab
+  spriteLibAssetName: Zako_1 Sprite Lib
+  skeletonAssetName: Zako_1 Skeleton
   secondarySpriteTextures: []

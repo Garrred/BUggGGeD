@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 02a3412859a399b46a981f2dcc3cb03e, type: 3}
+  m_Sprite: {fileID: -200478429293157819, guid: 6d6d1c34d53150446989c435adabe0d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116,5 +116,6 @@ MonoBehaviour:
   lastingTime: 10
   flyAwaySpeed: 2.5
   lifeTime: 10
+  buffDuration: 5
   itemUI: {fileID: 0}
   healAmount: 1
