@@ -85,7 +85,7 @@ public class Boss_1 : BossBehaviors
     {
         if (target != null)
         {
-            if ((transform.position - target.position).magnitude < 17)
+            if ((transform.position - target.position).magnitude < 1)
             {
                 //rendomly generate next target
                 target = movePoints.transform.GetChild(Random.Range(0, 3));
