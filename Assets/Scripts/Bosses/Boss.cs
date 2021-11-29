@@ -76,7 +76,7 @@ namespace Enemies
                     {
                         bugBulletEmitter.UpdateBug(stage + 1);
                         stage++;
-                        maxHealth = maxHealth * 1.25f;
+                        maxHealth = maxHealth * 1.5f;
                         Start();
                         hpDisplay.Start();
                         transform.parent.GetComponent<BossBehaviors>().StageChangeModification();
