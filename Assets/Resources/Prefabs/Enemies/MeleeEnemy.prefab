@@ -107,7 +107,7 @@ MonoBehaviour:
   stopDistance: 0.1
   timeBetweenAttacks: 1
   attackCoolDown: 0
-  speed: 3
+  speed: 5
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops: []
@@ -129,7 +129,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.04, y: 4.04}
+    oldSize: {x: 3.68, y: 3.68}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

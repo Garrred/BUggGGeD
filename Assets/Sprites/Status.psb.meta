@@ -99,7 +99,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 1004
       width: 39
       height: 131
     spriteID: d487ef7c741122445b823397f66ba824
@@ -112,7 +112,29 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -336, y: -486}
+    uvTransform: {x: -335, y: 515}
+  - name: "\u30EC\u30A4\u30E4\u30FC 2"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 992
+      height: 992
+    spriteID: 48bae5c6e5229d64a9176ec4c9362811
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
   characterData:
     bones: []
     parts: []
@@ -132,16 +154,16 @@ ScriptedImporter:
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
-  importedTextureWidth: 64
-  importedTextureHeight: 256
+  importedTextureWidth: 1024
+  importedTextureHeight: 2048
   documentSize: {x: 1000, y: 1000}
   paperDollMode: 0
   keepDupilcateSpriteName: 1
   skeletonAssetReferenceID: 
   spriteCategoryList:
     categories: []
-  textureActualWidth: 64
-  textureActualHeight: 256
+  textureActualWidth: 1024
+  textureActualHeight: 2048
   spritePackingTag: 
   resliceFromLayer: 0
   mosaicPSDLayers: []
@@ -152,6 +174,13 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: d487ef7c741122445b823397f66ba824
     layerID: 0
+    mosaicPosition: {x: 4, y: 1004}
+  - name: "\u30EC\u30A4\u30E4\u30FC 2"
+    spriteName: "\u30EC\u30A4\u30E4\u30FC 2"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 48bae5c6e5229d64a9176ec4c9362811
+    layerID: -1556059848
     mosaicPosition: {x: 4, y: 4}
   sharedRigPSDLayers: []
   generateGOHierarchy: 0

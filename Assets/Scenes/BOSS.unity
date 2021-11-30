@@ -311,6 +311,38 @@ PrefabInstance:
       objectReference: {fileID: 596269328}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ba8ceb7211821a43b8c532225010c61, type: 3}
+--- !u!1 &518270251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4380335230686918097, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+  m_PrefabInstance: {fileID: 7940012973203037925}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &518270253 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6468113285164219290, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+  m_PrefabInstance: {fileID: 7940012973203037925}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518270251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!111 &518270258
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518270251}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b250bfb2e707db846a4224a577be1558, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: b250bfb2e707db846a4224a577be1558, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &541505831 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 541505831, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
@@ -383,6 +415,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 596269322}
+    - target: {fileID: 4014909406514690452, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
+      propertyPath: backGround
+      value: 
+      objectReference: {fileID: 518270253}
+    - target: {fileID: 4014909406514690452, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
+      propertyPath: timeBetweenBugs
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6147097672454118350, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
       propertyPath: playerBody
       value: 
@@ -685,6 +725,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7773930349484911595, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
 --- !u!1001 &7940012973203037925
@@ -698,10 +742,34 @@ PrefabInstance:
       propertyPath: bossPrefab
       value: 
       objectReference: {fileID: 2133715407}
+    - target: {fileID: 100834652157971263, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 100834652157971263, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 1933778335128211920, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 867407165}
+    - target: {fileID: 6468113285164219290, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468113285164219290, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468113285164219290, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468113285164219290, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7940012973013768920, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
       propertyPath: m_Name
       value: GameManager
