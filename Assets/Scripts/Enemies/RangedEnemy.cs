@@ -83,7 +83,8 @@ namespace Enemies
             isCastingBug = true;
             attackCount = 0;
             yield return new WaitForSeconds(1f);
-            Instantiate(bugBullet, transform.position, rotation);
+            GameObject currentBugBullet = Instantiate(bugBullet, transform.position, rotation);
+            transform.GetChild(0).GetComponent<EnemyBugBulletEmitter>().AddRandomBug(currentBugBullet);
             GameObject spark = Instantiate(bugBulletSpark, transform.position, rotation);
             yield return new WaitForSeconds(2f);
             isCastingBug = false;

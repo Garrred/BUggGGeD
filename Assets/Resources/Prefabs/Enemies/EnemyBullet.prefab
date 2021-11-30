@@ -216,4 +216,4 @@ MonoBehaviour:
   bulletSpeed: 20
   bulletLifeTime: 5
   spark: {fileID: 0}
-  damage: 0
+  damage: 1

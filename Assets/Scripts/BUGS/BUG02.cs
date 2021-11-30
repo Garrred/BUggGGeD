@@ -17,6 +17,7 @@ namespace BUGS
 
         public override void BugStart()
         {
+            cam = GameObject.FindGameObjectWithTag("Camera");
             remainingTime = lastingTime;
             cameraFollow = cam.GetComponent<Basics.CameraFollow>();
             cameraFollow.isSleeping = true;
