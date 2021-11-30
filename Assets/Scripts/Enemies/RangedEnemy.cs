@@ -45,7 +45,7 @@ namespace Enemies
                         Attack();
                         attackCoolDown = timeBetweenAttacks;
                     }
-                    attackCoolDown -= Time.deltaTime;
+                    attackCoolDown -= Time.fixedDeltaTime;
                 }
             }
 

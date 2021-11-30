@@ -245,11 +245,6 @@ PrefabInstance:
       objectReference: {fileID: 1687060306}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
---- !u!4 &405501513 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7940012973013768923, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
-  m_PrefabInstance: {fileID: 7940012973203037925}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &460897833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -346,36 +341,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3527304499553222904, guid: 2ba8ceb7211821a43b8c532225010c61, type: 3}
   m_PrefabInstance: {fileID: 460897833}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1486989405
+--- !u!1 &1486989405 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1486989405, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+  m_PrefabInstance: {fileID: 7940012973203037925}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1486989406}
-  m_Layer: 0
-  m_Name: BugBullets
-  m_TagString: BugBullets
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1486989406
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486989405}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 405501513}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1687060306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6895383968276185509, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
@@ -579,10 +549,6 @@ PrefabInstance:
       propertyPath: bossPrefab
       value: 
       objectReference: {fileID: 165304843}
-    - target: {fileID: 780792520, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 99d356d243b02084c987cc78a35a4b20, type: 3}
     - target: {fileID: 1933778335128211920, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
       propertyPath: m_Camera
       value: 

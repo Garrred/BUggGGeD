@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &109849434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1486989405, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+  m_PrefabInstance: {fileID: 7940012973203037925}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &139478811 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6895383970101901804, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
@@ -362,6 +367,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 221404540, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
+      propertyPath: bugBullets
+      value: 
+      objectReference: {fileID: 109849434}
     - target: {fileID: 869185456, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
       propertyPath: hpBarUI
       value: 

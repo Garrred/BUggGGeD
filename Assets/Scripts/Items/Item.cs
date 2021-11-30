@@ -11,13 +11,16 @@ public class Item : MonoBehaviour
     private Vector3 flyAwayDirection = Vector3.up;
     public GameObject itemUI;
     protected GameObject player;
-
-
+    Vector3 target;
+    Vector3 direction;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         itemUI = GameObject.FindGameObjectWithTag("ItemUI");
         flyAwayDirection = new Vector3(0, -1, 0);
+        target = player.transform.position;
+        direction = (target - this.transform.position).normalized;
     }
 
     // Update is called once per frame
@@ -25,8 +28,7 @@ public class Item : MonoBehaviour
     {
         if (lifeTime > 0)
         {
-            lifeTime -= Time.fixedDeltaTime;
-            transform.Translate(flyAwayDirection * flyAwaySpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, direction * 100, flyAwaySpeed * Time.deltaTime);
         }
         else if (lifeTime > -5f)
         {
