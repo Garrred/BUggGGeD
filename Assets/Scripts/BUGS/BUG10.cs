@@ -7,6 +7,10 @@ namespace BUGS
     public class BUG10 : BUGFrame
     {
 
+        void Start()
+        {
+            bugText = "There Are Merge Conflicts In Remote Repository";
+        }
         public override void BugStart()
         {
             collision.GetComponent<Basics.Player>().isSticky = true;

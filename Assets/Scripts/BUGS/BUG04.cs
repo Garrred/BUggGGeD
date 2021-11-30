@@ -9,6 +9,11 @@ namespace BUGS
         public float rotationSpeed = 10f;
         public Basics.Player player;
         private Attacks.Weapon weapon;
+
+        void Start()
+        {
+            bugText = "Player.Rotate(Vector3.forward)";
+        }
         void Update()
         {
             if (remainingTime > 0)

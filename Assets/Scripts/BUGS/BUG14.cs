@@ -15,6 +15,7 @@ namespace BUGS
         // Start is called before the first frame update
         void Start()
         {
+            bugText = "Pin: 999ms";
         }
 
         // Update is called once per frame

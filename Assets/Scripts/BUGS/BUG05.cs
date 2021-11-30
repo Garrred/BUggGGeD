@@ -13,6 +13,7 @@ namespace BUGS
         void Start()
         {
             lastingTime = 5f;
+            bugText = "Gravity Scale = 1.0f";
         }
 
         public override void BugStart()

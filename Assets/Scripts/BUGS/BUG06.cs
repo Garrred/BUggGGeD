@@ -10,6 +10,7 @@ namespace BUGS
         void Start()
         {
             lastingTime = 5f;
+            bugText = "Bullet Image Direction Instantiated";
         }
 
         // TODO: Delete the method in Player's script

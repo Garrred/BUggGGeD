@@ -9,6 +9,10 @@ namespace BUGS
         private GameObject bullet;
         private float originalSpeed;
 
+        void Start()
+        {
+            bugText = "Bullet Script Not Found";
+        }
         public override void BugStart()
         {
             bullet = collision.GetComponent<Attacks.Weapon>().bullet;

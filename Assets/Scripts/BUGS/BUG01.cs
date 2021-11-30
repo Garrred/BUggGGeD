@@ -13,6 +13,10 @@ namespace BUGS
 
         private GameObject originalBullet;
 
+        public void Start()
+        {
+            bugText = "File Location Error";
+        }
         public override void BugStart()
         {
             player = collision.GetComponent<Basics.Player>();

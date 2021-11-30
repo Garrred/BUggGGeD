@@ -14,7 +14,7 @@ namespace BUGS
         void Start()
         {
             zanzouParent = new GameObject("zanzouParent");
-            
+            bugText = "CPU Temp: 999°C";
         }
 
         // Update is called once per frame

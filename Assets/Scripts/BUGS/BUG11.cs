@@ -7,6 +7,11 @@ namespace BUGS
     public class BUG11 : BUGFrame
     {
         SpriteRenderer[] playerSprites;
+
+        void Start()
+        {
+            bugText = "Player Sprite Not Found";
+        }
         public override void BugStart()
         {
             playerSprites = collision.gameObject.GetComponentsInChildren<SpriteRenderer>();

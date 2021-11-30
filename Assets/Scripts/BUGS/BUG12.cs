@@ -6,6 +6,11 @@ namespace BUGS
 {
     public class BUG12 : BUGFrame
     {
+
+        void Start()
+        {
+            bugText = "Freeze(this.bullet.rotation)";
+        }
         public override void BugStart()
         {
             collision.GetComponent<Attacks.Weapon>().rotationFreezed = true;

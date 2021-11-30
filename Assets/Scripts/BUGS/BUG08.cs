@@ -14,13 +14,12 @@ namespace BUGS
         private Rigidbody2D rb;
         void Start()
         {
+            bugText = "Map.SetParent(player)";
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<Basics.Player>();
             player.enableMovement = false;
             lastingTime = 5f;
             rb = this.GetComponent<Rigidbody2D>();
             rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
-
-
         }
 
         private void FixedUpdate()

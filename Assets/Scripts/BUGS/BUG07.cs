@@ -18,7 +18,7 @@ namespace BUGS
         // Start is called before the first frame update
         void Start()
         {
-
+            bugText = "Which One Is The Bullet?";
         }
         void FixedUpdate()
         {

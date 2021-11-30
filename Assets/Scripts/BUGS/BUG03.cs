@@ -9,6 +9,11 @@ namespace BUGS
     {
         public ParticleSystem ps;
         public Basics.CameraFollow cam;
+
+        public void Start()
+        {
+            bugText = "Null Pointer Exception";
+        }
         public override void BugStart()
         {
             collision.gameObject.tag = "FakePlayer";

@@ -9,6 +9,12 @@ namespace BUGS
         public GameObject cam;
         private Basics.CameraFollow cameraFollow;
 
+
+        public void Start()
+        {
+            bugText = "Camera: Player Position Not Found";
+        }
+
         public override void BugStart()
         {
             remainingTime = lastingTime;
