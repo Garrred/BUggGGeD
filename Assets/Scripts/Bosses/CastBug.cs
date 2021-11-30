@@ -40,18 +40,19 @@ public class CastBug : MonoBehaviour
     IEnumerator StartChangingColor()
     {
         isChangingColor = true;
-        for (int i = 0; i < 20; i++)
+        for (int j = 0; j < 20; j++)
         {
-            backGround.color = Color.Lerp(Color.white, Color.red, Time.deltaTime);
+            backGround.color = Color.Lerp(Color.white, Color.red, j / 20f);
             yield return new WaitForSeconds(0.05f);
         }
         isChangingColor = false;
         currentBug.OnTriggerEnter2D(player.gameObject.GetComponent<Collider2D>());
         remainingTime = timeBetweenBugs;
 
-        for (int i = 0; i < 20; i++)
+
+        for (int j = 0; j < 20; j++)
         {
-            backGround.color = Color.Lerp(Color.red, Color.white, Time.deltaTime);
+            backGround.color = Color.Lerp(Color.red, Color.white, j / 20f);
             yield return new WaitForSeconds(0.05f);
         }
 
