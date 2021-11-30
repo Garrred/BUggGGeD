@@ -30,7 +30,7 @@ public class BUGFrame : MonoBehaviour
     {
         collision.transform.parent.GetChild(1).gameObject.GetComponent<TMPro.TextMeshPro>().text = bugText;
         collision.transform.parent.GetChild(1).gameObject.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         collision.transform.parent.GetChild(1).gameObject.SetActive(false);
     }
     public virtual void BugStart() 
