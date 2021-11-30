@@ -78,6 +78,55 @@ Transform:
   m_Father: {fileID: 2034563880}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &981455399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 981455400}
+  - component: {fileID: 981455401}
+  m_Layer: 7
+  m_Name: BugBulletEmitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &981455400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981455399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9158487323918262837}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &981455401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981455399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae8f94db38e4564886f02762ad898d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenShots: 0.5
+  bugs:
+  - {fileID: 1587579249}
+  bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
+  isHoming: 0
+  bugBullets: {fileID: 0}
 --- !u!1 &1132877773
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,6 +290,7 @@ MonoBehaviour:
   - {fileID: 1587579250}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 0
+  bugBullets: {fileID: 0}
 --- !u!114 &1587579251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,9 +303,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7432adc8f6586514cadcb1d05d9d7488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BUGNumber: 
+  bugText: 
   lastingTime: 5
   remainingTime: -10
+  bugEnabled: 1
   collision: {fileID: 0}
 --- !u!114 &1587579250
 MonoBehaviour:
@@ -269,9 +320,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f162f408c743c342ab599cd76aa1e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BUGNumber: 
+  bugText: 
   lastingTime: 5
   remainingTime: -10
+  bugEnabled: 1
   collision: {fileID: 0}
 --- !u!114 &1587579249
 MonoBehaviour:
@@ -285,9 +337,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eedf562931a11146820db07e8d1b2ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BUGNumber: 
+  bugText: 
   lastingTime: 5
   remainingTime: -10
+  bugEnabled: 1
   collision: {fileID: 0}
 --- !u!1 &1851912235
 GameObject:
@@ -445,9 +498,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e09d62190816ef4d88daa92ae07d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BUGNumber: 
+  bugText: 
   lastingTime: 5
   remainingTime: -10
+  bugEnabled: 1
   collision: {fileID: 0}
   changedPlayerPrefab: {fileID: -9095717837082945937, guid: 02a3412859a399b46a981f2dcc3cb03e, type: 3}
   playerPrefabBullet: {fileID: 7793587587362056126, guid: 5a2c18a3b6ce26b4481ecd1712f0e827, type: 3}
@@ -464,9 +518,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b0d8fc81e8b030429bfabff785153e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BUGNumber: 
+  bugText: 
   lastingTime: 5
   remainingTime: -10
+  bugEnabled: 1
   collision: {fileID: 0}
   cam: {fileID: 0}
 --- !u!114 &2034563881
@@ -481,12 +536,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe59af662dbe263419a38ece440e4e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BUGNumber: 
+  bugText: 
   lastingTime: 5
   remainingTime: -10
+  bugEnabled: 1
   collision: {fileID: 0}
   ps: {fileID: 8830077744287951606, guid: fa9a0871af5c1d546adf9217df7901a9, type: 3}
   cam: {fileID: 0}
+--- !u!1 &2035214479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2035214480}
+  - component: {fileID: 2035214481}
+  m_Layer: 7
+  m_Name: BugBulletEmitter (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2035214480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035214479}
+  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0.000000749014}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9158487324566856401}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2035214481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035214479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae8f94db38e4564886f02762ad898d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenShots: 0.5
+  bugs:
+  - {fileID: 1587579249}
+  bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
+  isHoming: 0
+  bugBullets: {fileID: 0}
 --- !u!1 &1901238321335077132
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,10 +639,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9348029616484f940acee9275690ee3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bug: {fileID: 0}
+  attacksBeforeBug: 0
+  attackCount: 0
+  stopTimeBeforeCasting: 2
   health: 0
   maxHealth: 10
   attackPower: 0
-  timeBetweenAttack: 0
+  stopDistance: 0
+  timeBetweenAttacks: 0
+  attackCoolDown: 0
   speed: 10
   isInvincible: 0
   player: {fileID: 0}
@@ -551,14 +662,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901238321335077132}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 545b1faf2f9632248bf42d8928b3dbab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   timeBetweenBugs: 25
-  bugs: []
+  bugs:
+  - {fileID: 2034563883}
+  - {fileID: 2034563882}
+  - {fileID: 2034563881}
   currentBug: {fileID: 0}
 --- !u!1 &3766873565650274812
 GameObject:
@@ -605,9 +719,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenShots: 1
   bugs:
-  - {fileID: 0}
+  - {fileID: 1587579249}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 1
+  bugBullets: {fileID: 0}
 --- !u!1 &4445821844708531436
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,9 +768,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenShots: 1
   bugs:
-  - {fileID: 0}
+  - {fileID: 1587579249}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 1
+  bugBullets: {fileID: 0}
 --- !u!1 &4834461693803942933
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,9 +817,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenShots: 1
   bugs:
-  - {fileID: 0}
+  - {fileID: 1587579249}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 1
+  bugBullets: {fileID: 0}
 --- !u!1 &6144845714773818250
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,9 +866,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenShots: 1
   bugs:
-  - {fileID: 0}
+  - {fileID: 1587579249}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 1
+  bugBullets: {fileID: 0}
 --- !u!1 &7245926410621555303
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +884,7 @@ GameObject:
   - component: {fileID: 7245926410621555323}
   - component: {fileID: 5088393616117092218}
   - component: {fileID: 860946719}
+  - component: {fileID: 860946720}
   m_Layer: 0
   m_Name: BOSS2_TEMP
   m_TagString: Untagged
@@ -885,6 +1004,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062f52727e6c334e9874ed32058976a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &860946720
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7245926410621555303}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 682344cbd23ef6c45804e09023913d20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9158487323898217666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,19 +1150,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4820bc053cd1944dbc13ae3b422b997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bug: {fileID: 0}
+  attacksBeforeBug: 0
+  attackCount: 0
+  stopTimeBeforeCasting: 2
   health: 0
   maxHealth: 10
   attackPower: 0
-  timeBetweenAttack: 0
+  stopDistance: 5
+  timeBetweenAttacks: 2
+  attackCoolDown: 0
   speed: 0
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops: []
-  timeBetweenAttacks: 2
   dashAttackDuration: 2
   dashedTime: 0
   dashSpeed: 5
-  stopDistance: 5
   count: 0
 --- !u!1 &9158487323918262834
 GameObject:
@@ -1035,7 +1177,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9158487323918262837}
-  - component: {fileID: 1135875158}
+  - component: {fileID: 929688396}
+  - component: {fileID: 929688397}
   m_Layer: 7
   m_Name: UD
   m_TagString: Untagged
@@ -1056,23 +1199,46 @@ Transform:
   m_Children:
   - {fileID: 9158487325786567742}
   - {fileID: 9158487324536750381}
+  - {fileID: 981455400}
   m_Father: {fileID: 7245926410621555300}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1135875158
+--- !u!114 &929688396
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9158487323918262834}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7f5ba18a67ab884d92c793acdf8427b, type: 3}
+  m_Script: {fileID: 11500000, guid: 08d7ebe0ea588db46beb24102d11043f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashShader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
-  defaultShader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  pushSpeed: 0
+  knockedBackTime: 0
+  timeBetweenAttacks: 3
+  dashAttackDuration: 2
+  dashedTime: 0
+  dashSpeed: 15
+  stopDistance: 5
+  count: 0
+  splitedIntoFour: 0
+--- !u!114 &929688397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9158487323918262834}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a676b285f069c3c4884c27e78d0fc696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitterProfile: {fileID: 11400000, guid: e577d695f2a64bb4caafd39715998e5f, type: 2}
+  patternOrigin: {fileID: 9158487323918262837}
+  playAtStart: 1
 --- !u!1 &9158487323991910023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,7 +1324,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9158487324218886333}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a676b285f069c3c4884c27e78d0fc696, type: 3}
   m_Name: 
@@ -1173,7 +1339,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9158487324218886333}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a676b285f069c3c4884c27e78d0fc696, type: 3}
   m_Name: 
@@ -1193,6 +1359,7 @@ GameObject:
   - component: {fileID: 9158487324283752754}
   - component: {fileID: 9158487324283752755}
   - component: {fileID: 9158487324283752752}
+  - component: {fileID: 515990878}
   m_Layer: 0
   m_Name: ThreePoints
   m_TagString: Untagged
@@ -1230,7 +1397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emitterProfile: {fileID: 11400000, guid: e577d695f2a64bb4caafd39715998e5f, type: 2}
-  patternOrigin: {fileID: 9158487324701593403}
+  patternOrigin: {fileID: 9158487325786567742}
   playAtStart: 1
 --- !u!114 &9158487324283752755
 MonoBehaviour:
@@ -1245,7 +1412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emitterProfile: {fileID: 11400000, guid: e577d695f2a64bb4caafd39715998e5f, type: 2}
-  patternOrigin: {fileID: 9158487325879041003}
+  patternOrigin: {fileID: 9158487323898217669}
   playAtStart: 1
 --- !u!114 &9158487324283752752
 MonoBehaviour:
@@ -1260,7 +1427,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emitterProfile: {fileID: 11400000, guid: e577d695f2a64bb4caafd39715998e5f, type: 2}
-  patternOrigin: {fileID: 9158487325349138781}
+  patternOrigin: {fileID: 9158487324536750381}
+  playAtStart: 1
+--- !u!114 &515990878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9158487324283752753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a676b285f069c3c4884c27e78d0fc696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitterProfile: {fileID: 11400000, guid: e577d695f2a64bb4caafd39715998e5f, type: 2}
+  patternOrigin: {fileID: 9158487325961477467}
   playAtStart: 1
 --- !u!1 &9158487324300347943
 GameObject:
@@ -1421,19 +1603,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4820bc053cd1944dbc13ae3b422b997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bug: {fileID: 0}
+  attacksBeforeBug: 0
+  attackCount: 0
+  stopTimeBeforeCasting: 2
   health: 0
   maxHealth: 10
   attackPower: 0
-  timeBetweenAttack: 0
+  stopDistance: 5
+  timeBetweenAttacks: 2
+  attackCoolDown: 0
   speed: 0
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops: []
-  timeBetweenAttacks: 2
   dashAttackDuration: 2
   dashedTime: 0
   dashSpeed: 5
-  stopDistance: 5
   count: 0
 --- !u!1 &9158487324566856414
 GameObject:
@@ -1444,7 +1630,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9158487324566856401}
-  - component: {fileID: 493712}
+  - component: {fileID: 1715729871}
+  - component: {fileID: 1715729872}
   m_Layer: 7
   m_Name: LR
   m_TagString: Untagged
@@ -1459,29 +1646,52 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9158487324566856414}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0.000000749014}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9158487325961477467}
   - {fileID: 9158487323898217669}
+  - {fileID: 2035214480}
   m_Father: {fileID: 7245926410621555300}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &493712
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 900}
+--- !u!114 &1715729871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9158487324566856414}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7f5ba18a67ab884d92c793acdf8427b, type: 3}
+  m_Script: {fileID: 11500000, guid: 08d7ebe0ea588db46beb24102d11043f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashShader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
-  defaultShader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  pushSpeed: 0
+  knockedBackTime: 0
+  timeBetweenAttacks: 3
+  dashAttackDuration: 2
+  dashedTime: 0
+  dashSpeed: 15
+  stopDistance: 5
+  count: 0
+  splitedIntoFour: 0
+--- !u!114 &1715729872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9158487324566856414}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a676b285f069c3c4884c27e78d0fc696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitterProfile: {fileID: 11400000, guid: e577d695f2a64bb4caafd39715998e5f, type: 2}
+  patternOrigin: {fileID: 9158487324566856401}
+  playAtStart: 1
 --- !u!1 &9158487324701593400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,7 +1760,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9158487324795593614}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a676b285f069c3c4884c27e78d0fc696, type: 3}
   m_Name: 
@@ -1596,7 +1806,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9158487324986127091}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a676b285f069c3c4884c27e78d0fc696, type: 3}
   m_Name: 
@@ -1871,19 +2081,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4820bc053cd1944dbc13ae3b422b997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bug: {fileID: 0}
+  attacksBeforeBug: 0
+  attackCount: 0
+  stopTimeBeforeCasting: 2
   health: 0
   maxHealth: 10
   attackPower: 0
-  timeBetweenAttack: 0
+  stopDistance: 5
+  timeBetweenAttacks: 2
+  attackCoolDown: 0
   speed: 0
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops: []
-  timeBetweenAttacks: 2
   dashAttackDuration: 2
   dashedTime: 0
   dashSpeed: 5
-  stopDistance: 5
   count: 0
 --- !u!1 &9158487325879041000
 GameObject:
@@ -2042,19 +2256,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4820bc053cd1944dbc13ae3b422b997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bug: {fileID: 0}
+  attacksBeforeBug: 0
+  attackCount: 0
+  stopTimeBeforeCasting: 2
   health: 0
   maxHealth: 10
   attackPower: 0
-  timeBetweenAttack: 0
+  stopDistance: 5
+  timeBetweenAttacks: 2
+  attackCoolDown: 0
   speed: 0
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops: []
-  timeBetweenAttacks: 2
   dashAttackDuration: 2
   dashedTime: 0
   dashSpeed: 5
-  stopDistance: 5
   count: 0
 --- !u!1001 &31603944
 PrefabInstance:

@@ -17,6 +17,7 @@ TagManager:
   - HPDisplay
   - ItemUI
   - BugText
+  - BugBullets
   layers:
   - Default
   - TransparentFX

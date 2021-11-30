@@ -11,7 +11,7 @@ public class BugBulletEmitter : MonoBehaviour
     private BUGFrame currentBug;
     public bool isHoming = false;
     private Transform player;
-
+    public GameObject bugBullets;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -51,7 +51,7 @@ public class BugBulletEmitter : MonoBehaviour
             {
                 bullet = Instantiate(bugBulletPrefab, transform.position, Quaternion.identity);
             }
-            bullet.transform.SetParent(transform.parent);
+            bullet.transform.SetParent(bugBullets.transform);
             bullet.AddComponent(currentBug.GetType());
             bullet.GetComponent<Enemies.Bullet>().transform.rotation = Quaternion.Euler(0, 0, (i * 90) + transform.rotation.eulerAngles.z);
         }
