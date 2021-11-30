@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be8498df50e4baf4cb60e02bcc544340, type: 3}
+  m_Sprite: {fileID: -2248932028438479503, guid: 5c82929c59684f8448594dda79f09d13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +102,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 2.99, y: 2.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -193,13 +193,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e261556f8c4c80e45b950d22ed62a378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bug: {fileID: 0}
+  attacksBeforeBug: 0
+  attackCount: 0
+  stopTimeBeforeCasting: 2
   health: 0
   maxHealth: 1
   attackPower: 1
+  stopDistance: 1
   timeBetweenAttacks: 2
+  attackCoolDown: 0
   speed: 3
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops: []
-  stopDistance: 1
   attackSpeed: 2

@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: 3c5f81052c5a737468b894f74aaa0ab5
+guid: 5c82929c59684f8448594dda79f09d13
 ScriptedImporter:
-  internalIDToNameTable:
-  - first:
-      213: 1527460159850314722
-    second: Zako1_0
-  - first:
-      213: 1527460159850314722
-    second: Zako1_0
-  - first:
-      213: 1527460159850314722
-    second: Zako1_0
-  - first:
-      213: 1527460159850314722
-    second: Zako1_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 2
   userData: 
@@ -103,18 +91,18 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Zako1_0
+  - name: "\u30EC\u30A4\u30E4\u30FC 2 \u306E\u30B3\u30D4\u30FC"
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
-      width: 368
-      height: 368
-    spriteID: 2eb707c2ce0a23510800000000000000
+      y: 614
+      width: 299
+      height: 250
+    spriteID: 3dbcc7d0cbaca8449a0eea8d9ac7956c
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -124,7 +112,29 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: -642, y: 551}
+  - name: "\u30EC\u30A4\u30E4\u30FC 2"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 597
+      height: 602
+    spriteID: e129a404158a68046893898a5dc97ec8
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -61, y: -345}
   characterData:
     bones: []
     parts: []
@@ -144,31 +154,38 @@ ScriptedImporter:
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
-  importedTextureWidth: 512
-  importedTextureHeight: 512
+  importedTextureWidth: 1024
+  importedTextureHeight: 1024
   documentSize: {x: 1000, y: 1000}
   paperDollMode: 0
   keepDupilcateSpriteName: 1
   skeletonAssetReferenceID: 
   spriteCategoryList:
     categories: []
-  textureActualWidth: 512
-  textureActualHeight: 512
+  textureActualWidth: 1024
+  textureActualHeight: 1024
   spritePackingTag: 
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Zako1
-    spriteName: Zako1
+  - name: "\u30EC\u30A4\u30E4\u30FC 2 \u306E\u30B3\u30D4\u30FC"
+    spriteName: "\u30EC\u30A4\u30E4\u30FC 2 \u306E\u30B3\u30D4\u30FC"
     isGroup: 0
     parentIndex: -1
-    spriteID: 14d2aac6ceb284d4ea7d3544a93e5998
+    spriteID: 3dbcc7d0cbaca8449a0eea8d9ac7956c
     layerID: 0
+    mosaicPosition: {x: 4, y: 614}
+  - name: "\u30EC\u30A4\u30E4\u30FC 2"
+    spriteName: "\u30EC\u30A4\u30E4\u30FC 2"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e129a404158a68046893898a5dc97ec8
+    layerID: -1556059848
     mosaicPosition: {x: 4, y: 4}
   sharedRigPSDLayers: []
   generateGOHierarchy: 0
-  textureAssetName: Zako1 Texture
-  prefabAssetName: Zako1 Prefab
-  spriteLibAssetName: Zako1 Sprite Lib
-  skeletonAssetName: Zako1 Skeleton
+  textureAssetName: SummonerEnemy.ver2 Texture
+  prefabAssetName: SummonerEnemy.ver2 Prefab
+  spriteLibAssetName: SummonerEnemy.ver2 Sprite Lib
+  skeletonAssetName: SummonerEnemy.ver2 Skeleton
   secondarySpriteTextures: []
