@@ -72,6 +72,7 @@ namespace Enemies
                 }
                 else
                 {
+                    player.transform.position = new Vector2(0, 0);
                     Debug.Log("Congrats!");
                     nextPortal.SetActive(true);
                     exitPortal.SetActive(true);
