@@ -10,7 +10,7 @@ public class SceneLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //animator.SetTrigger("Start");
     }
 
     // Update is called once per frame
@@ -26,6 +26,7 @@ public class SceneLoader : MonoBehaviour
     {
         StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex + 1));
     }
+
     IEnumerator LoadScene(int sceneIndex)
     {
         animator.SetTrigger("Start");

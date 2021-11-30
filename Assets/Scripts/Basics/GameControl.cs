@@ -1,15 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 namespace Basics
 {
     public class GameControl : MonoBehaviour
     {
+        public float waitTime = 2f;
         public bool isPaused = false;
         public GameObject pauseMenu;
         public GameObject pauseButton;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -49,8 +52,17 @@ namespace Basics
         }
         public void Quit()
         {
-            Application.Quit();
+            SceneManager.LoadScene(0);
         }
 
+        IEnumerator LoadScene(int sceneIndex)
+        {
+            //Debug.Log("haha");
+            yield return new WaitForSeconds(waitTime);
+            SceneManager.LoadScene(sceneIndex);
+            //yield return null;
+
+
+        }
     }
 }
