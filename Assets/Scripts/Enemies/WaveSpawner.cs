@@ -17,6 +17,8 @@ namespace Enemies
         public Wave[] waves;
         public Transform[] spawnPoints;
         public int timeBetweenWaves;
+        public GameObject nextPortal;
+        public GameObject exitPortal;
 
         private Transform player;
         private Wave currentWave;
@@ -28,6 +30,9 @@ namespace Enemies
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
             StartCoroutine(StartNextWave());
+            nextPortal.SetActive(false);
+            exitPortal.SetActive(false);
+
         }
 
         IEnumerator StartNextWave()
@@ -68,6 +73,8 @@ namespace Enemies
                 else
                 {
                     Debug.Log("Congrats!");
+                    nextPortal.SetActive(true);
+                    exitPortal.SetActive(true);
                 }
             }
         }
