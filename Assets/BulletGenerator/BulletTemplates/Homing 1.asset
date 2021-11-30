@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 10679497
+  uniqueIndex: 14745913
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -1884,7 +1884,7 @@ MonoBehaviour:
     requiredComponentName: 
   foldoutVFX: 1
   hideSpriteList: 0
-  currentlyDisplayedModule: 1
+  currentlyDisplayedModule: 4
   canMove: 1
   canCollide: 1
   isVisible: 1
@@ -3097,7 +3097,7 @@ MonoBehaviour:
         weight: 0
         headerTitle: 
         blendColor: {r: 0, g: 0, b: 0, a: 0}
-      defaultValue: 5
+      defaultValue: 10
     useSlider: 0
     sliderMin: 0
     sliderMax: 0
@@ -6701,7 +6701,7 @@ MonoBehaviour:
   m_Name: Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 16446291
+  uniqueIndex: 7753260
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -6916,7 +6916,7 @@ MonoBehaviour:
         weight: 0
         headerTitle: 
         blendColor: {r: 0, g: 0, b: 0, a: 0}
-      defaultValue: 7
+      defaultValue: 3
     useSlider: 0
     sliderMin: 0
     sliderMax: 0
@@ -6931,22 +6931,6 @@ MonoBehaviour:
     useDifferentBullet: 0
     bulletParams: {fileID: 0}
   - index: 2
-    bulletOrigin: {x: 0, y: 0, z: 0}
-    useDifferentBullet: 0
-    bulletParams: {fileID: 0}
-  - index: 3
-    bulletOrigin: {x: 0, y: 0, z: 0}
-    useDifferentBullet: 0
-    bulletParams: {fileID: 0}
-  - index: 4
-    bulletOrigin: {x: 0, y: 0, z: 0}
-    useDifferentBullet: 0
-    bulletParams: {fileID: 0}
-  - index: 5
-    bulletOrigin: {x: 0, y: 0, z: 0}
-    useDifferentBullet: 0
-    bulletParams: {fileID: 0}
-  - index: 6
     bulletOrigin: {x: 0, y: 0, z: 0}
     useDifferentBullet: 0
     bulletParams: {fileID: 0}
@@ -9065,31 +9049,15 @@ MonoBehaviour:
     selectionRectsVisible: 0
     postEffectBulletSpawns:
     - index: 0
-      bulletOrigin: {x: 0.90000004, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 1
-      bulletOrigin: {x: 0.6, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 2
       bulletOrigin: {x: 0.3, y: 0, z: 0}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
-    - index: 3
+    - index: 1
       bulletOrigin: {x: 0, y: 0, z: 0}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
-    - index: 4
+    - index: 2
       bulletOrigin: {x: -0.3, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 5
-      bulletOrigin: {x: -0.6, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 6
-      bulletOrigin: {x: -0.90000004, y: 0, z: 0}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     enabled: 1
@@ -11207,31 +11175,15 @@ MonoBehaviour:
     selectionRectsVisible: 1
     postEffectBulletSpawns:
     - index: 0
-      bulletOrigin: {x: 0.90000004, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 1
-      bulletOrigin: {x: 0.6, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 2
       bulletOrigin: {x: 0.3, y: 0, z: 0}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
-    - index: 3
+    - index: 1
       bulletOrigin: {x: 0, y: 0, z: 0}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
-    - index: 4
+    - index: 2
       bulletOrigin: {x: -0.3, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 5
-      bulletOrigin: {x: -0.6, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 6
-      bulletOrigin: {x: -0.90000004, y: 0, z: 0}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     enabled: 0
@@ -13343,42 +13295,26 @@ MonoBehaviour:
     numberOfModifiersAffected: 1
     selectionRects:
     - serializedVersion: 2
-      x: 0.36538455
-      y: 0.32596147
-      width: 0.30288458
-      height: 0.2932692
-    indexesOfBulletsAffected: 0100000002000000030000000400000005000000
+      x: -0.17307723
+      y: -0.37019265
+      width: 1.5144229
+      height: 1.4663459
+    indexesOfBulletsAffected: 000000000100000002000000
     selectionColor: {r: 0.5365536, g: 0.71727324, b: 0.19739094, a: 0.4}
     pivotColor: {r: 0, g: 0, b: 1, a: 1}
     isEditingSelection: 0
     selectionRectsVisible: 1
     postEffectBulletSpawns:
     - index: 0
-      bulletOrigin: {x: 0.90000004, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 1
-      bulletOrigin: {x: 0.6, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 2
       bulletOrigin: {x: 0.3, y: 0, z: 0}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
-    - index: 3
+    - index: 1
       bulletOrigin: {x: 0, y: 0, z: 0}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
-    - index: 4
+    - index: 2
       bulletOrigin: {x: -0.3, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 5
-      bulletOrigin: {x: -0.6, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 6
-      bulletOrigin: {x: -0.90000004, y: 0, z: 0}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     enabled: 0
@@ -15501,39 +15437,23 @@ MonoBehaviour:
     selectionRectsVisible: 1
     postEffectBulletSpawns:
     - index: 0
-      bulletOrigin: {x: 0.90000004, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 1
-      bulletOrigin: {x: 0.6, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 2
       bulletOrigin: {x: 0.3, y: 0, z: 0}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
-    - index: 3
+    - index: 1
       bulletOrigin: {x: 0, y: 0, z: 0}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
-    - index: 4
+    - index: 2
       bulletOrigin: {x: -0.3, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 5
-      bulletOrigin: {x: -0.6, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 6
-      bulletOrigin: {x: -0.90000004, y: 0, z: 0}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     enabled: 0
   bulletParamsRandom: 0
   listOfPossibleBulletParams: []
   possibleBulletParams: 0
-  highestValues: {x: 0.90000004, y: 0, z: 0}
-  lowestValues: {x: -0.90000004, y: 0, z: 0}
+  highestValues: {x: 0.3, y: 0, z: 0}
+  lowestValues: {x: -0.3, y: 0, z: 0}
   hasBeenSerializedOnce: 1
   foldout0: 0
   foldout1: 0
@@ -15550,7 +15470,7 @@ MonoBehaviour:
   outputTexture:
     tex: {fileID: 0}
     widthInWindow: 0.5
-    ingameDistance: 5
+    ingameDistance: 1
     orientation: 0
     justChangedOrientation: 0
     hasCompactEditor: 0
@@ -15577,7 +15497,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 6019297
+  uniqueIndex: 9696272
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -21752,7 +21672,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 13998488
+  uniqueIndex: 9815717
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -22081,7 +22001,7 @@ MonoBehaviour:
             weight: 0
             headerTitle: 
             blendColor: {r: 0, g: 0, b: 0, a: 0}
-          defaultValue: 5
+          defaultValue: 3
         useSlider: 0
         sliderMin: 0
         sliderMax: 0
@@ -43976,4 +43896,4 @@ MonoBehaviour:
       displayName: Reboot Pattern
   hasBeenSerializedOnce: 1
   focusedInstruction: -1
-  safetyForPlaymode: 116
+  safetyForPlaymode: 117

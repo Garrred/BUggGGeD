@@ -55,6 +55,20 @@ namespace Enemies
             currentBullet = transform.GetChild(stage).gameObject;
             StartCoroutine(ChangeBulletPattern());
         }
+        public IEnumerator ChangeBulletPattern()
+        {
+            while (isAlive)
+            {
+                UpdateShootingPos();
+                transform.parent.GetChild(4).GetComponent<BugBulletEmitter>().enabled = true;
+                currentBullet.transform.GetChild(currentBulletIndex).gameObject.SetActive(true);
+                yield return new WaitForSeconds(20f);
+                currentBullet.transform.GetChild(currentBulletIndex).gameObject.SetActive(false);
+                currentBulletIndex = Mathf.Abs(currentBulletIndex - 1);
+                yield return new WaitForSeconds(2f);
+
+            }
+        }
         public override void takeDamage(float damage)
         {
             if (!isInvincible)
@@ -76,10 +90,9 @@ namespace Enemies
                     {
                         bugBulletEmitter.UpdateBug(stage + 1);
                         stage++;
-                        maxHealth = maxHealth * 1.5f;
+                        transform.parent.GetComponent<BossBehaviors>().StageChangeModification();
                         Start();
                         hpDisplay.Start();
-                        transform.parent.GetComponent<BossBehaviors>().StageChangeModification();
                     }
                 }
             }
@@ -94,20 +107,6 @@ namespace Enemies
             yield return new WaitForSeconds(2f);
             StartBullet();
         }
-        
-        public IEnumerator ChangeBulletPattern()
-        {
-            while (isAlive)
-            {
-                UpdateShootingPos();
-                transform.parent.GetChild(4).GetComponent<BugBulletEmitter>().enabled = true;
-                currentBullet.transform.GetChild(currentBulletIndex).gameObject.SetActive(true);
-                yield return new WaitForSeconds(20f);
-                currentBullet.transform.GetChild(currentBulletIndex).gameObject.SetActive(false);
-                currentBulletIndex = Mathf.Abs(currentBulletIndex - 1);
-                yield return new WaitForSeconds(2f);
 
-            }
-        }
     }
 }

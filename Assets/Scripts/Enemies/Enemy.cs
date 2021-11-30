@@ -6,7 +6,6 @@ namespace Enemies
 {
     public class Enemy : EnemyBugs
     {
-        [HideInInspector]
         public float health;
         public float maxHealth;
         public int attackPower;

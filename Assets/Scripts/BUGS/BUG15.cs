@@ -13,7 +13,6 @@ namespace BUGS
         // Start is called before the first frame update
         void Start()
         {
-            zanzouParent = new GameObject("zanzouParent");
             bugText = "CPU Temp: 999°C";
         }
 
@@ -35,6 +34,7 @@ namespace BUGS
 
         public override void BugStart()
         {
+            zanzouParent = new GameObject("zanzouParent");
             zanzou = Resources.Load<GameObject>("Prefabs/Player/PlayerZanzou");
             remainingTime = lastingTime;
         }

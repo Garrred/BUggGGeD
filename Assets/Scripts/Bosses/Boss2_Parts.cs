@@ -18,6 +18,7 @@ public class Boss2_Parts : Enemies.Enemy
     private bool isDashing = false;
     public int count = 0;
 
+    private int currentBulletIndex = 0;
     // Start is called before the first frame update
     public override void Start()
     {
@@ -30,6 +31,27 @@ public class Boss2_Parts : Enemies.Enemy
         if (transform.parent.GetComponent<Boss2Stage2>().splitedIntoFour)
         {
             transform.RotateAround(transform.parent.parent.position, transform.forward, Time.deltaTime * 100);
+        }
+    }
+
+    public void StartPartEmssion()
+    {
+        StartCoroutine(StartBullet());
+    }
+    public IEnumerator StartBullet()
+    {
+        yield return new WaitForSeconds(2f);
+        StartCoroutine(ChangeBulletPattern());
+    }
+    public IEnumerator ChangeBulletPattern()
+    {
+        while (true)
+        {
+            transform.GetChild(1 + currentBulletIndex).gameObject.SetActive(true);
+            yield return new WaitForSeconds(20f);
+            transform.GetChild(1 + currentBulletIndex).gameObject.SetActive(false);
+            currentBulletIndex = Mathf.Abs(currentBulletIndex - 1);
+            yield return new WaitForSeconds(2f);
         }
     }
     // Update is called once per frame

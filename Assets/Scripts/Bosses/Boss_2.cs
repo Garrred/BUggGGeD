@@ -56,6 +56,7 @@ public class Boss_2 : BossBehaviors
     {
         if (boss.stage == 1)
         {
+            boss.maxHealth = boss.maxHealth / 1.2f;
             splited = true;
             StartCoroutine(StartSplitingIntoTwo());
             boss.DropItem();
@@ -63,6 +64,7 @@ public class Boss_2 : BossBehaviors
         }
         if (boss.stage == 2)
         {
+            boss.maxHealth = boss.maxHealth / 1.5f;
             StartCoroutine(StartSplitingIntoFour());
             boss.DropItem();
             boss.DropItem();
@@ -72,6 +74,8 @@ public class Boss_2 : BossBehaviors
 
     IEnumerator StartSplitingIntoFour()
     {
+        Shuriken1.transform.GetChild(2).gameObject.SetActive(false);
+        Shuriken2.transform.GetChild(2).gameObject.SetActive(false);
         Shuriken1.GetComponent<Boss2Stage2>().enabled = false;
         Shuriken2.GetComponent<Boss2Stage2>().enabled = false;
         transform.GetChild(4).GetComponent<BugBulletEmitter>().enabled = false;
@@ -114,6 +118,10 @@ public class Boss_2 : BossBehaviors
             Shuriken1.transform.GetChild(i).GetComponent<Collider2D>().enabled = true;
             Shuriken2.transform.GetChild(i).GetComponent<Collider2D>().enabled = true;
         }
+        Shuriken1.transform.GetChild(0).GetComponent<Boss2_Parts>().StartPartEmssion();
+        Shuriken1.transform.GetChild(1).GetComponent<Boss2_Parts>().StartPartEmssion();
+        Shuriken2.transform.GetChild(0).GetComponent<Boss2_Parts>().StartPartEmssion();
+        Shuriken2.transform.GetChild(1).GetComponent<Boss2_Parts>().StartPartEmssion();
         yield return new WaitForSeconds(2f);
     }
 

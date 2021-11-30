@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae8f94db38e4564886f02762ad898d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 0.5
+  timeBetweenShots: 0.7
   bugs:
   - {fileID: 1741457633}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae8f94db38e4564886f02762ad898d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 0.5
+  timeBetweenShots: 0.7
   bugs:
   - {fileID: 1741457633}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
@@ -373,7 +373,7 @@ MonoBehaviour:
   timeBetweenBugs: 22.5
   bugs:
   - {fileID: 5630812696744154647}
-  - {fileID: 0}
+  - {fileID: 7409538878458645999}
   - {fileID: 538882054528817157}
   backGround: {fileID: 0}
   currentBug: {fileID: 0}
@@ -420,9 +420,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae8f94db38e4564886f02762ad898d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 1
+  timeBetweenShots: 2.5
   bugs:
-  - {fileID: 0}
+  - {fileID: 2235011798136336789}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 1
   bugBullets: {fileID: 0}
@@ -469,9 +469,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae8f94db38e4564886f02762ad898d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 1
+  timeBetweenShots: 2.5
   bugs:
-  - {fileID: 0}
+  - {fileID: 2235011798136336789}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 1
   bugBullets: {fileID: 0}
@@ -518,9 +518,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae8f94db38e4564886f02762ad898d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 1
+  timeBetweenShots: 2.5
   bugs:
-  - {fileID: 0}
+  - {fileID: 2235011798136336789}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 1
   bugBullets: {fileID: 0}
@@ -567,9 +567,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae8f94db38e4564886f02762ad898d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 1
+  timeBetweenShots: 2.5
   bugs:
-  - {fileID: 0}
+  - {fileID: 2235011798136336789}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 1
   bugBullets: {fileID: 0}
@@ -1094,7 +1094,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9158487324283752753}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a676b285f069c3c4884c27e78d0fc696, type: 3}
   m_Name: 
@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9158487324283752753}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a676b285f069c3c4884c27e78d0fc696, type: 3}
   m_Name: 
@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9158487324283752753}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a676b285f069c3c4884c27e78d0fc696, type: 3}
   m_Name: 
@@ -1139,7 +1139,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9158487324283752753}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a676b285f069c3c4884c27e78d0fc696, type: 3}
   m_Name: 

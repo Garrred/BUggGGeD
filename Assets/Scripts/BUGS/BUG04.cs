@@ -6,12 +6,13 @@ namespace BUGS
 {
     public class BUG04 : BUGFrame
     {
-        public float rotationSpeed = 1f;
+        public float rotationSpeed = 10f;
         public Basics.Player player;
         private Attacks.Weapon weapon;
 
         void Start()
         {
+            lastingTime = 3f;
             bugText = "Player.Rotate(Vector3.forward)";
         }
         void Update()
