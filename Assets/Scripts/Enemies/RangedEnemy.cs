@@ -36,6 +36,11 @@ namespace Enemies
 
                 if (player != null)
                 {
+                    Vector3 target = player.transform.position;
+                    Vector3 direction = (target - this.transform.position).normalized;
+                    transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(Vector3.forward, direction), 150f * Time.deltaTime);
+
+
                     if (Vector2.Distance(transform.position, player.position) > stopDistance)
                     {
                         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
