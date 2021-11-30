@@ -35,7 +35,8 @@ namespace BUGS
 
         public override void BugStart()
         {
-
+            zanzou = Resources.Load<GameObject>("Prefabs/Player/PlayerZanzou");
+            remainingTime = lastingTime;
         }
 
         public override void BugEnd()

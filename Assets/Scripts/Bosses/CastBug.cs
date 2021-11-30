@@ -20,7 +20,6 @@ public class CastBug : MonoBehaviour
     {
         remainingTime = timeBetweenBugs;
         StartCoroutine(GetPlayer());
-        backGround = backGround.GetComponent<Image>();
 
     }
 
