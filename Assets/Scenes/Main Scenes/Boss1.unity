@@ -239,17 +239,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3527304499553222904, guid: 2ba8ceb7211821a43b8c532225010c61, type: 3}
   m_PrefabInstance: {fileID: 460897833}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &454889622 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3527304499553222911, guid: 2ba8ceb7211821a43b8c532225010c61, type: 3}
-  m_PrefabInstance: {fileID: 460897833}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454889621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3bdac8053e66744f91d1094ed5653e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &460897833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -375,10 +364,6 @@ PrefabInstance:
       propertyPath: hpBarUI
       value: 
       objectReference: {fileID: 1687060306}
-    - target: {fileID: 1616518930888516111, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 454889622}
     - target: {fileID: 4014909406514690452, guid: 09605b0fede30ec40a84cab420405d1f, type: 3}
       propertyPath: player
       value: 
