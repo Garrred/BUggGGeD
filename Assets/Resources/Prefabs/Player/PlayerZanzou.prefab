@@ -429,7 +429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3125006649976274766}
   m_Layer: 0
-  m_Name: PlayerSanzou
+  m_Name: PlayerZanzou
   m_TagString: Sanzou
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

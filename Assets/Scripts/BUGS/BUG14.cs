@@ -10,7 +10,7 @@ namespace BUGS
         private Transform player;
         private Basics.Player playerScript;
         private Transform enemies;
-        private Transform playerBullets;
+        public GameObject playerBullets;
         private Attacks.Weapon weaponScript;
         // Start is called before the first frame update
         void Start()
@@ -41,8 +41,8 @@ namespace BUGS
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
             playerScript = player.GetComponent<Basics.Player>();
-            enemies = GameObject.FindGameObjectWithTag("WaveSpawner").transform.GetChild(0);
-            playerBullets = GameObject.FindGameObjectWithTag("PlayerBullets").transform;
+            // enemies = GameObject.FindGameObjectWithTag("WaveSpawner").transform.GetChild(0);
+            playerBullets = GameObject.FindGameObjectWithTag("PlayerBullets");
             weaponScript = collision.GetComponent<Attacks.Weapon>();
         }
         public override void BugEnd()
@@ -59,8 +59,8 @@ namespace BUGS
             weaponScript.rotationFreezed = false;
             Time.timeScale = 1f;
             player.position += new Vector3(playerScript.movementInput.x, playerScript.movementInput.y, 0);
-            playerBullets.Translate(Vector3.up * 2 * freezeTime);
-            enemies.Translate(Vector3.up * 2 * freezeTime);
+            playerBullets.transform.Translate(Vector3.up * 2 * freezeTime);
+            // enemies.Translate(Vector3.up * 2 * freezeTime);
         }
     }
 }

@@ -101,7 +101,7 @@ namespace Basics
             }
             else
             {
-                if (other.gameObject.CompareTag("Enemy"))
+                if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Boss"))
                 {
                     takeDamage(1);
                     //UpdateLife();

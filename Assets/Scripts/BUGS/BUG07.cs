@@ -7,7 +7,7 @@ namespace BUGS
 
     public class BUG07 : BUGFrame
     {
-        public float movementSpeed;
+        public float movementSpeed = 12f;
 
         private bool bugActive;
         private Basics.Player player;
@@ -25,8 +25,11 @@ namespace BUGS
             if (remainingTime > 0)
             {
                 remainingTime -= Time.deltaTime;
-                //rb.MovePosition(rb.position + (Vector2)collision.transform.forward * movementSpeed * Time.fixedDeltaTime);
-                playerObject.Translate(Vector3.up * movementSpeed* Time.deltaTime);
+                // rb.MovePosition(rb.position + (Vector2)collision.transform.forward * movementSpeed * Time.fixedDeltaTime);
+                if (Input.GetMouseButton(0))
+                {
+                    playerObject.Translate(Vector3.up * movementSpeed * Time.deltaTime);
+                }
             }
         }
 
@@ -34,14 +37,17 @@ namespace BUGS
 
         public override void BugStart()
         {
+            remainingTime = lastingTime;
             playerObject = collision.gameObject.transform;
             rb = collision.GetComponent<Rigidbody2D>();
             player = collision.GetComponent<Basics.Player>();
+            player.enableMovement = false;
             weapon = player.GetComponent<Attacks.Weapon>();
 
         }
         public override void BugEnd()
         {
+            player.enableMovement = true;
         }
     }
 }

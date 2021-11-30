@@ -19,7 +19,7 @@ namespace BUGS
             if (remainingTime > 0)
             {
                 remainingTime -= Time.deltaTime;
-                collision.transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime * remainingTime);
+                collision.transform.Rotate(Vector3.forward * rotationSpeed * remainingTime);
             }
         }
 
@@ -31,6 +31,7 @@ namespace BUGS
             player.enableMovement = false;
             weapon.enabled = false;
 
+            remainingTime = lastingTime;
         }
 
         public override void BugEnd()
