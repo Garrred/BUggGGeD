@@ -44,6 +44,7 @@ public class CastBug : MonoBehaviour
             backGround.color = Color.Lerp(Color.white, Color.red, j / 20f);
             yield return new WaitForSeconds(0.05f);
         }
+        yield return new WaitForSeconds(1f);
         isChangingColor = false;
         currentBug.OnTriggerEnter2D(player.gameObject.GetComponent<Collider2D>());
         remainingTime = timeBetweenBugs;

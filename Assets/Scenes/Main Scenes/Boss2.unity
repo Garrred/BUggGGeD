@@ -171,33 +171,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 295927280}
     - target: {fileID: 410391273, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
-      propertyPath: timeBetweenBugs
-      value: 22.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 597858049, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
-      propertyPath: player
+      propertyPath: bugs.Array.data[1]
       value: 
-      objectReference: {fileID: 596269325}
-    - target: {fileID: 929688396, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
-      propertyPath: dashAttackDuration
-      value: 5
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1182152107}
     - target: {fileID: 981455401, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: bugBullets
       value: 
       objectReference: {fileID: 1486989405}
-    - target: {fileID: 1587579247, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1587579252, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: bugBullets
       value: 
       objectReference: {fileID: 1486989405}
-    - target: {fileID: 1715729871, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
-      propertyPath: dashAttackDuration
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1741457632, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: playerBullets
       value: 
@@ -210,29 +194,49 @@ PrefabInstance:
       propertyPath: bugBullets
       value: 
       objectReference: {fileID: 1486989405}
+    - target: {fileID: 58282098623419450, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
+      propertyPath: bugs.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 274647581256233836, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: bugBullets
       value: 
       objectReference: {fileID: 1486989405}
+    - target: {fileID: 274647581256233836, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
+      propertyPath: bugs.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2235011798136336789, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 596269325}
     - target: {fileID: 2774571986917978172, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: bugBullets
       value: 
       objectReference: {fileID: 1486989405}
+    - target: {fileID: 2774571986917978172, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
+      propertyPath: bugs.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6054945326506210532, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: bugBullets
       value: 
       objectReference: {fileID: 1486989405}
+    - target: {fileID: 6054945326506210532, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
+      propertyPath: bugs.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7245926410621555300, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7245926410621555300, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.368675
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7245926410621555300, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.560474
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7245926410621555300, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: m_LocalPosition.z
@@ -274,18 +278,6 @@ PrefabInstance:
       propertyPath: hpBarUI
       value: 
       objectReference: {fileID: 1687060306}
-    - target: {fileID: 8213808096036485249, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
-      propertyPath: maxHealth
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 9158487323918262834, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
-      propertyPath: m_TagString
-      value: Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 9158487324566856414, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
-      propertyPath: m_TagString
-      value: Boss
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
 --- !u!1001 &460897833
@@ -390,6 +382,17 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 3527304498638251076, guid: 2ba8ceb7211821a43b8c532225010c61, type: 3}
   m_PrefabInstance: {fileID: 460897833}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1182152107 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7409538878458645999, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
+  m_PrefabInstance: {fileID: 344431103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69a860dd162557742ab793d5a2a2a4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1486989405 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1486989405, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
@@ -547,11 +550,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7773930348441300068, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.22
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 7773930348441300068, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -7.91
       objectReference: {fileID: 0}
     - target: {fileID: 7773930348441300068, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
       propertyPath: m_LocalPosition.z

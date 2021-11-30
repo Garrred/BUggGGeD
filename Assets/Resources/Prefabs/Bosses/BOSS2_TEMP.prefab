@@ -59,9 +59,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1587579248}
   - component: {fileID: 1587579252}
-  - component: {fileID: 1741457631}
   - component: {fileID: 1741457632}
   - component: {fileID: 1741457633}
+  - component: {fileID: 2235011798136336789}
   m_Layer: 0
   m_Name: BugBulletEmitter
   m_TagString: Untagged
@@ -98,30 +98,11 @@ MonoBehaviour:
   timeBetweenShots: 1
   bugs:
   - {fileID: 1741457632}
+  - {fileID: 2235011798136336789}
   - {fileID: 1741457633}
-  - {fileID: 1741457631}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 0
   bugBullets: {fileID: 0}
---- !u!114 &1741457631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1587579247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6deb088e19326b428b610c7efd5fab7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bugText: 
-  lastingTime: 5
-  remainingTime: -10
-  bugEnabled: 1
-  collision: {fileID: 0}
-  zanzou: {fileID: 7793587587362056126, guid: e43930f44131f124aa55964613ec9d98, type: 3}
-  zanzouCreationInterval: 0.1
 --- !u!114 &1741457632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bugText: 
-  lastingTime: 3
+  lastingTime: 2
   remainingTime: -10
   bugEnabled: 1
   collision: {fileID: 0}
@@ -158,6 +139,25 @@ MonoBehaviour:
   bugEnabled: 1
   collision: {fileID: 0}
   movementSpeed: 7.5
+--- !u!114 &2235011798136336789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587579247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5ac9f6a1c9d9448ab63783a4585aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugText: 
+  lastingTime: 3
+  remainingTime: -10
+  bugEnabled: 1
+  collision: {fileID: 0}
+  rotationSpeed: 1
+  player: {fileID: 0}
 --- !u!1 &2034563879
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,9 +167,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2034563880}
-  - component: {fileID: 597858049}
   - component: {fileID: 5630812696744154647}
   - component: {fileID: 7409538878458645999}
+  - component: {fileID: 538882054528817157}
   m_Layer: 0
   m_Name: BUGS
   m_TagString: BossCore
@@ -191,25 +191,6 @@ Transform:
   m_Father: {fileID: 7245926410621555300}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &597858049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034563879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf5ac9f6a1c9d9448ab63783a4585aae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bugText: 
-  lastingTime: 5
-  remainingTime: -10
-  bugEnabled: 1
-  collision: {fileID: 0}
-  rotationSpeed: 10
-  player: {fileID: 0}
 --- !u!114 &5630812696744154647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bugText: 
-  lastingTime: 5
+  lastingTime: 7
   remainingTime: -10
   bugEnabled: 1
   collision: {fileID: 0}
@@ -240,11 +221,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bugText: 
-  lastingTime: 5
+  lastingTime: 7
   remainingTime: -10
   bugEnabled: 1
   collision: {fileID: 0}
   movementSpeed: 12
+--- !u!114 &538882054528817157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034563879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6deb088e19326b428b610c7efd5fab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugText: 
+  lastingTime: 5
+  remainingTime: -10
+  bugEnabled: 1
+  collision: {fileID: 0}
+  zanzou: {fileID: 0}
+  zanzouCreationInterval: 0.1
 --- !u!1 &2035214479
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +346,7 @@ MonoBehaviour:
   attackCount: 0
   stopTimeBeforeCasting: 2
   health: 0
-  maxHealth: 150
+  maxHealth: 800
   attackPower: 0
   stopDistance: 0
   timeBetweenAttacks: 0
@@ -370,11 +370,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  timeBetweenBugs: 5
+  timeBetweenBugs: 22.5
   bugs:
-  - {fileID: 7409538878458645999}
-  - {fileID: 597858049}
   - {fileID: 5630812696744154647}
+  - {fileID: 0}
+  - {fileID: 538882054528817157}
   backGround: {fileID: 0}
   currentBug: {fileID: 0}
 --- !u!1 &3766873565650274812
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenShots: 1
   bugs:
-  - {fileID: 1741457631}
+  - {fileID: 0}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 1
   bugBullets: {fileID: 0}
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenShots: 1
   bugs:
-  - {fileID: 1741457631}
+  - {fileID: 0}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 1
   bugBullets: {fileID: 0}
@@ -520,7 +520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenShots: 1
   bugs:
-  - {fileID: 1741457631}
+  - {fileID: 0}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 1
   bugBullets: {fileID: 0}
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenShots: 1
   bugs:
-  - {fileID: 1741457631}
+  - {fileID: 0}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 1
   bugBullets: {fileID: 0}
@@ -884,7 +884,7 @@ GameObject:
   - component: {fileID: 929688397}
   m_Layer: 7
   m_Name: UD
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -920,8 +920,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushSpeed: 0
   knockedBackTime: 0
-  timeBetweenAttacks: 3
-  dashAttackDuration: 2
+  timeBetweenAttacks: 4
+  dashAttackDuration: 5
   dashedTime: 0
   dashSpeed: 15
   stopDistance: 5
@@ -1337,7 +1337,7 @@ GameObject:
   - component: {fileID: 1715729872}
   m_Layer: 7
   m_Name: LR
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1373,8 +1373,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushSpeed: 0
   knockedBackTime: 0
-  timeBetweenAttacks: 3
-  dashAttackDuration: 2
+  timeBetweenAttacks: 4
+  dashAttackDuration: 5
   dashedTime: 0
   dashSpeed: 15
   stopDistance: 5

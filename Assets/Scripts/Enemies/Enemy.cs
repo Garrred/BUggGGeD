@@ -40,10 +40,7 @@ namespace Enemies
                     Flash(transform.parent.parent);
                 if (health <= 0)
                 {
-                    if (possibleDrops.Length > 0)
-                    {
-                        Instantiate(possibleDrops[Random.Range(0, possibleDrops.Length)], transform.position, Quaternion.identity);
-                    }
+                    DropItem();
                     // StartCoroutine(hpDisplay.FadeOut());
                     // if (Random.Range(0, 100) <= healthDropChance)
                     // {
@@ -54,7 +51,13 @@ namespace Enemies
                 }
             }
         }
-
+        public void DropItem()
+        {
+            if (possibleDrops.Length > 0)
+            {
+                Instantiate(possibleDrops[Random.Range(0, possibleDrops.Length)], transform.position, Quaternion.identity);
+            }
+        }
         public void Flash(Transform materialLocation)
         {
             if (materialLocation.GetComponent<FlashOnHit>() != null)

@@ -118,10 +118,22 @@ namespace Basics
                 StartCoroutine(StartInvincibility());
             }
             if (health <= 0)
-                Destroy(gameObject);
+            {
+                Die();
+            }
             UpdateLife();
         }
 
+        void Die()
+        {
+            transform.parent.gameObject.SetActive(false);
+            // GetComponent<Collider2D>().enabled = false;
+            // SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>();
+            // foreach (SpriteRenderer sprite in sprites)
+            // {
+            //     sprite.enabled = false;
+            // }
+        }
         public void UpdateLife()
         {
             if (hearts != null)
@@ -171,5 +183,9 @@ namespace Basics
         //        UpdateLife();
         //    }
         //}
+        void OnDestroy()
+        {
+            StopAllCoroutines();
+        }
     }
 }

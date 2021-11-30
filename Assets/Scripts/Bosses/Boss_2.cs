@@ -25,6 +25,7 @@ public class Boss_2 : BossBehaviors
 
     private GameObject player;
     private bool followingPlayer = false;
+    private bool spawnedDrop = false;
 
     void Start()
     {
@@ -36,6 +37,13 @@ public class Boss_2 : BossBehaviors
     // Update is called once per frame
     void Update()
     {
+        if (!spawnedDrop && boss.health <= boss.maxHealth / 2)
+        {
+            spawnedDrop = true;
+            boss.DropItem();
+            boss.DropItem();
+        }
+
         if (followingPlayer)
         {
             transform.position = Vector2.Lerp(transform.position, player.transform.position, 10f * Time.fixedDeltaTime);
@@ -50,10 +58,14 @@ public class Boss_2 : BossBehaviors
         {
             splited = true;
             StartCoroutine(StartSplitingIntoTwo());
+            boss.DropItem();
+            boss.DropItem();
         }
         if (boss.stage == 2)
         {
             StartCoroutine(StartSplitingIntoFour());
+            boss.DropItem();
+            boss.DropItem();
             // transform.GetChild(4).GetComponent<BugBulletEmitter>().enabled = true;
         }
     }
