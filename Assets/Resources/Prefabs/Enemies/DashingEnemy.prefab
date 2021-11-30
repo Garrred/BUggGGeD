@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 831992537809649359}
   - component: {fileID: 831992537809649357}
   - component: {fileID: 831992537809649356}
-  - component: {fileID: 358334963}
+  - component: {fileID: 1274359022}
   m_Layer: 7
   m_Name: L
   m_TagString: Enemy
@@ -114,7 +114,7 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &358334963
+--- !u!114 &1274359022
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,14 +123,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 831992537809649358}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eedf562931a11146820db07e8d1b2ca, type: 3}
+  m_Script: {fileID: 11500000, guid: cf5ac9f6a1c9d9448ab63783a4585aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bugText: 
-  lastingTime: 5
+  lastingTime: 2
   remainingTime: -10
   bugEnabled: 1
   collision: {fileID: 0}
+  rotationSpeed: 10
+  player: {fileID: 0}
 --- !u!1 &831992538900189770
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +144,7 @@ GameObject:
   - component: {fileID: 831992538900189771}
   - component: {fileID: 831992538900189769}
   - component: {fileID: 831992538900189768}
-  - component: {fileID: 1455439562}
+  - component: {fileID: 1734552488}
   m_Layer: 7
   m_Name: R
   m_TagString: Enemy
@@ -245,7 +247,7 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &1455439562
+--- !u!114 &1734552488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,14 +256,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 831992538900189770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eedf562931a11146820db07e8d1b2ca, type: 3}
+  m_Script: {fileID: 11500000, guid: cf5ac9f6a1c9d9448ab63783a4585aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bugText: 
-  lastingTime: 5
+  lastingTime: 2
   remainingTime: -10
   bugEnabled: 1
   collision: {fileID: 0}
+  rotationSpeed: 10
+  player: {fileID: 0}
 --- !u!1 &5180796243297607643
 GameObject:
   m_ObjectHideFlags: 0

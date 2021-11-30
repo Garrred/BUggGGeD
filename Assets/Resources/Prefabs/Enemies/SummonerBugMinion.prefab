@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8368415053470399842}
   - component: {fileID: 8368415053470399843}
   - component: {fileID: 7534329363782667218}
-  - component: {fileID: 1243493081365693857}
   - component: {fileID: 8730285751264089633}
+  - component: {fileID: 89520383}
   m_Layer: 0
   m_Name: SummonerBugMinion
   m_TagString: Enemy
@@ -113,23 +113,6 @@ MonoBehaviour:
   player: {fileID: 0}
   possibleDrops: []
   attackSpeed: 2
---- !u!114 &1243493081365693857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8368415053470399845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eedf562931a11146820db07e8d1b2ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bugText: 
-  lastingTime: 5
-  remainingTime: -10
-  bugEnabled: 1
-  collision: {fileID: 0}
 --- !u!70 &8730285751264089633
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -146,3 +129,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.1391805}
   m_Size: {x: 1.8741688, y: 2.2440338}
   m_Direction: 0
+--- !u!114 &89520383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368415053470399845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f50be8b9f04e2e4089437303f9aa0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugText: 
+  lastingTime: 5
+  remainingTime: -10
+  bugEnabled: 1
+  collision: {fileID: 0}
