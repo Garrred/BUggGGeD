@@ -28,7 +28,6 @@ namespace Basics
         public float invincibleTime = 2f;
         private bool isInvincible = false;
         //private Animator animator;
-
         public GameObject hearts;
         // public Sprite fullHeart;
         //public Sprite emptyHeart;
