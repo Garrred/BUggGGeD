@@ -74,19 +74,23 @@ public class Boss_2 : BossBehaviors
             boss.maxHealth = boss.maxHealth / 1.2f;
             splited = true;
             StartCoroutine(StartSplitingIntoTwo());
-            boss.DropItem();
-            boss.DropItem();
+            StartCoroutine(DropItems());
         }
         if (boss.stage == 2)
         {
             boss.maxHealth = boss.maxHealth / 1.5f;
             StartCoroutine(StartSplitingIntoFour());
-            boss.DropItem();
-            boss.DropItem();
+            StartCoroutine(DropItems());
             // transform.GetChild(4).GetComponent<BugBulletEmitter>().enabled = true;
         }
     }
 
+    IEnumerator DropItems()
+    {
+        boss.DropItem();
+        yield return new WaitForSeconds(1f);
+        boss.DropItem();
+    }
     IEnumerator StartSplitingIntoFour()
     {
         Shuriken1.transform.GetChild(2).gameObject.SetActive(false);

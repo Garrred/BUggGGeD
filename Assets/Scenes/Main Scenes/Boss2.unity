@@ -339,6 +339,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 541505831, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
   m_PrefabInstance: {fileID: 6895383969962458871}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &568196413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5120174097732374165, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
+  m_PrefabInstance: {fileID: 6895383969962458871}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &596269322 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3621905896540322367, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
@@ -515,6 +520,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 242675796665117720, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
+      propertyPath: fail
+      value: 
+      objectReference: {fileID: 568196413}
+    - target: {fileID: 242675796665117720, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
+      propertyPath: health
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 242675796665117720, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
       propertyPath: hearts
       value: 

@@ -88,7 +88,7 @@ namespace Enemies
                 {
                     isAlive = false;
                     EndBullet();
-                    if (stage == 2)
+                    if (stage >= 2)
                     {
                         StartCoroutine(EndBoss());
                     }
