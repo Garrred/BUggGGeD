@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shot 2
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 417357
+  uniqueIndex: 6445208
   profile: {fileID: 11400000}
   parent: {fileID: 5296634569574987018}
   children:
@@ -2519,7 +2519,7 @@ MonoBehaviour:
   m_Name: Shot 1
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 3926930
+  uniqueIndex: 1760373
   profile: {fileID: 11400000}
   parent: {fileID: 8793826846081910860}
   children:
@@ -5025,7 +5025,7 @@ MonoBehaviour:
   m_Name: Bullet 1
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 13182050
+  uniqueIndex: 57571
   profile: {fileID: 11400000}
   parent: {fileID: -2212999757008136810}
   children: []
@@ -6026,7 +6026,7 @@ MonoBehaviour:
         weight: 0
         headerTitle: 
         blendColor: {r: 0, g: 0, b: 0, a: 0}
-      defaultValue: {r: 0, g: 0.4705882, b: 1, a: 1}
+      defaultValue: {r: 0, g: 0.7278514, b: 1, a: 1}
       gradientValue:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -6301,24 +6301,24 @@ MonoBehaviour:
         blendColor: {r: 0, g: 0, b: 0, a: 0}
       defaultValue:
         serializedVersion: 2
-        key0: {r: 0, g: 0, b: 0, a: 1}
-        key1: {r: 0, g: 0, b: 0, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
+        key0: {r: 0, g: 1, b: 0.0018956661, a: 0.58431375}
+        key1: {r: 1, g: 0, b: 0.8499465, a: 0.7058824}
+        key2: {r: 0, g: 0.41341805, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
-        ctime1: 65535
-        ctime2: 0
+        ctime0: 4626
+        ctime1: 32575
+        ctime2: 65535
         ctime3: 0
         ctime4: 0
         ctime5: 0
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 65535
+        atime1: 43754
         atime2: 0
         atime3: 0
         atime4: 0
@@ -6865,7 +6865,7 @@ MonoBehaviour:
     requiredComponentName: 
   foldoutVFX: 1
   hideSpriteList: 0
-  currentlyDisplayedModule: 2
+  currentlyDisplayedModule: 0
   canMove: 1
   canCollide: 1
   isVisible: 1
@@ -9337,7 +9337,7 @@ MonoBehaviour:
           m_RotationOrder: 4
       forceZeroToOne: 1
   colorOverLifetime:
-    enabled: 0
+    enabled: 1
     wrapMode:
       valueTree:
       - settings:
@@ -11587,8 +11587,8 @@ MonoBehaviour:
   foldoutExport: 0
   foldoutEmptyBin: 0
   foldoutCompactMode: 0
-  currentParamsSelected: {fileID: 114201774248674550}
-  numberOfSubAssets: 7
+  currentParamsSelected: {fileID: 3846248802662607307}
+  numberOfSubAssets: 13
 --- !u!114 &114027673760526898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11602,7 +11602,7 @@ MonoBehaviour:
   m_Name: Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 9972860
+  uniqueIndex: 14751896
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -12878,24 +12878,24 @@ MonoBehaviour:
         blendColor: {r: 0, g: 0, b: 0, a: 0}
       defaultValue:
         serializedVersion: 2
-        key0: {r: 0, g: 0, b: 0, a: 1}
-        key1: {r: 0, g: 0, b: 0, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
+        key0: {r: 0, g: 1, b: 0.0018956661, a: 0.58431375}
+        key1: {r: 1, g: 0, b: 0.8499465, a: 0.7058824}
+        key2: {r: 0, g: 0.41341805, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
-        ctime1: 65535
-        ctime2: 0
+        ctime0: 4626
+        ctime1: 32575
+        ctime2: 65535
         ctime3: 0
         ctime4: 0
         ctime5: 0
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 65535
+        atime1: 43754
         atime2: 0
         atime3: 0
         atime4: 0
@@ -13442,7 +13442,7 @@ MonoBehaviour:
     requiredComponentName: 
   foldoutVFX: 1
   hideSpriteList: 0
-  currentlyDisplayedModule: 2
+  currentlyDisplayedModule: 0
   canMove: 1
   canCollide: 1
   isVisible: 1
@@ -15914,7 +15914,7 @@ MonoBehaviour:
           m_RotationOrder: 4
       forceZeroToOne: 1
   colorOverLifetime:
-    enabled: 0
+    enabled: 1
     wrapMode:
       valueTree:
       - settings:
@@ -16234,7 +16234,7 @@ MonoBehaviour:
           weight: 0
           headerTitle: 
           blendColor: {r: 0, g: 0, b: 0, a: 0}
-        defaultValue: 1
+        defaultValue: 3
       useSlider: 0
       sliderMin: 0
       sliderMax: 0
@@ -18125,7 +18125,7 @@ MonoBehaviour:
   preview:
     collidersTex: {fileID: 0}
     sprite: {fileID: 21300000, guid: 06e5d8f7ba9c17144b1ace83b073da17, type: 3}
-    gizmoColor: {r: 0, g: 0, b: 0.5, a: 1}
+    gizmoColor: {r: 0.52852917, g: 0, b: 1, a: 1}
 --- !u!114 &114201774248674550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18139,7 +18139,7 @@ MonoBehaviour:
   m_Name: Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 4950195
+  uniqueIndex: 8247321
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -20645,7 +20645,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 6682486
+  uniqueIndex: 14241086
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -27131,7 +27131,7 @@ MonoBehaviour:
   m_Name: Arc
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 4931991
+  uniqueIndex: 7905949
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -43689,7 +43689,7 @@ MonoBehaviour:
   m_Name: Bullet 0
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 7604594
+  uniqueIndex: 1735912
   profile: {fileID: 11400000}
   parent: {fileID: 6123529305275095401}
   children: []
@@ -50226,7 +50226,7 @@ MonoBehaviour:
   m_Name: Pattern 0
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 5133424
+  uniqueIndex: 12959761
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -66784,7 +66784,7 @@ MonoBehaviour:
   m_Name: Bullet 2
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 4489514
+  uniqueIndex: 6543999
   profile: {fileID: 11400000}
   parent: {fileID: -3832267187214936903}
   children: []
@@ -68060,24 +68060,24 @@ MonoBehaviour:
         blendColor: {r: 0, g: 0, b: 0, a: 0}
       defaultValue:
         serializedVersion: 2
-        key0: {r: 0, g: 0, b: 0, a: 1}
-        key1: {r: 0, g: 0, b: 0, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
+        key0: {r: 0, g: 1, b: 0.0018956661, a: 0.58431375}
+        key1: {r: 1, g: 0, b: 0.8499465, a: 0.7058824}
+        key2: {r: 0, g: 0.41341805, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
-        ctime1: 65535
-        ctime2: 0
+        ctime0: 4626
+        ctime1: 32575
+        ctime2: 65535
         ctime3: 0
         ctime4: 0
         ctime5: 0
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 65535
+        atime1: 43754
         atime2: 0
         atime3: 0
         atime4: 0
@@ -68624,7 +68624,7 @@ MonoBehaviour:
     requiredComponentName: 
   foldoutVFX: 1
   hideSpriteList: 0
-  currentlyDisplayedModule: 2
+  currentlyDisplayedModule: 0
   canMove: 1
   canCollide: 1
   isVisible: 1
@@ -71096,7 +71096,7 @@ MonoBehaviour:
           m_RotationOrder: 4
       forceZeroToOne: 1
   colorOverLifetime:
-    enabled: 0
+    enabled: 1
     wrapMode:
       valueTree:
       - settings:
@@ -73307,7 +73307,7 @@ MonoBehaviour:
   preview:
     collidersTex: {fileID: 0}
     sprite: {fileID: 21300000, guid: 06e5d8f7ba9c17144b1ace83b073da17, type: 3}
-    gizmoColor: {r: 0, g: 0, b: 0.5, a: 1}
+    gizmoColor: {r: 0, g: 0.3930602, b: 1, a: 1}
 --- !u!114 &5296634569574987018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -73321,7 +73321,7 @@ MonoBehaviour:
   m_Name: Arc 1
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 12837314
+  uniqueIndex: 9847280
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -89879,7 +89879,7 @@ MonoBehaviour:
   m_Name: Shot 0
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 4847319
+  uniqueIndex: 2686394
   profile: {fileID: 11400000}
   parent: {fileID: 3364272501446511089}
   children:
@@ -92385,7 +92385,7 @@ MonoBehaviour:
   m_Name: Arc 0
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 4381022
+  uniqueIndex: 10421210
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
