@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip startButtonClick;
+    public AudioClip quitButtonClick;
+    public AudioClip selectButtonClick;
+    public AudioClip stageClick;
+
     public float waitTime = 2f;
     public GameObject levelSelectionMenu;
     public GameObject mainMenu;
@@ -27,33 +33,37 @@ public class MainMenuManager : MonoBehaviour
 
     public void LoadFirstLevel()
     {
+        audioSource.PlayOneShot(startButtonClick);
         SceneManager.LoadScene(1);
     }
 
     public void LoadLevel()
     {
+        audioSource.PlayOneShot(startButtonClick);
         SceneManager.LoadScene(sceneNum);
     }
     public void SetLevel(int n)
     {
-
-        Debug.Log("set level: " + n);
+        audioSource.PlayOneShot(stageClick);
         sceneNum = n;
     }
 
     public void Quit()
     {
+        audioSource.PlayOneShot(quitButtonClick);
         Application.Quit();
     }
 
     public void LevelMenu()
     {
+        audioSource.PlayOneShot(selectButtonClick);
         levelSelectionMenu.SetActive(true);
         mainMenu.SetActive(false);
     }
 
     public void MainMenu()
     {
+        audioSource.PlayOneShot(selectButtonClick);
         mainMenu.SetActive(true);
         levelSelectionMenu.SetActive(false);
     }

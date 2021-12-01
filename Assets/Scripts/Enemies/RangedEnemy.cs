@@ -70,6 +70,7 @@ namespace Enemies
                 }
                 else
                 {
+                    audioSource.PlayOneShot(attackSound);
                     Instantiate(bullet, transform.position, rotation);
                     attackCount++;
                 }

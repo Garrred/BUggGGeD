@@ -766,11 +766,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c80e069b24df647945499f84d3c77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupSound: {fileID: 0}
-  healthUp: {fileID: 0}
-  attackSpeedUp: {fileID: 0}
-  gatling: {fileID: 0}
-  audioSource: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 3ea945579ac675a4eb44765bf73852bf, type: 3}
+  healthUp: {fileID: 8300000, guid: ec6c88f97f5924d498a9e7b1a903f7c9, type: 3}
+  attackSpeedUp: {fileID: 8300000, guid: 508f8b219fd3f2649b2ef581efa0a50c, type: 3}
+  gatling: {fileID: 8300000, guid: 600fadbbc4b3f454fa0d73ddba52bc06, type: 3}
+  audioSource: {fileID: 907907763}
 --- !u!82 &907907763
 AudioSource:
   m_ObjectHideFlags: 0

@@ -49,6 +49,7 @@ public class DashingEnemy : Enemies.Enemy
 
     IEnumerator DashAttack()
     {
+        audioSource.PlayOneShot(attackSound);
         isDashing = true;
         attackCount++;
         Vector3 target = player.transform.position;
