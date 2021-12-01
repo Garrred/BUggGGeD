@@ -13,6 +13,12 @@ namespace Basics
         public GameObject pauseMenu;
         public GameObject pauseButton;
 
+        void Awake()
+        {
+            Time.timeScale = 1f;
+            isPaused = false;
+            pauseMenu.SetActive(false);
+        }
         // Start is called before the first frame update
         void Start()
         {
@@ -61,8 +67,6 @@ namespace Basics
             yield return new WaitForSeconds(waitTime);
             SceneManager.LoadScene(sceneIndex);
             //yield return null;
-
-
         }
     }
 }

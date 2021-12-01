@@ -18,6 +18,7 @@ TagManager:
   - ItemUI
   - BugText
   - BugBullets
+  - SceneLoader
   layers:
   - Default
   - TransparentFX
