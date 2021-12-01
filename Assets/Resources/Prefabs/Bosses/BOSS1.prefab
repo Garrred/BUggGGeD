@@ -2904,7 +2904,7 @@ MonoBehaviour:
   deathSound: {fileID: 0}
   attackSound: {fileID: 0}
   health: 0
-  maxHealth: 1
+  maxHealth: 100
   attackPower: 0
   stopDistance: 0
   timeBetweenAttacks: 0

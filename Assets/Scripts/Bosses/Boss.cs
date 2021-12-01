@@ -55,7 +55,14 @@ namespace Enemies
         }
         public void StartBullet()
         {
-            currentBullet = transform.GetChild(stage).gameObject;
+            try
+            {
+                currentBullet = transform.GetChild(stage).gameObject;
+            }
+            catch
+            {
+                Debug.Log("Child out of range");
+            }
             StartCoroutine(ChangeBulletPattern());
         }
         public IEnumerator ChangeBulletPattern()

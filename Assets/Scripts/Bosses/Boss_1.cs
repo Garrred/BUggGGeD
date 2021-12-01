@@ -35,7 +35,7 @@ public class Boss_1 : BossBehaviors
 
     public override void StageChangeModification()
     {
-        if (boss.stage == 3)
+        if (boss.stage >= 3)
         {
             return;
         }
