@@ -39,6 +39,10 @@ namespace Basics
         {
             rb = GetComponent<Rigidbody2D>();
             weapon = GetComponent<Attacks.Weapon>();
+
+            GetComponent<Attacks.Weapon>().bullet.GetComponent<Attacks.Bullet>().bulletSpeed = 10f;
+            GetComponent<Attacks.Weapon>().bullet.GetComponent<CapsuleCollider2D>().isTrigger = true;
+            GetComponent<Attacks.Weapon>().bullet.GetComponent<Rigidbody2D>().gravityScale = 0f;
             //animator = GetComponent<Animator>();
             UpdateLife();
         }
