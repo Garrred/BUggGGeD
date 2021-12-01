@@ -25,6 +25,7 @@ namespace Enemies
         public Transform player;
 
         public GameObject[] possibleDrops;
+        public int dropChance = 100;
 
         // Start is called before the first frame update
         public virtual void Start()
@@ -66,7 +67,10 @@ namespace Enemies
         {
             if (possibleDrops.Length > 0)
             {
-                Instantiate(possibleDrops[Random.Range(0, possibleDrops.Length)], transform.position, Quaternion.identity);
+                if (Random.Range(0, 100) <= dropChance)
+                {
+                    Instantiate(possibleDrops[Random.Range(0, possibleDrops.Length)], transform.position, Quaternion.identity);
+                }
             }
         }
         public void Flash(Transform materialLocation)
