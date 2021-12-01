@@ -329,9 +329,9 @@ MonoBehaviour:
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops:
-  - {fileID: 3629523356527745325, guid: f239bcf96863bf84396283e52e8103f9, type: 3}
+  - {fileID: 837208454273266806, guid: d04b811233516f64f8aa6fb9b0a3c8c9, type: 3}
   - {fileID: 5791915124679065411, guid: 41edc5a02c4d64b428c83477fb220563, type: 3}
-  dropChance: 3
+  dropChance: 10
   dashSpeed: 15
   dashAttackDuration: 4
   dashedTime: 0

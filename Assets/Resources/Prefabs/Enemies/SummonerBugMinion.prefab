@@ -115,7 +115,9 @@ MonoBehaviour:
   speed: 7
   isInvincible: 0
   player: {fileID: 0}
-  possibleDrops: []
+  possibleDrops:
+  - {fileID: 837208454273266806, guid: d04b811233516f64f8aa6fb9b0a3c8c9, type: 3}
+  dropChance: 3
   attackSpeed: 2
 --- !u!70 &8730285751264089633
 CapsuleCollider2D:
