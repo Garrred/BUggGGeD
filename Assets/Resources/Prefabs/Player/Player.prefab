@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2122199264}
   m_Layer: 6
   m_Name: BUGPRESSED
-  m_TagString: BugText
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -761,6 +761,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7773930348441300068}
     m_Modifications:
+    - target: {fileID: 4278312890149642165, guid: 77922efef174d7046902582823ae90db, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4861831110909219302, guid: 77922efef174d7046902582823ae90db, type: 3}
       propertyPath: health
       value: 5

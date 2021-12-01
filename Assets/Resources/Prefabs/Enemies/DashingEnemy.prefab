@@ -321,7 +321,7 @@ MonoBehaviour:
   deathSound: {fileID: 0}
   attackSound: {fileID: 8300000, guid: 8aa7740e1092c074b8de5883dd7a73da, type: 3}
   health: 0
-  maxHealth: 20
+  maxHealth: 35
   attackPower: 1
   stopDistance: 10
   timeBetweenAttacks: 1.25

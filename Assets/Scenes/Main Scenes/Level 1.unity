@@ -766,34 +766,34 @@ MonoBehaviour:
   - enemies:
     - {fileID: 5507399272857002407, guid: 216cbd091b885204eac54dc3f34195ca, type: 3}
     - {fileID: -6953087138398941293, guid: b4498818433f50e4d8f81adfb20c7fbe, type: 3}
-    enemyNum: 6
+    enemyNum: 8
     timeBetweenSpawns: 1
   - enemies:
     - {fileID: 5507399272857002407, guid: 216cbd091b885204eac54dc3f34195ca, type: 3}
     - {fileID: 5507399272857002407, guid: 216cbd091b885204eac54dc3f34195ca, type: 3}
     - {fileID: 3851400743318969207, guid: e927209c778ed324c909c779eaffb41e, type: 3}
     enemyNum: 10
-    timeBetweenSpawns: 2
-  - enemies:
-    - {fileID: 5507399272857002407, guid: 216cbd091b885204eac54dc3f34195ca, type: 3}
-    - {fileID: -6953087138398941293, guid: b4498818433f50e4d8f81adfb20c7fbe, type: 3}
-    - {fileID: 3851400743318969207, guid: e927209c778ed324c909c779eaffb41e, type: 3}
-    enemyNum: 10
-    timeBetweenSpawns: 2
-  - enemies:
-    - {fileID: 5507399272857002407, guid: 216cbd091b885204eac54dc3f34195ca, type: 3}
-    - {fileID: -6953087138398941293, guid: b4498818433f50e4d8f81adfb20c7fbe, type: 3}
-    - {fileID: 3851400743318969207, guid: e927209c778ed324c909c779eaffb41e, type: 3}
-    enemyNum: 12
     timeBetweenSpawns: 1.5
   - enemies:
     - {fileID: 5507399272857002407, guid: 216cbd091b885204eac54dc3f34195ca, type: 3}
     - {fileID: -6953087138398941293, guid: b4498818433f50e4d8f81adfb20c7fbe, type: 3}
     - {fileID: 3851400743318969207, guid: e927209c778ed324c909c779eaffb41e, type: 3}
+    enemyNum: 10
+    timeBetweenSpawns: 1.5
+  - enemies:
+    - {fileID: 5507399272857002407, guid: 216cbd091b885204eac54dc3f34195ca, type: 3}
     - {fileID: -6953087138398941293, guid: b4498818433f50e4d8f81adfb20c7fbe, type: 3}
     - {fileID: 3851400743318969207, guid: e927209c778ed324c909c779eaffb41e, type: 3}
-    enemyNum: 10
-    timeBetweenSpawns: 2
+    enemyNum: 12
+    timeBetweenSpawns: 1
+  - enemies:
+    - {fileID: 5507399272857002407, guid: 216cbd091b885204eac54dc3f34195ca, type: 3}
+    - {fileID: -6953087138398941293, guid: b4498818433f50e4d8f81adfb20c7fbe, type: 3}
+    - {fileID: 3851400743318969207, guid: e927209c778ed324c909c779eaffb41e, type: 3}
+    - {fileID: -6953087138398941293, guid: b4498818433f50e4d8f81adfb20c7fbe, type: 3}
+    - {fileID: 3851400743318969207, guid: e927209c778ed324c909c779eaffb41e, type: 3}
+    enemyNum: 15
+    timeBetweenSpawns: 1.5
   spawnPoints:
   - {fileID: 718497467}
   - {fileID: 1256621856}

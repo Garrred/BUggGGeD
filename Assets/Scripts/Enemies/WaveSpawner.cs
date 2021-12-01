@@ -91,7 +91,7 @@ namespace Enemies
                 else
                 {
                     finishedSpawning = false;
-                    player.transform.position = new Vector2(0, 0);
+                    player.position = new Vector2(0, 0);
                     StopCoroutine(CountCoroutine());
                     Debug.Log("Congrats!");
                     nextPortal.SetActive(true);
