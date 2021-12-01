@@ -32,7 +32,7 @@ namespace Enemies
             StartCoroutine(StartNextWave());
             nextPortal.SetActive(false);
             exitPortal.SetActive(false);
-
+            StartCoroutine(CountCoroutine());
         }
 
         IEnumerator StartNextWave()
@@ -62,8 +62,17 @@ namespace Enemies
         // Update is called once per frame
         void Update()
         {
+
         }
 
+        IEnumerator CountCoroutine()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(3f);
+                CountEnemies();
+            }
+        }
         public void CountEnemies()
         {
             if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0 && finishedSpawning)
@@ -78,6 +87,7 @@ namespace Enemies
                 {
                     finishedSpawning = false;
                     player.transform.position = new Vector2(0, 0);
+                    StopCoroutine(CountCoroutine());
                     Debug.Log("Congrats!");
                     nextPortal.SetActive(true);
                     exitPortal.SetActive(true);

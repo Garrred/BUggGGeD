@@ -83,13 +83,13 @@ namespace Enemies
             GetComponent<SpriteRenderer>().material.shader = ob.GetComponent<FlashOnHit>().defaultShader;
         }
 
-        void OnDestroy()
-        {
-            GameObject waveSpawner = GameObject.FindGameObjectWithTag("WaveSpawner");
-            if (waveSpawner != null)
-            {
-                waveSpawner.GetComponent<WaveSpawner>().CountEnemies();
-            }
-        }
+        // void OnDestroy()
+        // {
+        //     GameObject waveSpawner = GameObject.FindGameObjectWithTag("WaveSpawner");
+        //     if (waveSpawner != null)
+        //     {
+        //         waveSpawner.GetComponent<WaveSpawner>().CountEnemies();
+        //     }
+        // }
     }
 }

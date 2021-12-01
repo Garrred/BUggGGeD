@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10
-  bulletLifeTime: 1
+  bulletLifeTime: 4
   spark: {fileID: 8074394522384127132, guid: ec80aee8be4ccb04892360c573c78ad3, type: 3}
   damage: 5
 --- !u!50 &345201487658562945

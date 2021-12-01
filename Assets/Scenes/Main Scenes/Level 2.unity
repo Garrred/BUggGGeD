@@ -633,6 +633,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 780792520, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fcd07ab21019de247a298240de0f2ed2, type: 3}
+    - target: {fileID: 780792520, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1933778335128211920, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
       propertyPath: m_Camera
       value: 
