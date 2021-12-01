@@ -62,16 +62,21 @@ namespace Enemies
         // Update is called once per frame
         void Update()
         {
+        }
+
+        public void CountEnemies()
+        {
             if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0 && finishedSpawning)
             {
-                finishedSpawning = false;
-                if (currentWaveIndex + 1 < waves.Length)
+                if (GameObject.FindGameObjectsWithTag("Enemy").Length <= 5 && currentWaveIndex + 1 < waves.Length)
                 {
+                    finishedSpawning = false;
                     currentWaveIndex++;
                     StartCoroutine(StartNextWave());
                 }
                 else
                 {
+                    finishedSpawning = false;
                     player.transform.position = new Vector2(0, 0);
                     Debug.Log("Congrats!");
                     nextPortal.SetActive(true);
