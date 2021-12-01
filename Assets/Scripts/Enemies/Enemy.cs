@@ -31,12 +31,11 @@ namespace Enemies
         public virtual void Start()
         {
             health = maxHealth;
-            try
+            GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+            if (playerObject != null)
             {
-                player = GameObject.FindGameObjectWithTag("Player").transform;
-
+                player = playerObject.transform;
             }
-            catch { }
         }
 
         public virtual void takeDamage(float damage)
@@ -50,6 +49,10 @@ namespace Enemies
                 health -= damage;
                 if (transform.parent != null && transform.parent.parent != null)
                     Flash(transform.parent.parent);
+                if (tag == "Enemy")
+                {
+                    Flash(transform);
+                }
                 if (health <= 0)
                 {
                     DropItem();
