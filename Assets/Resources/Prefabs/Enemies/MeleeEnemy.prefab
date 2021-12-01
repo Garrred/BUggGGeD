@@ -114,7 +114,10 @@ MonoBehaviour:
   speed: 6
   isInvincible: 0
   player: {fileID: 0}
-  possibleDrops: []
+  possibleDrops:
+  - {fileID: 5791915124679065411, guid: 41edc5a02c4d64b428c83477fb220563, type: 3}
+  - {fileID: 837208454273266806, guid: d04b811233516f64f8aa6fb9b0a3c8c9, type: 3}
+  dropChance: 5
   attackSpeed: 1
 --- !u!58 &3526111518989837284
 CircleCollider2D:
