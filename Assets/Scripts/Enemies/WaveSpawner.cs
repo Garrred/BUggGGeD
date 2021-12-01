@@ -38,7 +38,12 @@ namespace Enemies
         IEnumerator StartNextWave()
         {
             yield return new WaitForSeconds(timeBetweenWaves);
+            transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(0).GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = "Wave " + (currentWaveIndex + 1) + "/" + waves.Length;
+            transform.GetChild(0).GetChild(0).GetComponent<Animator>().SetTrigger("DisplayWave");
             StartCoroutine(SpawnEnemy(currentWaveIndex));
+            yield return new WaitForSeconds(1.5f);
+            transform.GetChild(0).gameObject.SetActive(false);
         }
 
         IEnumerator SpawnEnemy(int index)
@@ -50,7 +55,7 @@ namespace Enemies
                     yield break;
                 Enemies.Enemy enemy = Instantiate(currentWave.enemies[Random.Range(0, currentWave.enemies.Length)],
                     spawnPoints[Random.Range(0, spawnPoints.Length)].position, transform.rotation);
-                enemy.transform.SetParent(transform.GetChild(0));
+                enemy.transform.SetParent(transform.parent);
                 yield return new WaitForSeconds(currentWave.timeBetweenSpawns);
                 if (i >= currentWave.enemyNum - 1)
                 {
