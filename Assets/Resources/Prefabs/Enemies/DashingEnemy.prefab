@@ -326,7 +326,7 @@ MonoBehaviour:
   stopDistance: 10
   timeBetweenAttacks: 1.25
   attackCoolDown: 0
-  speed: 5
+  speed: 7
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops:
@@ -334,7 +334,7 @@ MonoBehaviour:
   - {fileID: 5791915124679065411, guid: 41edc5a02c4d64b428c83477fb220563, type: 3}
   dropChance: 10
   dashSpeed: 15
-  dashAttackDuration: 4
+  dashAttackDuration: 2
   dashedTime: 0
 --- !u!82 &1734736335
 AudioSource:
