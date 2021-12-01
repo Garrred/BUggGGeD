@@ -8,7 +8,7 @@ public class BugBulletEmitter : MonoBehaviour
     private float timeSinceLastShot = 0f;
     public BUGFrame[] bugs;
     public GameObject bugBulletPrefab;
-    private BUGFrame currentBug;
+    public BUGFrame currentBug;
     public bool isHoming = false;
     private Transform player;
     public GameObject bugBullets;

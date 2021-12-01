@@ -31,12 +31,11 @@ namespace Enemies
         public virtual void Start()
         {
             health = maxHealth;
-            try
+            GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+            if (playerObject != null)
             {
-                player = GameObject.FindGameObjectWithTag("Player").transform;
-
+                player = playerObject.transform;
             }
-            catch { }
         }
 
         public virtual void takeDamage(float damage)
@@ -50,6 +49,10 @@ namespace Enemies
                 health -= damage;
                 if (transform.parent != null && transform.parent.parent != null)
                     Flash(transform.parent.parent);
+                if (tag == "Enemy")
+                {
+                    Flash(transform);
+                }
                 if (health <= 0)
                 {
                     DropItem();
@@ -73,7 +76,7 @@ namespace Enemies
                 }
             }
         }
-        public void Flash(Transform materialLocation)
+        public virtual void Flash(Transform materialLocation)
         {
             if (materialLocation.GetComponent<FlashOnHit>() != null)
             {
@@ -81,7 +84,7 @@ namespace Enemies
                 StartCoroutine(ResetMaterial(materialLocation));
             }
         }
-        public IEnumerator ResetMaterial(Transform ob)
+        public virtual IEnumerator ResetMaterial(Transform ob)
         {
             yield return new WaitForSeconds(0.1f);
             GetComponent<SpriteRenderer>().material.shader = ob.GetComponent<FlashOnHit>().defaultShader;

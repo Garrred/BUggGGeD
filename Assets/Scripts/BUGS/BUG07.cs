@@ -37,13 +37,15 @@ namespace BUGS
 
         public override void BugStart()
         {
-            remainingTime = lastingTime;
-            playerObject = collision.gameObject.transform;
-            rb = collision.GetComponent<Rigidbody2D>();
-            player = collision.GetComponent<Basics.Player>();
-            player.enableMovement = false;
-            weapon = player.GetComponent<Attacks.Weapon>();
-
+            if (collision.GetComponent<Basics.Player>().enableMovement)
+            {
+                remainingTime = lastingTime;
+                playerObject = collision.gameObject.transform;
+                rb = collision.GetComponent<Rigidbody2D>();
+                player = collision.GetComponent<Basics.Player>();
+                player.enableMovement = false;
+                weapon = player.GetComponent<Attacks.Weapon>();
+            }
         }
         public override void BugEnd()
         {

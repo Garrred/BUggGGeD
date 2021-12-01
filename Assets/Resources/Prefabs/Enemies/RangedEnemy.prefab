@@ -174,6 +174,7 @@ GameObject:
   - component: {fileID: 9180165133814136980}
   - component: {fileID: -6953087138398941293}
   - component: {fileID: 1941246231}
+  - component: {fileID: 2025429529552243147}
   m_Layer: 0
   m_Name: RangedEnemy
   m_TagString: Enemy
@@ -287,9 +288,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bug: {fileID: 0}
-  attacksBeforeBug: 1
+  attacksBeforeBug: 2
   attackCount: 0
-  stopTimeBeforeCasting: 1
+  stopTimeBeforeCasting: 0.5
   audioSource: {fileID: 1941246231}
   deathSound: {fileID: 0}
   attackSound: {fileID: 8300000, guid: 961e130f946daa54d9972339c155aa0d, type: 3}
@@ -297,15 +298,18 @@ MonoBehaviour:
   maxHealth: 15
   attackPower: 1
   stopDistance: 10
-  timeBetweenAttacks: 2
+  timeBetweenAttacks: 1.5
   attackCoolDown: 0
   speed: 3
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops:
   - {fileID: 3629523356527745325, guid: f239bcf96863bf84396283e52e8103f9, type: 3}
+  - {fileID: 3629523356527745325, guid: f239bcf96863bf84396283e52e8103f9, type: 3}
+  - {fileID: 3629523356527745325, guid: f239bcf96863bf84396283e52e8103f9, type: 3}
   - {fileID: 5791915124679065411, guid: 41edc5a02c4d64b428c83477fb220563, type: 3}
-  dropChance: 10
+  - {fileID: 837208454273266806, guid: d04b811233516f64f8aa6fb9b0a3c8c9, type: 3}
+  dropChance: 5
   bullet: {fileID: 2170877412027227711, guid: b31651638e726ba4f84b8eefba832469, type: 3}
   bugBullet: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   bugBulletSpark: {fileID: 8501820297212146196, guid: ca2cd0b57b2cf224daa77da719e8c249, type: 3}
@@ -406,3 +410,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2025429529552243147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7837308486137776956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f5ba18a67ab884d92c793acdf8427b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashShader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
+  defaultShader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}

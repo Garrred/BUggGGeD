@@ -42,4 +42,10 @@ public class BUGFrame : MonoBehaviour
     {
         Debug.Log("This bug is not implemented");
     }
+    public void BugEnd(GameObject player)
+    {
+        collision = player.GetComponent<Collider2D>();
+        BugEnd();
+
+    }
 }

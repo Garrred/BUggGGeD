@@ -45,8 +45,25 @@ public class DashingEnemy : Enemies.Enemy
         }
 
     }
-
-
+    public override void Flash(Transform materialLocation)
+    {
+        if (materialLocation.GetComponent<FlashOnHit>() != null)
+        {
+            for (int i = 0; i < materialLocation.childCount; i++)
+            {
+                transform.GetChild(i).GetComponent<SpriteRenderer>().material.shader = materialLocation.GetComponent<FlashOnHit>().flashShader;
+                StartCoroutine(ResetMaterial(materialLocation));
+            }
+        }
+    }
+    public override IEnumerator ResetMaterial(Transform ob)
+    {
+        yield return new WaitForSeconds(0.1f);
+        for (int i = 0; i < ob.childCount; i++)
+        {
+            transform.GetChild(i).GetComponent<SpriteRenderer>().material.shader = ob.GetComponent<FlashOnHit>().defaultShader;
+        }
+    }
     IEnumerator DashAttack()
     {
         audioSource.PlayOneShot(attackSound);

@@ -114,6 +114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10
-  bulletLifeTime: 10
+  bulletLifeTime: 20
   spark: {fileID: 0}
   damage: 0

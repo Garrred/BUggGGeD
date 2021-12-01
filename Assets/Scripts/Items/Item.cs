@@ -29,6 +29,7 @@ public class Item : MonoBehaviour
     {
         if (lifeTime > 0)
         {
+            lifeTime -= Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, direction * 100, flyAwaySpeed * Time.deltaTime);
         }
         else if (lifeTime > -5f)

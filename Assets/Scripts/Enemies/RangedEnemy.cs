@@ -66,7 +66,7 @@ namespace Enemies
 
                 if (attackCount >= attacksBeforeBug)
                 {
-                    StartCoroutine(BugAttack(rotation));
+                    StartCoroutine(BugAttack());
                 }
                 else
                 {
@@ -79,11 +79,14 @@ namespace Enemies
             }
         }
 
-        public IEnumerator BugAttack(Quaternion rotation)
+        public IEnumerator BugAttack()
         {
             isCastingBug = true;
             attackCount = 0;
             yield return new WaitForSeconds(1f);
+            Vector2 direction = player.position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
             GameObject currentBugBullet = Instantiate(bugBullet, transform.position, rotation);
             transform.GetChild(0).GetComponent<EnemyBugBulletEmitter>().AddRandomBug(currentBugBullet);
             GameObject spark = Instantiate(bugBulletSpark, transform.position, rotation);

@@ -9,6 +9,7 @@ public class BossSpawner : MonoBehaviour
     private GameObject currentBoss;
     private SpriteRenderer[] spriteRenderer;
     // Start is called before the first frame update
+
     void Start()
     {
         StartCoroutine(SpawnBoss());
@@ -18,8 +19,10 @@ public class BossSpawner : MonoBehaviour
     {
         if (bossPrefab != null)
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Basics.Player>().enableMovement = false;
             yield return new WaitForSeconds(timeBeforeSpawn);
             gameObject.GetComponent<AudioSource>().Play();
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Basics.Player>().enableMovement = true;
 
             spriteRenderer = bossPrefab.GetComponentsInChildren<SpriteRenderer>();
             // foreach (SpriteRenderer sr in spriteRenderer)

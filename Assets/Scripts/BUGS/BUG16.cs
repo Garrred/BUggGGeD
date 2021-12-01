@@ -9,7 +9,14 @@ public class BUG16 : BUGFrame
     // Start is called before the first frame update
     void Start()
     {
-        bugText = "You Are Stung... Hurt Hurt Hurt";
+        if (GameObject.FindGameObjectWithTag("Boss") != null)
+        {
+            bugText = "You Are Stung... Even Though It's Not A Bee!";
+        }
+        else
+        {
+            bugText = "You Are Stung... Hurt Hurt Hurt";
+        }
     }
 
     // Update is called once per frame

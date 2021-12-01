@@ -71,6 +71,8 @@ public class Boss_2 : BossBehaviors
         }
         if (boss.stage == 1)
         {
+            transform.GetChild(0).GetComponent<CastBug>().bugs[boss.stage - 1].GetComponent<BUGFrame>().BugEnd(player.gameObject);
+            transform.GetChild(4).GetComponent<BugBulletEmitter>().bugs[0].GetComponent<BUGFrame>().BugEnd(player.gameObject);
             boss.maxHealth = boss.maxHealth / 1.2f;
             splited = true;
             StartCoroutine(StartSplitingIntoTwo());
@@ -78,6 +80,8 @@ public class Boss_2 : BossBehaviors
         }
         if (boss.stage == 2)
         {
+            transform.GetChild(0).GetComponent<CastBug>().bugs[boss.stage - 1].GetComponent<BUGFrame>().BugEnd(player.gameObject);
+            transform.GetChild(1).GetChild(2).GetComponent<BugBulletEmitter>().bugs[0].GetComponent<BUGFrame>().BugEnd(player.gameObject);
             boss.maxHealth = boss.maxHealth / 1.5f;
             StartCoroutine(StartSplitingIntoFour());
             StartCoroutine(DropItems());
@@ -99,8 +103,26 @@ public class Boss_2 : BossBehaviors
         Shuriken2.GetComponent<Boss2Stage2>().enabled = false;
         transform.GetChild(4).GetComponent<BugBulletEmitter>().enabled = false;
         StartCoroutine(bossSpawner.FadeOut());
+        try
+        {
+            Destroy(Shuriken1.transform.GetChild(3).gameObject);
+            Destroy(Shuriken2.transform.GetChild(3).gameObject);
+        }
+        catch
+        {
+            Debug.Log("No Child");
+        }
         yield return new WaitForSeconds(3);
         // gameObject.GetComponent<Animator>().SetTrigger("Stage2Start");
+        try
+        {
+            Destroy(Shuriken1.transform.GetChild(3).gameObject);
+            Destroy(Shuriken2.transform.GetChild(3).gameObject);
+        }
+        catch
+        {
+            Debug.Log("No Child");
+        }
         Shuriken1.GetComponent<Boss2Stage2>().splitedIntoFour = true;
         Shuriken2.GetComponent<Boss2Stage2>().splitedIntoFour = true;
 
@@ -141,6 +163,15 @@ public class Boss_2 : BossBehaviors
         Shuriken1.transform.GetChild(1).GetComponent<Boss2_Parts>().StartPartEmssion();
         Shuriken2.transform.GetChild(0).GetComponent<Boss2_Parts>().StartPartEmssion();
         Shuriken2.transform.GetChild(1).GetComponent<Boss2_Parts>().StartPartEmssion();
+        try
+        {
+            Destroy(Shuriken1.transform.GetChild(3).gameObject);
+            Destroy(Shuriken2.transform.GetChild(3).gameObject);
+        }
+        catch
+        {
+            Debug.Log("No Child");
+        }
         yield return new WaitForSeconds(2f);
     }
 

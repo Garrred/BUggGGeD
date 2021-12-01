@@ -24,14 +24,14 @@ public class Gatling : Item
     {
         weapon = player.GetComponent<Attacks.Weapon>();
         activated = true;
-        originalAttackSpeed = weapon.timeBetweenShots;
+        // originalAttackSpeed = weapon.timeBetweenShots;
         weapon.timeBetweenShots = 0.03f;
     }
 
     public override void EndEffect()
     {
         weapon.buggedDirection = Quaternion.Euler(0, 0, 0);
-        weapon.timeBetweenShots = originalAttackSpeed;
+        weapon.timeBetweenShots = 0.2f;
         Destroy(gameObject);
     }
 }
