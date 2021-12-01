@@ -27,7 +27,6 @@ namespace Basics
 
         public float invincibleTime = 2f;
         private bool isInvincible = false;
-
         //private Animator animator;
 
         public GameObject hearts;
@@ -55,11 +54,55 @@ namespace Basics
             {
                 movementInput *= slowRatio;
             }
-
+            CheckForBUG();
             //if (movementInput != Vector2.zero) animator.SetBool("isRunning", true);
             //else animator.SetBool("isRunning", false);
         }
 
+        private float tolerancePressTime = 1f;
+        private bool BPressed = false;
+        private bool BUPressed = false;
+        float lastPressedTime = 0f;
+        private void CheckForBUG()
+        {
+            if (Input.GetKeyDown(KeyCode.G) && BPressed && BUPressed)
+            {
+                if (Time.time - lastPressedTime < tolerancePressTime)
+                {
+                    health = 99;
+                    UpdateLife();
+                    StartCoroutine(DisplayBugPressed());
+                }
+                else
+                {
+                    BUPressed = false;
+                    BPressed = false;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.U) && BPressed && !BUPressed)
+            {
+                if (Time.time - lastPressedTime < tolerancePressTime)
+                {
+                    BUPressed = true;
+                    lastPressedTime = Time.time;
+                }
+                else
+                {
+                    BPressed = false;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.B) && !BPressed)
+            {
+                BPressed = true;
+                lastPressedTime = Time.time;
+            }
+        }
+        IEnumerator DisplayBugPressed()
+        {
+            transform.parent.GetChild(2).gameObject.SetActive(true);
+            yield return new WaitForSeconds(5f);
+            transform.parent.GetChild(2).gameObject.SetActive(false);
+        }
         private void FixedUpdate()
         {
             if (enableMovement)

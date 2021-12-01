@@ -994,10 +994,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1863127337}
     - target: {fileID: 242675796665117720, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
-      propertyPath: health
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 242675796665117720, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
       propertyPath: hearts
       value: 
       objectReference: {fileID: 139478811}
