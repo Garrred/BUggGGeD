@@ -288,9 +288,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bug: {fileID: 0}
-  attacksBeforeBug: 1
+  attacksBeforeBug: 2
   attackCount: 0
-  stopTimeBeforeCasting: 1
+  stopTimeBeforeCasting: 0.5
   audioSource: {fileID: 1941246231}
   deathSound: {fileID: 0}
   attackSound: {fileID: 8300000, guid: 961e130f946daa54d9972339c155aa0d, type: 3}
@@ -298,7 +298,7 @@ MonoBehaviour:
   maxHealth: 15
   attackPower: 1
   stopDistance: 10
-  timeBetweenAttacks: 2
+  timeBetweenAttacks: 1.5
   attackCoolDown: 0
   speed: 3
   isInvincible: 0
@@ -309,7 +309,7 @@ MonoBehaviour:
   - {fileID: 3629523356527745325, guid: f239bcf96863bf84396283e52e8103f9, type: 3}
   - {fileID: 5791915124679065411, guid: 41edc5a02c4d64b428c83477fb220563, type: 3}
   - {fileID: 837208454273266806, guid: d04b811233516f64f8aa6fb9b0a3c8c9, type: 3}
-  dropChance: 8
+  dropChance: 5
   bullet: {fileID: 2170877412027227711, guid: b31651638e726ba4f84b8eefba832469, type: 3}
   bugBullet: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   bugBulletSpark: {fileID: 8501820297212146196, guid: ca2cd0b57b2cf224daa77da719e8c249, type: 3}

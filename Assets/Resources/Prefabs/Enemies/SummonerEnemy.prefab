@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1651325010096360671
 Transform:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
   health: 10
   maxHealth: 50
   attackPower: 0
-  stopDistance: 7
+  stopDistance: 8
   timeBetweenAttacks: 0.7
   attackCoolDown: 0
   speed: 5
@@ -122,7 +122,7 @@ MonoBehaviour:
   - {fileID: 5791915124679065411, guid: 41edc5a02c4d64b428c83477fb220563, type: 3}
   - {fileID: 5791915124679065411, guid: 41edc5a02c4d64b428c83477fb220563, type: 3}
   - {fileID: 837208454273266806, guid: d04b811233516f64f8aa6fb9b0a3c8c9, type: 3}
-  dropChance: 10
+  dropChance: 12
   escapeDistance: 5
   bugSummonSpark: {fileID: 8501820297212146196, guid: ca2cd0b57b2cf224daa77da719e8c249, type: 3}
   bugMinion: {fileID: 8368415053470399845, guid: b12ddaaad97a35a4a873ba8014d9b8ef, type: 3}

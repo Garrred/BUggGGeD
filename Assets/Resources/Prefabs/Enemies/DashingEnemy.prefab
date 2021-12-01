@@ -316,17 +316,17 @@ MonoBehaviour:
   bug: {fileID: 0}
   attacksBeforeBug: 2
   attackCount: 0
-  stopTimeBeforeCasting: 2
+  stopTimeBeforeCasting: 0.5
   audioSource: {fileID: 1734736335}
   deathSound: {fileID: 0}
   attackSound: {fileID: 8300000, guid: 8aa7740e1092c074b8de5883dd7a73da, type: 3}
   health: 0
-  maxHealth: 10
+  maxHealth: 20
   attackPower: 1
-  stopDistance: 5
-  timeBetweenAttacks: 2
+  stopDistance: 10
+  timeBetweenAttacks: 1.25
   attackCoolDown: 0
-  speed: 4
+  speed: 5
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops:
@@ -334,7 +334,7 @@ MonoBehaviour:
   - {fileID: 5791915124679065411, guid: 41edc5a02c4d64b428c83477fb220563, type: 3}
   dropChance: 10
   dashSpeed: 15
-  dashAttackDuration: 4
+  dashAttackDuration: 8
   dashedTime: 0
 --- !u!82 &1734736335
 AudioSource:
