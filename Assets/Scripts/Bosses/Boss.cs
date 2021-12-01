@@ -73,6 +73,10 @@ namespace Enemies
         {
             if (!isInvincible)
             {
+                if (GetComponent<AudioSource>() != null)
+                {
+                    GetComponent<AudioSource>().Play();
+                }
                 health -= damage;
                 if (transform.GetComponent<SpriteRenderer>() != null)
                     Flash(transform.parent);

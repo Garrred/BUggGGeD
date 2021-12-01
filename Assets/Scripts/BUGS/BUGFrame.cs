@@ -30,6 +30,7 @@ public class BUGFrame : MonoBehaviour
     {
         collision.transform.parent.GetChild(1).gameObject.GetComponent<TMPro.TextMeshPro>().text = bugText;
         collision.transform.parent.GetChild(1).gameObject.SetActive(true);
+        collision.transform.parent.GetChild(1).GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(3f);
         collision.transform.parent.GetChild(1).gameObject.SetActive(false);
     }

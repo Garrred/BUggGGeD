@@ -38,6 +38,7 @@ public class CastBug : MonoBehaviour
     }
     IEnumerator StartChangingColor()
     {
+        backGround.gameObject.GetComponent<AudioSource>().Play();
         isChangingColor = true;
         for (int j = 0; j < 20; j++)
         {
@@ -45,6 +46,7 @@ public class CastBug : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
         yield return new WaitForSeconds(1f);
+        backGround.GetComponent<AudioSource>().Stop();
         isChangingColor = false;
         currentBug.OnTriggerEnter2D(player.gameObject.GetComponent<Collider2D>());
         remainingTime = timeBetweenBugs;
