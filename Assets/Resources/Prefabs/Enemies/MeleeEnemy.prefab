@@ -111,7 +111,7 @@ MonoBehaviour:
   stopDistance: 0.1
   timeBetweenAttacks: 1
   attackCoolDown: 0
-  speed: 5
+  speed: 6
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops: []

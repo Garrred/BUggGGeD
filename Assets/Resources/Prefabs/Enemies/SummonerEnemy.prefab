@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bug: {fileID: 0}
-  attacksBeforeBug: 2
+  attacksBeforeBug: 1
   attackCount: 0
   stopTimeBeforeCasting: 2
   audioSource: {fileID: 1892920462}
@@ -109,10 +109,10 @@ MonoBehaviour:
   health: 10
   maxHealth: 50
   attackPower: 0
-  stopDistance: 7
-  timeBetweenAttacks: 1
+  stopDistance: 10
+  timeBetweenAttacks: 0.3
   attackCoolDown: 0
-  speed: 3
+  speed: 5
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops: []

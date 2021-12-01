@@ -287,9 +287,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bug: {fileID: 0}
-  attacksBeforeBug: 2
+  attacksBeforeBug: 1
   attackCount: 0
-  stopTimeBeforeCasting: 2
+  stopTimeBeforeCasting: 1
   audioSource: {fileID: 1941246231}
   deathSound: {fileID: 0}
   attackSound: {fileID: 8300000, guid: 961e130f946daa54d9972339c155aa0d, type: 3}

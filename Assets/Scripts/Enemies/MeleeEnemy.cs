@@ -8,7 +8,7 @@ public class MeleeEnemy : Enemies.Enemy
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, player.position) > stopDistance)
+        if (player != null && Vector2.Distance(transform.position, player.position) > stopDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
