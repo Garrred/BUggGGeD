@@ -15,7 +15,7 @@ namespace BUGS
         // Start is called before the first frame update
         void Start()
         {
-            bugText = "Pin: 999ms";
+            bugText = "Ping: 999ms";
         }
 
         // Update is called once per frame
@@ -59,7 +59,10 @@ namespace BUGS
             weaponScript.rotationFreezed = false;
             Time.timeScale = 1f;
             player.position += new Vector3(playerScript.movementInput.x, playerScript.movementInput.y, 0);
-            playerBullets.transform.Translate(Vector3.up * 2 * freezeTime);
+            foreach (Transform bullet in playerBullets.transform)
+            {
+                bullet.Translate(Vector3.up * bullet.GetComponent<Attacks.Bullet>().bulletSpeed * freezeTime);
+            }
             // enemies.Translate(Vector3.up * 2 * freezeTime);
         }
     }

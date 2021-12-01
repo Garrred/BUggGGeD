@@ -139,6 +139,7 @@ MonoBehaviour:
   bugs:
   - {fileID: 1775312573}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
+  currentBug: {fileID: 0}
   isHoming: 0
   bugBullets: {fileID: 0}
 --- !u!1 &1222656592
@@ -469,6 +470,7 @@ MonoBehaviour:
   - {fileID: 2235011798136336789}
   - {fileID: 1741457633}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
+  currentBug: {fileID: 0}
   isHoming: 0
   bugBullets: {fileID: 0}
 --- !u!114 &1741457632
@@ -678,6 +680,7 @@ MonoBehaviour:
   bugs:
   - {fileID: 1775312573}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
+  currentBug: {fileID: 0}
   isHoming: 0
   bugBullets: {fileID: 0}
 --- !u!1 &1901238321335077132
@@ -736,7 +739,7 @@ MonoBehaviour:
   deathSound: {fileID: 0}
   attackSound: {fileID: 0}
   health: 0
-  maxHealth: 800
+  maxHealth: 1
   attackPower: 0
   stopDistance: 0
   timeBetweenAttacks: 0
@@ -753,6 +756,7 @@ MonoBehaviour:
   hpBarUI: {fileID: 0}
   next: {fileID: 0}
   exit: {fileID: 0}
+  isAlive: 0
   stage: 0
 --- !u!114 &410391273
 MonoBehaviour:
@@ -913,10 +917,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae8f94db38e4564886f02762ad898d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 2.5
+  timeBetweenShots: 3.5
   bugs:
   - {fileID: 2235011798136336789}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
+  currentBug: {fileID: 0}
   isHoming: 1
   bugBullets: {fileID: 0}
 --- !u!1 &4445821844708531436
@@ -962,10 +967,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae8f94db38e4564886f02762ad898d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 2.5
+  timeBetweenShots: 3.5
   bugs:
   - {fileID: 2235011798136336789}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
+  currentBug: {fileID: 0}
   isHoming: 1
   bugBullets: {fileID: 0}
 --- !u!1 &4834461693803942933
@@ -1011,10 +1017,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae8f94db38e4564886f02762ad898d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 2.5
+  timeBetweenShots: 3.5
   bugs:
   - {fileID: 2235011798136336789}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
+  currentBug: {fileID: 0}
   isHoming: 1
   bugBullets: {fileID: 0}
 --- !u!1 &6144845714773818250
@@ -1060,10 +1067,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae8f94db38e4564886f02762ad898d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 2.5
+  timeBetweenShots: 3.5
   bugs:
   - {fileID: 2235011798136336789}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
+  currentBug: {fileID: 0}
   isHoming: 1
   bugBullets: {fileID: 0}
 --- !u!1 &7245926410621555303
@@ -1630,7 +1638,7 @@ MonoBehaviour:
   pushSpeed: 0
   knockedBackTime: 0
   timeBetweenAttacks: 4
-  dashAttackDuration: 5
+  dashAttackDuration: 3
   dashedTime: 0
   dashSpeed: 15
   stopDistance: 5
@@ -2202,7 +2210,7 @@ MonoBehaviour:
   pushSpeed: 0
   knockedBackTime: 0
   timeBetweenAttacks: 4
-  dashAttackDuration: 5
+  dashAttackDuration: 3
   dashedTime: 0
   dashSpeed: 15
   stopDistance: 5

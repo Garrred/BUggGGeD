@@ -25,7 +25,7 @@ public class CastBug : MonoBehaviour
 
     void Update()
     {
-        if (!isChangingColor)
+        if (!isChangingColor && GetComponent<Enemies.Boss>().isAlive)
         {
             remainingTime -= Time.deltaTime;
             if (player != null && remainingTime <= 0 && !player.GetComponent<Basics.Player>().hasBugNow)

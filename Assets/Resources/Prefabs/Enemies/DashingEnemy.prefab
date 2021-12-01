@@ -334,7 +334,7 @@ MonoBehaviour:
   - {fileID: 5791915124679065411, guid: 41edc5a02c4d64b428c83477fb220563, type: 3}
   dropChance: 10
   dashSpeed: 15
-  dashAttackDuration: 8
+  dashAttackDuration: 4
   dashedTime: 0
 --- !u!82 &1734736335
 AudioSource:

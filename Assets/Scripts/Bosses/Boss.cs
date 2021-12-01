@@ -13,7 +13,7 @@ namespace Enemies
         private Basics.HPDisplay hpDisplay;
         private GameObject currentBullet;
         private int currentBulletIndex;
-        private bool isAlive;
+        public bool isAlive;
 
         public int stage = 0;
 
@@ -93,6 +93,7 @@ namespace Enemies
                 UpdateHP();
                 if (health <= 0)
                 {
+                    EndAllBugs();
                     isAlive = false;
                     EndBullet();
                     if (stage >= 2)
@@ -102,12 +103,25 @@ namespace Enemies
                     else
                     {
                         stage++;
-                        bugBulletEmitter.UpdateBug(stage);
                         transform.parent.GetComponent<BossBehaviors>().StageChangeModification();
+                        bugBulletEmitter.UpdateBug(stage);
                         Start();
                         hpDisplay.Start();
                     }
                 }
+            }
+        }
+
+        void EndAllBugs()
+        {
+            try
+            {
+                GetComponent<CastBug>().bugs[stage].GetComponent<BUGFrame>().BugEnd(player.gameObject);
+                bugBulletEmitter.GetComponent<BugBulletEmitter>().bugs[stage].GetComponent<BUGFrame>().BugEnd(player.gameObject);
+            }
+            catch
+            {
+                Debug.Log("No bugs");
             }
         }
         IEnumerator EndBoss()
