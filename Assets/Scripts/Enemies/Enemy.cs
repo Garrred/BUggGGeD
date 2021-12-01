@@ -30,7 +30,12 @@ namespace Enemies
         public virtual void Start()
         {
             health = maxHealth;
-            player = GameObject.FindGameObjectWithTag("Player").transform;
+            try
+            {
+                player = GameObject.FindGameObjectWithTag("Player").transform;
+
+            }
+            catch { }
         }
 
         public virtual void takeDamage(float damage)
