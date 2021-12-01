@@ -137,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenShots: 0.7
   bugs:
-  - {fileID: 1741457633}
+  - {fileID: 1775312573}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 0
   bugBullets: {fileID: 0}
@@ -538,6 +538,7 @@ GameObject:
   - component: {fileID: 5630812696744154647}
   - component: {fileID: 7409538878458645999}
   - component: {fileID: 538882054528817157}
+  - component: {fileID: 1775312573}
   m_Layer: 0
   m_Name: BUGS
   m_TagString: BossCore
@@ -613,6 +614,23 @@ MonoBehaviour:
   collision: {fileID: 0}
   zanzou: {fileID: 0}
   zanzouCreationInterval: 0.1
+--- !u!114 &1775312573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034563879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f50be8b9f04e2e4089437303f9aa0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugText: 
+  lastingTime: 6
+  remainingTime: -10
+  bugEnabled: 1
+  collision: {fileID: 0}
 --- !u!1 &2035214479
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenShots: 0.7
   bugs:
-  - {fileID: 1741457633}
+  - {fileID: 1775312573}
   bugBulletPrefab: {fileID: 6657655551737317930, guid: e519a716ce420ab459fcbd63fce9ccc7, type: 3}
   isHoming: 0
   bugBullets: {fileID: 0}
@@ -731,6 +749,7 @@ MonoBehaviour:
   - {fileID: 5791915124679065411, guid: 41edc5a02c4d64b428c83477fb220563, type: 3}
   - {fileID: 3629523356527745325, guid: f239bcf96863bf84396283e52e8103f9, type: 3}
   - {fileID: 3629523356527745325, guid: f239bcf96863bf84396283e52e8103f9, type: 3}
+  dropChance: 100
   hpBarUI: {fileID: 0}
   next: {fileID: 0}
   exit: {fileID: 0}
@@ -1445,6 +1464,7 @@ MonoBehaviour:
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops: []
+  dropChance: 100
   dashAttackDuration: 2
   dashedTime: 0
   dashSpeed: 5
@@ -2016,6 +2036,7 @@ MonoBehaviour:
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops: []
+  dropChance: 100
   dashAttackDuration: 2
   dashedTime: 0
   dashSpeed: 5
@@ -2612,6 +2633,7 @@ MonoBehaviour:
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops: []
+  dropChance: 100
   dashAttackDuration: 2
   dashedTime: 0
   dashSpeed: 5
@@ -2905,6 +2927,7 @@ MonoBehaviour:
   isInvincible: 0
   player: {fileID: 0}
   possibleDrops: []
+  dropChance: 100
   dashAttackDuration: 2
   dashedTime: 0
   dashSpeed: 5
