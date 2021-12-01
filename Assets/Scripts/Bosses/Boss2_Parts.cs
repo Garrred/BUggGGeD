@@ -8,6 +8,10 @@ public class Boss2_Parts : Enemies.Enemy
     {
         if (!isInvincible)
         {
+            if (GetComponent<AudioSource>() != null)
+            {
+                GetComponent<AudioSource>().Play();
+            }
             transform.parent.parent.GetChild(0).GetComponent<Enemies.Boss>().takeDamage(damage);
             Flash(transform.parent.parent);
         }

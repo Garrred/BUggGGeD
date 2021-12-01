@@ -35,6 +35,10 @@ public class Boss_1 : BossBehaviors
 
     public override void StageChangeModification()
     {
+        if (boss.stage == 3)
+        {
+            return;
+        }
         boss.maxHealth = boss.maxHealth * 1.5f;
         // disable the inner shield's invincibility
         if (boss.stage == 1)
