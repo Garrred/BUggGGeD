@@ -54,6 +54,21 @@ public class Boss_2 : BossBehaviors
 
     public override void StageChangeModification()
     {
+        if (boss.stage == 3)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                Shuriken1.transform.GetChild(0).GetChild(i).gameObject.SetActive(false);
+                Shuriken2.transform.GetChild(0).GetChild(i).gameObject.SetActive(false);
+                Shuriken1.transform.GetChild(1).GetChild(i).gameObject.SetActive(false);
+                Shuriken2.transform.GetChild(1).GetChild(i).gameObject.SetActive(false);
+            }
+            Shuriken1.transform.GetChild(0).GetComponent<Boss2_Parts>().enabled = false;
+            Shuriken1.transform.GetChild(1).GetComponent<Boss2_Parts>().enabled = false;
+            Shuriken2.transform.GetChild(0).GetComponent<Boss2_Parts>().enabled = false;
+            Shuriken2.transform.GetChild(1).GetComponent<Boss2_Parts>().enabled = false;
+            return;
+        }
         if (boss.stage == 1)
         {
             boss.maxHealth = boss.maxHealth / 1.2f;

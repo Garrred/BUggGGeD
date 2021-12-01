@@ -242,6 +242,9 @@ MonoBehaviour:
   attacksBeforeBug: 0
   attackCount: 0
   stopTimeBeforeCasting: 2
+  audioSource: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackSound: {fileID: 0}
   health: 0
   maxHealth: 150
   attackPower: 0
@@ -489,6 +492,9 @@ MonoBehaviour:
   attacksBeforeBug: 0
   attackCount: 0
   stopTimeBeforeCasting: 2
+  audioSource: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackSound: {fileID: 0}
   health: 0
   maxHealth: 150
   attackPower: 0
@@ -770,6 +776,9 @@ MonoBehaviour:
   attacksBeforeBug: 0
   attackCount: 0
   stopTimeBeforeCasting: 2
+  audioSource: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackSound: {fileID: 0}
   health: 0
   maxHealth: 150
   attackPower: 0
@@ -1017,6 +1026,9 @@ MonoBehaviour:
   attacksBeforeBug: 0
   attackCount: 0
   stopTimeBeforeCasting: 2
+  audioSource: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackSound: {fileID: 0}
   health: 0
   maxHealth: 150
   attackPower: 0
@@ -1384,6 +1396,9 @@ MonoBehaviour:
   attacksBeforeBug: 0
   attackCount: 0
   stopTimeBeforeCasting: 2
+  audioSource: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackSound: {fileID: 0}
   health: 0
   maxHealth: 200
   attackPower: 0
@@ -1853,6 +1868,9 @@ MonoBehaviour:
   attacksBeforeBug: 0
   attackCount: 0
   stopTimeBeforeCasting: 2
+  audioSource: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackSound: {fileID: 0}
   health: 0
   maxHealth: 200
   attackPower: 0
@@ -2200,6 +2218,9 @@ MonoBehaviour:
   attacksBeforeBug: 0
   attackCount: 0
   stopTimeBeforeCasting: 2
+  audioSource: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackSound: {fileID: 0}
   health: 0
   maxHealth: 200
   attackPower: 0
@@ -2455,6 +2476,9 @@ MonoBehaviour:
   attacksBeforeBug: 0
   attackCount: 0
   stopTimeBeforeCasting: 2
+  audioSource: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackSound: {fileID: 0}
   health: 0
   maxHealth: 200
   attackPower: 0
@@ -2577,6 +2601,7 @@ GameObject:
   - component: {fileID: 7784216933953424808}
   - component: {fileID: 7784216933953424811}
   - component: {fileID: 2133715408}
+  - component: {fileID: 7117089070473529529}
   m_Layer: 0
   m_Name: BOSS1
   m_TagString: Boss
@@ -2657,6 +2682,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashShader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
   defaultShader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!82 &7117089070473529529
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784216933953424814}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5f06754c297645c4eb1a60cc503b2365, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7784216934432258314
 GameObject:
   m_ObjectHideFlags: 0
@@ -2779,8 +2900,11 @@ MonoBehaviour:
   attacksBeforeBug: 0
   attackCount: 0
   stopTimeBeforeCasting: 2
+  audioSource: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackSound: {fileID: 0}
   health: 0
-  maxHealth: 100
+  maxHealth: 1
   attackPower: 0
   stopDistance: 0
   timeBetweenAttacks: 0
@@ -2790,6 +2914,8 @@ MonoBehaviour:
   player: {fileID: 0}
   possibleDrops: []
   hpBarUI: {fileID: 0}
+  next: {fileID: 0}
+  exit: {fileID: 0}
   stage: 0
 --- !u!114 &4014909406514690452
 MonoBehaviour:
@@ -2804,7 +2930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  timeBetweenBugs: 5
+  timeBetweenBugs: 22.5
   bugs:
   - {fileID: 6147097672454118350}
   - {fileID: 7824490205041500636}

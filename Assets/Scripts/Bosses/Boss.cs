@@ -90,21 +90,43 @@ namespace Enemies
                     EndBullet();
                     if (stage == 2)
                     {
-                        isAlive = false;
-                        exit.SetActive(true);
-                        next.SetActive(true);
-                        Destroy(gameObject.transform.parent.gameObject);
+                        StartCoroutine(EndBoss());
                     }
                     else
                     {
-                        bugBulletEmitter.UpdateBug(stage + 1);
                         stage++;
+                        bugBulletEmitter.UpdateBug(stage);
                         transform.parent.GetComponent<BossBehaviors>().StageChangeModification();
                         Start();
                         hpDisplay.Start();
                     }
                 }
             }
+        }
+        IEnumerator EndBoss()
+        {
+            stage++;
+            transform.parent.GetComponent<BossBehaviors>().StageChangeModification();
+            transform.parent.GetComponent<AudioSource>().Play();
+            SpriteRenderer[] spriteRenderer = transform.parent.GetComponentsInChildren<SpriteRenderer>();
+
+            float alpha = 1f;
+            while (alpha > 0.01f)
+            {
+                alpha *= 0.9f;
+                foreach (SpriteRenderer sr in spriteRenderer)
+                {
+                    int direction = Random.Range(0, 2) * 2 - 1;
+                    transform.Translate(new Vector3(direction, direction, 0) * 10f * Time.deltaTime);
+                    sr.color = new Color(1, 1, 1, alpha);
+                    yield return null;
+                }
+            }
+            hpBarUI.SetActive(false);
+            yield return new WaitForSeconds(2f);
+            next.SetActive(true);
+            exit.SetActive(true);
+            Destroy(gameObject.transform.parent.gameObject);
         }
         public void EndBullet()
         {
