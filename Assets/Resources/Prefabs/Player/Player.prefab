@@ -451,7 +451,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4861831110909219302, guid: 77922efef174d7046902582823ae90db, type: 3}
       propertyPath: health
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4861831110909219302, guid: 77922efef174d7046902582823ae90db, type: 3}
       propertyPath: dieSound

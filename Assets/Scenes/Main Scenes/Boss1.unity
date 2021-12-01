@@ -683,6 +683,11 @@ Transform:
   m_Father: {fileID: 659009929}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1663789811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5120174097732374165, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
+  m_PrefabInstance: {fileID: 6895383969962458871}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1687060306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6895383968276185509, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
@@ -711,6 +716,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 240183286, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 196609087}
+    - target: {fileID: 457757368, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 196609087}
+    - target: {fileID: 1132229020, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 196609087}
@@ -824,17 +837,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 242675796665117720, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
-      propertyPath: health
-      value: 20
-      objectReference: {fileID: 0}
+      propertyPath: fail
+      value: 
+      objectReference: {fileID: 1663789811}
     - target: {fileID: 242675796665117720, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
       propertyPath: hearts
       value: 
       objectReference: {fileID: 139478811}
-    - target: {fileID: 1311743308784632185, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4622551372082447456, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
       propertyPath: gameManager
       value: 
