@@ -61,6 +61,12 @@ namespace Basics
             SceneManager.LoadScene(0);
         }
 
+        public void Replay()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+
         IEnumerator LoadScene(int sceneIndex)
         {
             //Debug.Log("haha");

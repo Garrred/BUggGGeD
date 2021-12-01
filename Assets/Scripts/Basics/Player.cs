@@ -14,6 +14,7 @@ namespace Basics
         public float movementSpeed;
         public float rotationSpeed;
         public float slowRatio;
+        public GameObject fail;
 
         public int health;
         public bool enableMovement = true;
@@ -130,6 +131,7 @@ namespace Basics
 
         void Die()
         {
+            fail.SetActive(true);
             transform.parent.GetComponent<AudioSource>().Play();
             transform.gameObject.SetActive(false);
             // GetComponent<Collider2D>().enabled = false;
