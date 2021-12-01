@@ -76,7 +76,7 @@ namespace Enemies
                 }
             }
         }
-        public void Flash(Transform materialLocation)
+        public virtual void Flash(Transform materialLocation)
         {
             if (materialLocation.GetComponent<FlashOnHit>() != null)
             {
@@ -84,7 +84,7 @@ namespace Enemies
                 StartCoroutine(ResetMaterial(materialLocation));
             }
         }
-        public IEnumerator ResetMaterial(Transform ob)
+        public virtual IEnumerator ResetMaterial(Transform ob)
         {
             yield return new WaitForSeconds(0.1f);
             GetComponent<SpriteRenderer>().material.shader = ob.GetComponent<FlashOnHit>().defaultShader;
