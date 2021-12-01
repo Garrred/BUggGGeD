@@ -5,6 +5,11 @@ using UnityEngine;
 public class AttackSpeedUp : Item
 {
 
+    public override void Start()
+    {
+        base.Start();
+        itemName = "AttackSpeedUp";
+    }
     // increase player's attack speed
     public override void TriggerEffect()
     {

@@ -6,6 +6,11 @@ public class HealthUp : Item
 {
     public int healAmount = 1;
 
+    public override void Start()
+    {
+        base.Start();
+        itemName = "HealthUp";
+    }
     public override void TriggerEffect()
     {
         player.GetComponent<Basics.Player>().Heal(healAmount);

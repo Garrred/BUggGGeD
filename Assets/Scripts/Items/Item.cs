@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    public string itemName;
     public float lastingTime = 10f;
     public float flyAwaySpeed = 2.5f;
     public float lifeTime = 10f;
@@ -14,7 +15,7 @@ public class Item : MonoBehaviour
     Vector3 target;
     Vector3 direction;
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         itemUI = GameObject.FindGameObjectWithTag("ItemUI");
@@ -55,10 +56,11 @@ public class Item : MonoBehaviour
         }
     }
 
-    public void UseItem()
+    public string UseItem()
     {
         TriggerEffect();
         Invoke("EndEffect", buffDuration);
+        return itemName;
     }
 
     public virtual void TriggerEffect()

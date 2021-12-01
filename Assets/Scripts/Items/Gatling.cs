@@ -7,6 +7,11 @@ public class Gatling : Item
     private Attacks.Weapon weapon;
     private bool activated = false;
     private float originalAttackSpeed;
+    public override void Start()
+    {
+        base.Start();
+        itemName = "Gatling";
+    }
     public override void FixedUpdate()
     {
         base.FixedUpdate();

@@ -8,6 +8,9 @@ namespace Basics
 {
     public class Player : MonoBehaviour
     {
+        public AudioSource audioSource;
+        public AudioClip getHitSound;
+        public AudioClip dieSound;
         public float movementSpeed;
         public float rotationSpeed;
         public float slowRatio;
@@ -114,6 +117,7 @@ namespace Basics
         {
             if (damage > 0 && !isInvincible)
             {
+                audioSource.PlayOneShot(getHitSound);
                 health -= damage;
                 StartCoroutine(StartInvincibility());
             }
@@ -126,7 +130,8 @@ namespace Basics
 
         void Die()
         {
-            transform.parent.gameObject.SetActive(false);
+            transform.parent.GetComponent<AudioSource>().Play();
+            transform.gameObject.SetActive(false);
             // GetComponent<Collider2D>().enabled = false;
             // SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>();
             // foreach (SpriteRenderer sprite in sprites)

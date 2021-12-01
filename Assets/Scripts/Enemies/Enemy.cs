@@ -6,6 +6,9 @@ namespace Enemies
 {
     public class Enemy : EnemyBugs
     {
+        public AudioSource audioSource;
+        public AudioClip deathSound;
+        public AudioClip attackSound;
         public float health;
         public float maxHealth;
         public int attackPower;

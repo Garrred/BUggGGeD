@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class ItemUI : MonoBehaviour
 {
+    public AudioClip pickupSound;
+    public AudioClip healthUp;
+    public AudioClip attackSpeedUp;
+    public AudioClip gatling;
+    public AudioSource audioSource;
     private GameObject item1;
     private GameObject item2;
     private bool hasItem1 = false;
@@ -25,7 +30,7 @@ public class ItemUI : MonoBehaviour
         {
             if (hasItem1)
             {
-                currentItem1.GetComponent<Item>().UseItem();
+                UseItemAndPlayAudio(currentItem1);
                 item1.SetActive(false);
                 hasItem1 = false;
             }
@@ -34,13 +39,28 @@ public class ItemUI : MonoBehaviour
         {
             if (hasItem2)
             {
-                currentItem2.GetComponent<Item>().UseItem();
+                UseItemAndPlayAudio(currentItem2);
                 item2.SetActive(false);
                 hasItem2 = false;
             }
         }
     }
 
+    void UseItemAndPlayAudio(GameObject item)
+    {
+        switch (item.GetComponent<Item>().UseItem())
+        {
+            case "HealthUp":
+                audioSource.PlayOneShot(healthUp);
+                break;
+            case "AttackSpeedUp":
+                audioSource.PlayOneShot(attackSpeedUp);
+                break;
+            case "Gatling":
+                audioSource.PlayOneShot(gatling);
+                break;
+        }
+    }
     public bool PickupItem(Item item)
     {
         if (!hasItem1)
@@ -49,6 +69,7 @@ public class ItemUI : MonoBehaviour
             item1.SetActive(true);
             currentItem1 = item.gameObject;
             hasItem1 = true;
+            audioSource.PlayOneShot(pickupSound);
             return true;
         }
         else if (!hasItem2)
@@ -57,6 +78,7 @@ public class ItemUI : MonoBehaviour
             item2.SetActive(true);
             currentItem2 = item.gameObject;
             hasItem2 = true;
+            audioSource.PlayOneShot(pickupSound);
             return true;
         }
         return false;
