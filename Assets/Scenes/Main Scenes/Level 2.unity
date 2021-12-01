@@ -396,12 +396,12 @@ MonoBehaviour:
     timeBetweenSpawns: 1
   - enemies:
     - {fileID: 3851400743318969207, guid: e927209c778ed324c909c779eaffb41e, type: 3}
-    enemyNum: 5
+    enemyNum: 10
     timeBetweenSpawns: 2
   - enemies:
     - {fileID: -6953087138398941293, guid: b4498818433f50e4d8f81adfb20c7fbe, type: 3}
     - {fileID: 3851400743318969207, guid: e927209c778ed324c909c779eaffb41e, type: 3}
-    enemyNum: 5
+    enemyNum: 10
     timeBetweenSpawns: 3
   spawnPoints:
   - {fileID: 718497467}
