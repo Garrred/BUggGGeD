@@ -339,11 +339,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 541505831, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
   m_PrefabInstance: {fileID: 6895383969962458871}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &568196413 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5120174097732374165, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
-  m_PrefabInstance: {fileID: 6895383969962458871}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &596269322 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3621905896540322367, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
@@ -411,6 +406,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 196609087}
+    - target: {fileID: 457757368, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 196609087}
+    - target: {fileID: 457757368, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Replay
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132229020, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 196609087}
+    - target: {fileID: 1132229020, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
     - target: {fileID: 1233433010, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -513,6 +524,11 @@ PrefabInstance:
       objectReference: {fileID: 867407165}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
+--- !u!1 &6895383969962458872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5120174097732374165, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
+  m_PrefabInstance: {fileID: 6895383969962458871}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7773930349124482141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -523,11 +539,7 @@ PrefabInstance:
     - target: {fileID: 242675796665117720, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
       propertyPath: fail
       value: 
-      objectReference: {fileID: 568196413}
-    - target: {fileID: 242675796665117720, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
-      propertyPath: health
-      value: 7
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6895383969962458872}
     - target: {fileID: 242675796665117720, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
       propertyPath: hearts
       value: 

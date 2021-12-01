@@ -400,8 +400,9 @@ MonoBehaviour:
     timeBetweenSpawns: 2
   - enemies:
     - {fileID: -6953087138398941293, guid: b4498818433f50e4d8f81adfb20c7fbe, type: 3}
-    enemyNum: 10
-    timeBetweenSpawns: 1
+    - {fileID: 3851400743318969207, guid: e927209c778ed324c909c779eaffb41e, type: 3}
+    enemyNum: 5
+    timeBetweenSpawns: 3
   spawnPoints:
   - {fileID: 718497467}
   - {fileID: 752197996}
@@ -559,6 +560,10 @@ PrefabInstance:
       propertyPath: fail
       value: 
       objectReference: {fileID: 1863127337}
+    - target: {fileID: 242675796665117720, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 242675796665117720, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
       propertyPath: hearts
       value: 
