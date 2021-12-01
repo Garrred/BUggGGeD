@@ -300,6 +300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BOSS2_TEMP
       objectReference: {fileID: 0}
+    - target: {fileID: 7245926410621555303, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8213808096036485249, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: hpBarUI
       value: 
@@ -973,10 +977,6 @@ PrefabInstance:
       propertyPath: hearts
       value: 
       objectReference: {fileID: 139478811}
-    - target: {fileID: 1311743308784632185, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4622551372082447456, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
       propertyPath: gameManager
       value: 
