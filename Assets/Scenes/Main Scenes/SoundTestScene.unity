@@ -220,11 +220,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 3527304498638251076, guid: 2ba8ceb7211821a43b8c532225010c61, type: 3}
   m_PrefabInstance: {fileID: 460897833}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &907907763 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 907907763, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
-  m_PrefabInstance: {fileID: 6895383969962458871}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1854921464 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1854921464, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
@@ -241,26 +236,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 196609087}
-    - target: {fileID: 801585363, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
-      propertyPath: gatling
-      value: 
-      objectReference: {fileID: 8300000, guid: 69218a0d051664f4f91a55b0911cf19a, type: 3}
-    - target: {fileID: 801585363, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
-      propertyPath: healthUp
-      value: 
-      objectReference: {fileID: 8300000, guid: ec6c88f97f5924d498a9e7b1a903f7c9, type: 3}
-    - target: {fileID: 801585363, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
-      propertyPath: audioSource
-      value: 
-      objectReference: {fileID: 907907763}
-    - target: {fileID: 801585363, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
-      propertyPath: pickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 3ea945579ac675a4eb44765bf73852bf, type: 3}
-    - target: {fileID: 801585363, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
-      propertyPath: attackSpeedUp
-      value: 
-      objectReference: {fileID: 8300000, guid: 508f8b219fd3f2649b2ef581efa0a50c, type: 3}
     - target: {fileID: 1233433010, guid: 98779e768f37c024d8f831d4f4357b2a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
