@@ -7,6 +7,9 @@ namespace Enemies
     public class Boss : Enemy
     {
         public GameObject hpBarUI;
+        public GameObject next;
+        public GameObject exit;
+
         private Basics.HPDisplay hpDisplay;
         private GameObject currentBullet;
         private int currentBulletIndex;
@@ -84,6 +87,8 @@ namespace Enemies
                     if (stage == 2)
                     {
                         isAlive = false;
+                        exit.SetActive(true);
+                        next.SetActive(true);
                         Destroy(gameObject.transform.parent.gameObject);
                     }
                     else

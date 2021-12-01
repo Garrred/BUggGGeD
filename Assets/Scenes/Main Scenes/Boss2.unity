@@ -305,6 +305,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8213808096036485249, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
+      propertyPath: exit
+      value: 
+      objectReference: {fileID: 728410441}
+    - target: {fileID: 8213808096036485249, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
+      propertyPath: next
+      value: 
+      objectReference: {fileID: 657264228}
+    - target: {fileID: 8213808096036485249, guid: 6c0914288cb91364b84deecf99f76858, type: 3}
       propertyPath: hpBarUI
       value: 
       objectReference: {fileID: 1687060306}
@@ -456,6 +464,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1311743308784632185, guid: 28d7506afa8dec04b9b4bd04754a2c74, type: 3}
   m_PrefabInstance: {fileID: 7773930349124482141}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &657264228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2201498841318451750, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+  m_PrefabInstance: {fileID: 7940012973203037925}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &659309771
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +515,11 @@ MonoBehaviour:
   emitterProfile: {fileID: 11400000, guid: 75426f98b52196842b3211c63487b8fc, type: 2}
   patternOrigin: {fileID: 659309772}
   playAtStart: 1
+--- !u!1 &728410441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4374492811451269442, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
+  m_PrefabInstance: {fileID: 7940012973203037925}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &840876521 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 840876521, guid: 61f0f5fba9b40314f9887fea6799cd6a, type: 3}
