@@ -101,11 +101,11 @@ MonoBehaviour:
   attacksBeforeBug: 2
   attackCount: 0
   stopTimeBeforeCasting: 2
-  health: 0
-  maxHealth: 15
+  health: 10
+  maxHealth: 50
   attackPower: 0
   stopDistance: 7
-  timeBetweenAttacks: 3
+  timeBetweenAttacks: 1
   attackCoolDown: 0
   speed: 3
   isInvincible: 0

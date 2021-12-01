@@ -16,11 +16,12 @@ public class SceneLoader : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 1)
         {
-            SceneManager.LoadScene(0);
+            StartCoroutine(LoadScene(0));
         }
         else
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex + 1));
         }
     }
 

@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class Next : MonoBehaviour
 {
     public Animator animator;
-    public float waitTime = 2f;
     private SceneLoader sceneLoader;
 
     void Start()
